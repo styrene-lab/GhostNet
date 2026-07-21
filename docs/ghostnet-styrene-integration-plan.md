@@ -6,6 +6,7 @@
 
 Source artifacts:
 
+- `GhostNet_Version_1.5.pdf` — original PDF supplied by the operator
 - `references/GhostNet-v1.5.txt` — searchable extraction of the supplied PDF
 - `references/GhostNet-v1.5.provenance.md` — provenance and licensing note
 
