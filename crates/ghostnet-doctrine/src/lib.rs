@@ -5,9 +5,17 @@
 
 mod canonical;
 mod clock;
+mod incident;
+mod report;
 
 pub use canonical::{CanonicalError, body_hash, canonicalize, signature_input};
 pub use clock::{Clock, ClockQuality, ClockReading, FakeClock};
+pub use incident::{
+    ApplyTransition, IncidentChain, IncidentError, IncidentState, IncidentTransition,
+};
+pub use report::{
+    ReportArtifact, ReportError, ReportLedger, ReportOperation, ReportStatus, ReportView,
+};
 
 /// Identifies the initial Phase 0 workspace contract.
 pub const CONTRACT_VERSION: u32 = 1;
