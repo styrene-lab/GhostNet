@@ -59,6 +59,12 @@ require_text docs/ghostnet-policy-client-overlay.md 'WORKSPACE-CHARTER\.md' \
 require_text docs/ghostnet-styrene-integration-plan.md 'WORKSPACE-CHARTER\.md' \
   'implementation plan must link the workspace charter'
 
+for schema in net-definition incident-transition operational-report detached-signed-envelope projection adapter-capability; do
+  if [[ ! -f "schemas/v1/${schema}-v1.schema.json" ]]; then
+    fail "required Phase 0 schema is missing: ${schema}-v1"
+  fi
+done
+
 # GhostNet production code may use released public Styrene client crates, but it
 # must not import daemon internals or reach into a sibling source checkout.
 scan_production_sources \
