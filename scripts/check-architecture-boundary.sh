@@ -25,12 +25,17 @@ scan_production_sources() {
   local description="$2"
   local output
 
-  if [[ ! -d crates && ! -d src && ! -d adapters ]]; then
+  local roots=()
+  [[ -d crates ]] && roots+=(crates)
+  [[ -d src ]] && roots+=(src)
+  [[ -d adapters ]] && roots+=(adapters)
+
+  if (( ${#roots[@]} == 0 )); then
     return
   fi
 
   output="$(
-    find crates src adapters \
+    find "${roots[@]}" \
       -type f \( -name '*.rs' -o -name 'Cargo.toml' \) \
       ! -path '*/tests/*' \
       ! -name '*_test.rs' \
@@ -60,7 +65,7 @@ scan_production_sources \
   '(^|[^[:alnum:]_])(styrened::|use[[:space:]]+styrened|extern[[:space:]]+crate[[:space:]]+styrened)' \
   'production GhostNet source imports styrened internals'
 scan_production_sources \
-  'path[[:space:]]*=[[:space:]]*"[^"]*styrene-rs' \
+  'path[[:space:]]*=[[:space:]]*"[^"]*(styrene-rs|styrene-rns|styrened)' \
   'production GhostNet manifest uses a Styrene source-tree path dependency'
 scan_production_sources \
   '(ed25519_dalek::SigningKey|x25519_dalek::StaticSecret|PrivateKey|SecretKey)' \
