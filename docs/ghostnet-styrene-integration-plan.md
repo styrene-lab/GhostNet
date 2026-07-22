@@ -1,408 +1,566 @@
-# GhostNet doctrine integration plan for Styrene
+# GhostNet–Styrene Implementation Plan
 
 ## Status
 
-**Planning document.** This plan maps useful concepts from the operator-supplied *GhostNet v1.5* reference into Styrene capabilities. It is not approval to transmit, a frequency plan, or a replacement for jurisdiction-specific radio rules.
+**Implementation plan constrained by the policy/client-overlay architecture.** This plan supersedes any earlier implication that GhostNet domain models, SQLite repositories, or RPC services should be added directly to `styrened`.
 
-Source artifacts:
+Normative design inputs:
 
-- `GhostNet_Version_1.5.pdf` — original PDF supplied by the operator
-- `references/GhostNet-v1.5.txt` — searchable extraction of the supplied PDF
-- `references/GhostNet-v1.5.provenance.md` — provenance and licensing note
+- [`ghostnet-policy-client-overlay.md`](ghostnet-policy-client-overlay.md)
+- [`ghostnet-doctrine-kernel.md`](ghostnet-doctrine-kernel.md)
+- [`styrene-integration-contract.md`](styrene-integration-contract.md)
+- [`integration-friction-register.md`](integration-friction-register.md)
+- `references/GhostNet-v1.5.txt`
 
-## Executive conclusion
+## 1. Strategic objective
 
-GhostNet is primarily **communications doctrine**: prepare before a crisis, use multiple paths, schedule contact windows, support receive-only participants, relay concise reports, degrade gracefully, and control emissions according to risk. It is not a protocol that Styrene should reimplement wholesale.
+Implement the useful GhostNet doctrine—prepared nets, scheduled windows, incident activation, concise signed reports, multiple paths, receive-only participation, store-and-forward, disclosure discipline, and graceful degradation—as an independent GhostNet product using Styrene's public communications substrate.
 
-Styrene already supplies much of the secure digital substrate that GhostNet approximates with separate radio applications:
+GhostNet is not a second mesh daemon. Styrene proper remains responsible for generic secure communications. GhostNet adds operational semantics and workflows.
 
-- Reticulum identities, encrypted links, paths, resources, and TCP/UDP/Serial-KISS interfaces
-- LXMF messaging and configurable store-and-forward
-- topics, telemetry, geospatial markers, contacts/trust, attachments, and paper-message envelopes
-- page serving, content-addressed chunk distribution, fleet control, RBAC, and offline hub services
-- TUI, CLI, daemon IPC, and hub/edge deployment surfaces
+## 2. Workstream boundaries
 
-The useful extension is an **incident/net operations layer plus supervised adapters**, not native implementations of JS8Call, Winlink, RTTY, or ALE. Styrene should remain the identity, message, custody, policy, and operator-workflow plane. Existing radio applications and hardware should remain modem/link specialists behind narrow adapters.
+### GhostNet repository
 
-## 1. Doctrine to preserve
+Owns:
 
-The following source concepts are worth implementing as product behavior:
+- doctrine and policy kernel;
+- canonical artifact schemas;
+- client orchestration;
+- local drafts/cursors/views/audit;
+- public Styrene adapter;
+- operator surfaces;
+- external radio-application sidecars;
+- simulation and exercise tooling.
 
-1. **Prepare and exercise before disruption.** A net definition, contacts, transport profiles, and test windows must be installable and testable before an incident.
-2. **No single mandatory controller.** Nodes should converge through signed state and replicated reports; a coordinator may facilitate a window but must not be a protocol root.
-3. **Multiple communications paths.** A report can move over any suitable active transport and can be relayed across transports without changing its identity.
-4. **Scheduled and ad-hoc nets.** Recurring check-in windows coexist with incident-triggered “CrisisNet” sessions.
-5. **Receive-only participation.** Monitoring, ingest, and local display are first-class roles that cannot accidentally transmit.
-6. **Store, carry, and forward.** Intermittent links are normal. Custody, expiry, retries, and duplicate suppression must be explicit.
-7. **Concise, useful information exchange.** Structured SITREPs, alerts, requests, observations, and bulletins should outrank chat and diagnostics on constrained links.
-8. **Emission discipline.** A STRADCON-like posture controls discovery, heartbeat, acknowledgements, automatic relays, and permitted transports.
-9. **Local autonomy and modular trust.** Public-interest nets, private groups, and trusted-team traffic can coexist without sharing one identity or one policy.
-10. **Graceful degradation.** Rich content should become summaries, text-only reports, delayed attachments, or manual hand-carry rather than simply fail.
+### Styrene proper
 
-## 2. Concepts not to copy directly
+May receive narrowly scoped generic proposals for:
 
-The source includes operational details that should remain reference material rather than software defaults:
+- detached identity signing;
+- generic outbound transmission-policy enforcement;
+- clarified topic retention/idempotency contract if required.
 
-- fixed amateur frequencies and schedules
-- shared static channel/encryption keys
-- assumptions that emergency conditions automatically remove legal obligations
-- anonymous or fabricated callsign guidance
-- continuous automatic transmissions without operator and regional policy controls
-- one global public group as a trust or truth mechanism
+It does not receive GhostNet nets, incidents, reports, windows, check-ins, adapters, tables, or UI workflows.
 
-Styrene should also avoid pretending that its packet transport can transparently ride every named mode. JS8Call, Winlink P2P, RTTY, and ALE have different semantics, latency, duty cycles, addressing, and operator requirements. Treat them as **bridged bearers**, not interchangeable byte streams, until an adapter proves otherwise.
+## 3. Phase 0 — boundary reset and contract fixtures
 
-## 3. Current Styrene capability map
+### Goal
 
-| GhostNet need | Existing Styrene foundation | Gap |
-|---|---|---|
-| Decentralized identity and private messaging | Reticulum identity/destinations/links; LXMF messaging | Net-scoped roles and signed operational reports |
-| Intermittent delivery | LXMF store-and-forward and delivery state | Cross-bearer custody policy, expiry, and operator-visible relay receipts |
-| Data bridges | Reticulum routing plus daemon transport abstraction | Supervised application adapters and bridge loop prevention |
-| Low-cost LoRa/packet access | Serial/KISS interface for RNode/RP2040/ESP32-class devices | Hardware profiles, regional TX guards, onboarding |
-| Receive-only monitoring | Daemon subscriptions, telemetry, TUI | Enforced receive-only node/adapter role and ingest provenance |
-| Group information exchange | SDK topics and subscriptions | Durable replicated topic log and constrained-link prioritization |
-| Situation reports and map data | Telemetry points and geospatial markers | Signed report schema, confidence, source chain, TTL, supersession |
-| Bulletins and offline information | NomadNet-compatible pages, attachments, content distribution, hub Kiwix/Qdrant | Net bundles, manifests, priority replication, operator curation |
-| Comms posture | Policy/RBAC primitives | Net-specific emission-control state machine |
-| Scheduled nets and crisis activation | No dedicated domain model | Net/window/incident scheduler and check-in workflow |
-| Equipment checks | Interface and link stats | Preflight workflow, synthetic receive-only tests, readiness score |
-| TAK interoperability | Marker/telemetry domain types | Optional Cursor-on-Target import/export adapter |
+Make ownership and interoperability executable before product behavior.
 
-Relevant implementation anchors include:
+### Tasks
 
-- transport interface modules in `styrene-rns/src/transport/iface/` (TCP, UDP, Serial/KISS)
-- `MeshTransport` in `crates/apps/styrened/src/transport/mesh_transport.rs`
-- SDK domain types in `crates/libs/styrene-lxmf/src/sdk/domain.rs`
-- store-and-forward config in `crates/libs/styrene-lxmf/src/sdk/types/config.rs`
-- pages in `crates/apps/styrened/src/services/pages.rs`
-- content distribution in `crates/libs/styrene-content/src/distributor.rs`
-- I2P fast/degraded path precedent in `crates/libs/styrene-mesh/src/i2p.rs`
+1. Mark the exploratory `feat/ghostnet-netops` Styrene branch as non-mergeable research.
+2. Create a GhostNet Rust workspace and initial crates:
+   - `ghostnet-doctrine`;
+   - `ghostnet-styrene`;
+   - `ghostnet-store`;
+   - `ghostnet-adapter-api`;
+   - `ghostnet-cli`.
+3. Add architecture tests that reject production imports from `styrened`, `styrene-rns` internal identity types, `rusqlite` in doctrine, and private-key types.
+4. Commit JSON Schemas for:
+   - net definition v1;
+   - incident transition v1;
+   - operational report v1;
+   - detached signed envelope v1;
+   - projection v1;
+   - adapter capability v1.
+5. Implement the RFC 8785 restricted canonical encoder and SHA-256 body references.
+6. Add language-neutral golden vectors with positive and negative signature cases.
+7. Define `StyrenePort`, `Clock`, `LocalStorePort`, and `AdapterSupervisorPort`.
+8. Implement `FakeStyrenePort` with injected duplicates, reorder, timeout, denials, and retention gaps.
+9. Produce two Styrene upstream proposals, without implementation coupling:
+   - detached identity signing;
+   - generic transmission-policy enforcement.
+10. Add CI checks for Markdown, JSON Schema, Rust formatting, clippy, tests, and dependency boundaries.
 
-## 4. Target architecture
+### Exit criteria
+
+- GhostNet builds without a Styrene checkout.
+- Doctrine has no platform or secret dependencies.
+- Golden canonical bytes are stable.
+- Fake client conformance suite passes.
+- No GhostNet change is pending merge in Styrene proper.
+
+## 4. Phase 1 — doctrine kernel
+
+### Goal
+
+Implement deterministic prepared-net and incident semantics independent of transport.
+
+### Tasks
+
+#### 4.1 Net definitions
+
+- IDs, revisions, predecessor hashes, effective/expiry times;
+- role bindings;
+- window/profile references;
+- validation limits;
+- fork detection and explicit conflict state;
+- signed bootstrap and revision authorization policy.
+
+#### 4.2 Communication windows
+
+- one-shot UTC windows;
+- restricted UTC recurrence grammar;
+- next/current occurrence calculation;
+- check-in lead periods;
+- explicit clock-quality and skew handling;
+- property tests across week/year boundaries.
+
+#### 4.3 Incidents
+
+- immutable transition artifacts;
+- planned/active/monitoring/closed/cancelled lifecycle;
+- terminal-state behavior;
+- predecessor hash chain;
+- duplicate idempotency;
+- divergent transition detection;
+- new-incident linkage for follow-on events.
+
+#### 4.4 Reports
+
+- report kinds, confidence, priorities, TTL;
+- area references and disclosure class;
+- attachment references;
+- source assertions;
+- correction/retraction semantics;
+- validation and resource limits;
+- canonical signature input generation.
+
+#### 4.5 Disclosure and degradation
+
+- audience profiles;
+- geographic precision reduction;
+- details/attachment/source-chain omission;
+- complete, text-only, summary, compact-code projections;
+- explicit omission metadata;
+- projection size proofs.
+
+#### 4.6 Posture and decisions
+
+- emission intents;
+- routine/elevated/restricted/silent profiles;
+- confirmation requirements;
+- policy outcome/reason codes;
+- enforcement-level semantics;
+- deterministic decision audit fields.
+
+### Test scenarios
+
+- prepared weekly readiness net;
+- ad-hoc incident activation;
+- receive-only observer;
+- expired alert;
+- corrected location report;
+- conflicting net revisions;
+- divergent incident transitions;
+- confidential report on public bearer;
+- clock uncertainty during a window;
+- projection onto a 160-byte text bearer.
+
+### Exit criteria
+
+- all normative invariants in `ghostnet-doctrine-kernel.md` have tests;
+- model-based event-chain tests pass;
+- fuzz targets enforce bounded allocation and no panics;
+- canonical golden vectors do not depend on Rust struct field order.
+
+## 5. Phase 2 — client application and local views
+
+### Goal
+
+Create usable workflows against `FakeStyrenePort` while preserving substrate ownership.
+
+### Tasks
+
+1. Implement command handlers:
+   - install/remove net;
+   - list/show net revisions;
+   - calculate next window;
+   - open/monitor/reactivate/close/cancel incident;
+   - draft/sign/publish report;
+   - correct/retract report;
+   - check in;
+   - set desired posture;
+   - inspect policy decision/audit.
+2. Implement application-local storage for:
+   - net installation preferences;
+   - drafts;
+   - pending confirmations;
+   - subscription cursors;
+   - projection event log;
+   - rebuildable materialized views;
+   - policy audit records;
+   - adapter configuration.
+3. Ensure no tables duplicate raw Styrene message bodies, native receipts, propagation queue, identity secrets, RBAC roster, or interface/path state.
+4. Implement atomic cursor-and-view commits.
+5. Add full rebuild from fake retained events.
+6. Implement status labels that distinguish requested, accepted, queued, sent, protocol-acknowledged, operator-confirmed, expired, failed, and unknown.
+7. Build initial CLI commands and JSON output for automation.
+8. Add an exercise runner that consumes scripted capability/outage schedules.
+
+### Exit criteria
+
+- a two-client fake exercise installs a net, activates an incident, publishes reports, corrects one, partitions, reconnects, deduplicates, and converges;
+- retention gaps visibly produce incomplete/indeterminate state;
+- publication unknown-outcome path does not duplicate artifacts;
+- local views rebuild from the fake public event history;
+- private-key types remain absent.
+
+## 6. Phase 3 — real public Styrene adapter
+
+### Goal
+
+Replace the fake with a capability-negotiated adapter over supported Styrene SDK/RPC.
+
+### Tasks
+
+1. Implement connection and capability handshake.
+2. Map fixed GhostNet topic paths to topic create/list/publish/poll APIs.
+3. Map identity lookup to opaque `IdentityRef`.
+4. Implement detached signing only when the public capability exists.
+5. Implement publish idempotency and correlation IDs.
+6. Implement polling cursors and retention-gap handling.
+7. Map attachment upload/download and immutable references.
+8. Map marker projections and optional telemetry observations.
+9. Normalize receipts without overstating delivery.
+10. Run the same conformance suite against fake and real adapter.
+11. Test local and authenticated remote authorization contexts.
+12. Publish a supported Styrene version/capability matrix.
+
+### Degradation rules
+
+- no detached signing: drafts and read-only verification may work; signed publication is disabled;
+- no topics: core net synchronization is unavailable; do not fall back silently to chat;
+- no markers: reports work, map view is disabled;
+- no attachments: text-only reports remain available;
+- no transmission policy: maximum silence claim is `client_guarded`;
+- insufficient retention: derived state is explicitly incomplete.
+
+### Exit criteria
+
+- real adapter passes conformance suite;
+- daemon-managed identity signs and verifies golden bytes;
+- no path dependency on the Styrene source repository in release builds;
+- no daemon-private imports or database access;
+- report and control artifacts round-trip byte-for-byte.
+
+## 7. Phase 4 — generic transmission enforcement
+
+### Goal
+
+Support truthful daemon-enforced receive-only and restricted operation when Styrene provides the generic capability.
+
+### Styrene upstream scope
+
+A separate Styrene change implements:
+
+- generic transmission classes;
+- one shared outbound enforcement gate;
+- policy apply/status commands;
+- operator confirmation to relax receive-only;
+- explicit exceptions and enforcement scope;
+- audit events;
+- end-to-end tests for automatic and application traffic.
+
+The patch contains no GhostNet artifact or workflow types.
+
+### GhostNet tasks
+
+1. Map doctrine posture requirements to generic Styrene policy requests.
+2. Compare requested and achieved enforcement.
+3. Refuse `daemon_enforced` label if exceptions exist.
+4. Refresh capability/policy state before every consequential send.
+5. Record applied policy ID and correlation in audit.
+6. Require explicit confirmation when leaving silent posture.
+7. Provide client-guarded fallback only with prominent labeling.
+
+### Test matrix
+
+- application payload;
+- ACK/proof;
+- announce/discovery;
+- heartbeat;
+- relay/forward;
+- propagation sync;
+- path request/response;
+- policy expiration;
+- daemon restart;
+- second client attempting transmission;
+- interface added after policy application;
+- hardware receive-only evidence.
+
+### Exit criteria
+
+- blocked classes emit zero frames in an instrumented transport test;
+- every active path is covered or reported as an exception;
+- UI/API report achieved enforcement accurately;
+- relaxing receive-only is impossible without required authority and confirmation.
+
+## 8. Phase 5 — operator surfaces
+
+### Goal
+
+Deliver the doctrine as understandable operational workflows.
+
+### CLI
 
 ```text
-Operator surfaces
-  styrene TUI / CLI / future mobile
-              |
-              v
-Net Operations service (styrened)
-  - net definitions and windows
-  - incidents and check-ins
-  - report validation/priorities
-  - comms posture and TX interlocks
-  - delivery/custody ledger
-              |
-      +-------+--------------------+
-      |                            |
-      v                            v
-Native Styrene plane          Adapter supervisor
-RNS/LXMF/topics/pages         versioned local adapter protocol
-content/telemetry             no adapter gets daemon secrets
-      |                            |
-TCP/UDP/Serial-KISS           JS8Call / Meshtastic / Winlink
-and future drivers            FLDigi-RTTY / ALE / import spool
-      |                            |
-      +----------- bridged bearers+
+ghostnet net install|list|show|remove
+ghostnet window next|status|preflight
+ghostnet incident open|status|monitor|reactivate|close|cancel
+ghostnet report draft|sign|publish|list|show|correct|retract
+ghostnet check-in
+ghostnet posture show|set|verify
+ghostnet sync status|rebuild
+ghostnet audit list|export
+ghostnet capabilities
 ```
 
-### 4.1 New domain module: `styrene-netops`
-
-Create `crates/libs/styrene-netops` as a pure, transport-neutral library. Keeping policy and data models out of `styrened` allows deterministic tests and reuse by desktop/mobile clients.
-
-Initial types:
-
-```rust
-NetDefinition {
-    id, name, description, region_policy,
-    memberships, windows, report_policy,
-    transport_profiles, default_posture,
-    extensions
-}
-
-NetWindow {
-    id, starts_at, duration, recurrence,
-    purpose, coordinator_hint, allowed_transports,
-    preflight_lead, extensions
-}
-
-Incident {
-    id, title, severity, status,
-    opened_at, area, activation_reason,
-    participating_nets, extensions
-}
-
-OperationalReport {
-    id, kind, author, created_at, observed_at,
-    area, summary, details, confidence,
-    priority, ttl, references, attachments,
-    supersedes, signature
-}
-
-CommsPosture {
-    level,
-    discovery, heartbeat, auto_ack, auto_relay,
-    allowed_transports, tx_budget, quiet_hours,
-    operator_confirmation
-}
-
-CustodyRecord {
-    report_id, bearer, peer, state,
-    attempted_at, acknowledged_at, retry_after,
-    failure_class
-}
-```
-
-Report kinds for v1: `check_in`, `situation`, `alert`, `request`, `offer`, `observation`, `bulletin`, `correction`, and `retraction`.
+### UI views
+
+- next window and countdown;
+- clock quality;
+- installed net revision/fork state;
+- incident lifecycle and participating nets;
+- priority reports with author, observation time, receipt time, confidence, and provenance;
+- draft/pending/queued status;
+- current desired and achieved posture;
+- incomplete-history warning;
+- adapter health and custody evidence;
+- attachment fetch cost/size warning.
+
+### Accessibility and constrained devices
+
+- keyboard-only operation;
+- text-first rendering;
+- no color-only severity distinction;
+- compact 80×24 layout;
+- bounded pagination;
+- no hidden automatic transmissions triggered by opening a view.
 
-Use stable IDs and canonical serialization so the same report retains identity across RNS, LXMF, print/QR, or a radio application. Sign the canonical report; never sign bearer-specific wrappers.
+### Exit criteria
 
-### 4.2 Net topic convention
+- every transmission has a visible policy decision and confirmation path;
+- no UI wording promotes protocol ACK to human confirmation;
+- receive-only enforcement level is always visible;
+- all commands provide stable machine-readable output.
 
-Map net operations onto existing topic primitives:
+## 9. Phase 6 — offline bulletins and operational picture
+
+### Goal
+
+Turn signed reports into durable, low-bandwidth information products.
+
+### Tasks
+
+1. Generate a signed incident summary manifest from selected authoritative artifacts.
+2. Render a static incident landing page without executable content.
+3. Publish bulletin manifests before optional content chunks.
+4. Reference Kiwix/Qdrant/local knowledge as reference sources distinct from live reports.
+5. Project geospatial reports to markers with disclosure-reduced precision.
+6. Add optional Cursor-on-Target import/export as an external adapter, not a doctrine primitive.
+7. Produce printable/QR hand-carry envelopes referencing signed source artifacts.
+8. Support checkpoints with event-range and root-hash integrity.
+
+### Exit criteria
+
+- disconnected client can verify incident summary provenance;
+- reference content is visually and structurally distinct from live operational evidence;
+- marker changes do not alter source reports;
+- checkpoint omissions/tampering are detected.
 
-```text
-net/<net-id>/control       signed net definitions and posture changes
-net/<net-id>/checkins      compact presence/check-in events
-net/<net-id>/reports       operational reports
-net/<net-id>/requests      resource/information requests
-net/<net-id>/bulletins     curated longer-lived information
-incident/<incident-id>/*   incident-specific projection of the above
-```
+## 10. Phase 7 — adapter framework
+
+### Goal
+
+Bridge non-native bearers without embedding modem/link-specific behavior in Styrene or doctrine.
+
+### Sidecar protocol
+
+Every adapter declares:
+
+- name/version/protocol version;
+- receive/transmit capability;
+- addressed/broadcast semantics;
+- ACK model;
+- store-forward capability;
+- payload and throughput limits;
+- half-duplex and operator-tuning requirements;
+- clock requirements;
+- confidentiality class;
+- configured legal-profile reference;
+- health and achieved mode.
+
+Security controls:
+
+- process argument arrays, no shell interpolation;
+- bounded message/frame sizes;
+- scoped filesystem/socket access;
+- no Styrene private keys;
+- no direct daemon database access;
+- adapter-specific credentials only;
+- deadlines, bounded queues, restart limits, and redacted logs;
+- inbound text/content treated as untrusted.
+
+### Adapter order
+
+1. **Spool/QR/file hand-carry** — deterministic and safe generic baseline.
+2. **Meshtastic receive-only**, then supervised transmit.
+3. **JS8Call receive-only**, then supervised compact report transmit.
+4. **Winlink P2P** message/file exchange.
+5. **FLDigi/RTTY** blind bulletin projection.
+6. **ALE** only after hardware-in-loop safety and policy validation.
 
-A topic is a routing and subscription boundary, not proof of truth. Clients must show author identity, trust, observation time, received time, relay chain, confidence, and whether corroboration exists.
-
-### 4.3 Bridge envelope
-
-Every non-native bearer uses a minimal envelope:
-
-```text
-version | report_id | fragment | fragment_count | ttl
-source_identity | destination/net | priority | created_at
-payload_hash | payload/fragment | signature | relay_trace
-```
+### Cross-bearer rules
 
-Rules:
+- preserve source artifact ID/hash/signature;
+- create explicit gateway projection/attestation;
+- never replace author identity;
+- deduplicate by source reference;
+- bound relay trace;
+- enforce TTL and net policy;
+- schedule by priority, age, cost, and fit;
+- maintain bearer custody separately from Styrene receipts.
 
-- deduplicate on `report_id + payload_hash`
-- cap relay trace growth and detect loops
-- preserve the original signature across relays
-- allow bearer gateways to add, never replace, custody attestations
-- expire traffic by TTL and incident state
-- redact fields according to destination trust and bearer confidentiality
-- fragment only after applying the bearer's size profile
-- schedule by priority, age, and airtime cost; do not use FIFO alone
+### Exit criteria
 
-## 5. Delivery phases
+- a report enters one sidecar, traverses public Styrene topics, exits another, and does not loop;
+- crashing/restarting an adapter does not corrupt native state;
+- receive-only mode is tested before transmit enablement;
+- each adapter's ACK wording matches actual evidence.
 
-### Phase 0 — decisions and test fixtures
+## 11. Phase 8 — constrained-link scheduling and exercises
 
-**Goal:** remove ambiguity before adding runtime behavior.
+### Goal
 
-1. Write an ADR defining Styrene as the operations plane and external applications as supervised bearers.
-2. Define the regulatory policy interface: region, service, license class, permitted modes, encryption constraints, duty-cycle limits, and `rx_only`.
-3. Define canonical report serialization and signing.
-4. Define incident and posture lifecycle transitions.
-5. Build a low-bandwidth simulator with configurable MTU, latency, loss, outage windows, and bytes/hour.
-6. Convert representative GhostNet workflows into fixtures without copying frequencies or shared keys:
-   - weekly readiness net
-   - ad-hoc disaster net
-   - receive-only monitor
-   - cross-region relay
-   - high-risk low-emission posture
+Validate useful behavior under real outage and bandwidth conditions.
 
-**Exit:** reviewed ADRs, schemas, and failing scenario tests.
+### Simulator
 
-### Phase 1 — native net operations MVP
+Configurable:
 
-**Goal:** deliver GhostNet's useful workflow entirely over existing Styrene/RNS links.
+- MTU/max text length;
+- bytes per hour;
+- latency/jitter;
+- loss/duplication/reorder;
+- outage windows;
+- half-duplex contention;
+- gateway count;
+- ACK model;
+- clock skew;
+- retention depth;
+- power/airtime cost.
 
-Implementation:
+### Scheduling
 
-- add `styrene-netops` models, validation, recurrence, priority, and posture logic
-- add SQLite persistence and migrations in `styrened`
-- add daemon services for net CRUD, window schedule, incident activation, check-in, report publish/list, and custody query
-- project reports onto SDK topics; attach large payloads through existing attachment/content APIs
-- add IPC request/response/event types in `styrene-ipc`
-- add CLI commands:
-  - `styrene net list|show|join|leave`
-  - `styrene net check-in`
-  - `styrene incident open|close|status`
-  - `styrene report send|list|show|correct`
-  - `styrene posture get|set`
-- add a TUI “Operations” view for next window, readiness, incident status, high-priority reports, queued custody, and current posture
+Prioritize using:
 
-**Exit:** two disconnected test nodes exchange, relay, deduplicate, expire, correct, and display signed reports after a simulated outage.
-
-### Phase 2 — emission control and receive-only safety
-
-**Goal:** make operational posture enforceable rather than advisory.
-
-Implementation:
-
-- introduce an outbound policy gate below all service sends and above concrete interfaces
-- define posture presets such as `routine`, `elevated`, `restricted`, and `silent_rx`
-- enforce per-interface and per-net TX budgets
-- disable discovery, heartbeat, auto-ack, propagation, or gateway relay according to posture
-- require explicit operator confirmation to leave `silent_rx` or use a legally restricted bearer
-- expose an immutable audit event for every automatic transmission decision
-- add “preflight mode” before windows: identity, clock, interface, receive path, queue, storage, and power-health checks without requiring on-air transmission
-
-**Exit:** property and integration tests prove `silent_rx` produces zero outbound frames, including acknowledgements and discovery traffic.
-
-### Phase 3 — adapter framework and first bearers
-
-**Goal:** bridge existing radio ecosystems without embedding their full stacks.
-
-Build a versioned local adapter protocol over a Unix socket/named pipe using the project's existing structured IPC conventions. The adapter supervisor owns process lifecycle, capability negotiation, bounded queues, deadlines, and redacted logs. Adapters receive scoped bearer credentials only; they never receive Styrene identity private keys.
-
-Adapter capability declaration:
-
-```text
-bearer name/version
-rx, tx, broadcast, addressed, ack, store_forward
-max_payload, text_only, estimated_bps
-half_duplex, operator_tuned, requires_accurate_clock
-confidentiality, regional constraints, health
-```
-
-Recommended order:
-
-1. **Meshtastic adapter** — useful local LoRa text/telemetry bridge; map channel traffic to an explicitly configured net and preserve source provenance.
-2. **JS8Call adapter** — compact check-ins and reports through a locally running application where a documented local API is available. Start receive-only, then require operator-supervised TX.
-3. **Import/export spool adapter** — human-carried USB/QR/file bundles for severe outages; also provides a safe generic fallback.
-4. **Winlink P2P adapter** — exchange report bundles as messages/attachments through supported local workflows; do not treat Winlink as a transparent packet link.
-5. **FLDigi/RTTY adapter** — receive and originate short blind bulletins with aggressive size limits and no delivery assumption.
-6. **ALE adapter** — last, because radio control, automatic sounding, legal constraints, and software variance require hardware-in-loop validation.
-
-Each adapter starts as `rx_only`. TX is enabled only after fixtures, simulator tests, and hardware-in-loop tests pass.
-
-**Exit:** a report enters through one adapter, is signed/normalized/deduplicated by Styrene, traverses native RNS, and exits a second adapter without a relay loop.
-
-### Phase 4 — constrained-link routing and custody
-
-**Goal:** make mixed bearers useful under real bandwidth and outage constraints.
-
-Implementation:
-
-- add bearer scoring using availability, payload fit, confidentiality, latency, energy/airtime cost, and legal policy
-- add compact binary encoding plus a human-readable text projection
-- add summary-first delivery: header/summary before details and attachments
-- add fragment selective repeat where the bearer can address peers; use fountain/repeated bulletin strategy only after simulation justifies it
-- add gateway leases so multiple bridges do not rebroadcast the same public report simultaneously
-- add hop/custody limits, retry jitter, congestion backoff, and quiet-window scheduling
-- surface “queued,” “heard,” “custodied,” “delivered,” and “confirmed by operator” as distinct states
-
-**Exit:** simulation demonstrates bounded duplicate traffic and delivery of priority reports under loss, partitions, and competing gateways.
-
-### Phase 5 — bulletins, offline knowledge, and operational picture
-
-**Goal:** turn messages into durable, useful shared information.
-
-Implementation:
-
-- generate a compact incident landing page from current signed reports
-- publish curated bulletin bundles through `styrene-content`
-- replicate bundle manifests first and chunks by priority/availability
-- integrate hub Kiwix/Qdrant search as a local enrichment source, clearly separating reference material from live reports
-- add marker projections for geospatial reports and optional CoT import/export
-- add report corroboration views without automatic “truth scores”
-- support printable/QR report envelopes for hand carry
-
-**Exit:** an edge node with no Internet can obtain the incident summary, inspect provenance, fetch selected bulletin content, and carry a signed report bundle to another partition.
-
-### Phase 6 — field validation and release hardening
-
-**Goal:** validate behavior rather than merely protocol correctness.
-
-Test matrix:
-
-- desktop ↔ desktop over TCP with induced partitions
-- desktop ↔ RNode-class device over Serial/KISS
-- two gateways attached to the same external bearer
-- receive-only node under every posture transition
-- clock skew and stale-window handling
-- malicious duplicate, replay, oversized fragment, false custody, and forged report attempts
-- adapter crash/restart and queue recovery
-- database rollback/upgrade
-- 24-hour low-rate soak and scheduled-window exercise
-- jurisdiction profile refusing an invalid TX configuration
-
-Run a staged exercise: lab simulation, shielded/dummy-load hardware test, receive-only field test, then lawful supervised transmission.
-
-## 6. Security and trust model
-
-1. **Identity is not veracity.** A valid signature proves who signed a report, not that the report is true.
-2. **Preserve provenance.** Never collapse author, relay, gateway, and local observer into one source field.
-3. **Replay resistance.** Use report IDs, timestamps, TTL, supersession, and bounded replay caches.
-4. **Least privilege.** Adapter permissions are bearer-scoped and net-scoped. Remote command capability is separate from report forwarding.
-5. **No shared global secret.** Private nets use per-net key material with rotation and membership revocation; public nets assume public observability.
-6. **Metadata awareness.** The UI must warn that callsigns, timing, frequency, direction finding, and gateway patterns can expose participants even when payloads are encrypted elsewhere.
-7. **Untrusted content handling.** Pages, attachments, and imported text render inertly; no scripts, shell interpolation, or automatic command execution.
-8. **Operator authority.** Automatic bridging and transmission are bounded by posture, regional policy, budget, and explicit enablement.
-9. **Abuse controls.** Local blocklists, per-identity rate limits, bounded queues, report-size limits, and trust-filtered views are required even for decentralized public nets.
-10. **Secrets separation.** RNS identity keys stay in the daemon/identity backend and are never copied into radio sidecars.
-
-## 7. Product decisions and tradeoffs
-
-### Adopt
-
-- scheduled and ad-hoc net workflows
-- multiple paths with explicit bridge/custody semantics
-- receive-only roles
-- structured reports with concise text projections
-- posture-driven emission controls
-- decentralized operation with optional coordinators
-- offline bulletins and knowledge bundles
-
-### Defer
-
-- native DSP/modem implementations
-- transparent IP tunneling over low-rate HF modes
-- autonomous ALE radio control
-- automatic truth/reputation scoring
-- broad TAK synchronization over HF
-
-### Reject
-
-- hard-coded frequencies, shared keys, or callsigns
-- “emergency means regulations no longer apply” logic
-- hidden automatic transmissions
-- using a public group name as authorization
-- assuming delivery merely because a gateway accepted custody
-
-The main tradeoff is deliberate: adapters add deployment complexity, but keep radio-specific failure modes and legal controls outside the trusted core. A monolithic all-mode daemon would be easier to demo and substantially harder to secure, test, or operate safely.
-
-## 8. Initial backlog
-
-The first shippable increment should stay narrow:
-
-1. `styrene-netops` types and canonical report signing.
-2. `styrened` net/incident/report service with SQLite persistence.
-3. IPC and CLI support for nets, windows, check-ins, reports, and posture.
-4. `silent_rx` enforcement at the outbound transport gate.
-5. Lossy-link simulator and end-to-end two-node tests.
-6. TUI operations dashboard.
-7. Receive-only import/export spool adapter.
-8. Meshtastic adapter spike.
-9. JS8Call receive-only adapter spike.
-
-Do not start Winlink, RTTY, or ALE transmission work until the native MVP and `silent_rx` invariants are proven.
-
-## 9. Success criteria
-
-The integration is successful when:
-
-- an operator can install a net plan before an incident and see the next readiness window
-- a receive-only participant can monitor with a machine-enforced no-transmit guarantee
-- an incident can be activated without a central server
-- signed reports retain identity, provenance, TTL, and correction history across relays
-- priority traffic survives partitions and resumes without broadcast storms
-- the same report can cross native RNS and at least two supervised external bearers
-- no frequency, key, callsign, or legal assumption is embedded as a universal default
-- adapters can fail or be removed without corrupting the native Styrene message plane
-- field exercises produce auditable readiness and delivery evidence
-
-## 10. Recommended next decision
-
-Approve **Phase 0 + Phase 1 only** as the first implementation change. That proves the doctrine is useful on Styrene's existing transport before taking on radio-application integration risk. Treat Meshtastic and JS8Call as parallel, receive-only validation spikes after the net/report schema stabilizes.
+- emergency/priority/routine class;
+- expiry urgency;
+- payload fit;
+- available confidentiality;
+- estimated airtime/energy;
+- existing custody evidence;
+- quiet windows and TX budget;
+- summary-before-detail policy.
+
+Do not use FIFO alone.
+
+### Exercises
+
+1. weekly readiness check-in;
+2. natural-disaster incident activation;
+3. cross-region partition and delayed bridge;
+4. competing gateways;
+5. malicious duplicate/replay;
+6. false custody claim;
+7. clock-skewed participant;
+8. receive-only observer;
+9. attachment available only after reconnection;
+10. net revision fork during partition.
+
+### Exit criteria
+
+- bounded duplicate traffic;
+- priority reports beat routine traffic;
+- expired traffic does not consume constrained bearer budget;
+- all nodes converge or show explicit fork/incomplete state;
+- exercise output produces auditable, signed evidence bundles.
+
+## 12. Upstream Styrene proposal plan
+
+### Proposal A — detached identity signing
+
+Expected files are determined by Styrene ownership at proposal time, likely public identity trait/types, daemon facade/RPC handler, identity service, authorization registry, and tests. No GhostNet dependency or schema is added.
+
+Acceptance scenarios:
+
+- authorized caller signs bounded bytes;
+- private key never leaves daemon;
+- expected-identity mismatch rejects;
+- oversize payload rejects;
+- unauthorized caller rejects;
+- purpose/hash/correlation are audited;
+- verification succeeds through public API;
+- local and remote command surfaces share semantics.
+
+### Proposal B — generic transmission policy
+
+Expected files are determined by Styrene transport/policy ownership. No GhostNet dependency or posture enum is added; Styrene defines generic classes/modes.
+
+Acceptance scenarios:
+
+- receive-only covers every active outbound class;
+- uncovered interface/path rejects or reports exception;
+- blocked attempt creates audit event;
+- policy survives/discontinues across restart according to contract;
+- expiry restores only declared prior/default state;
+- relaxing requires authorization/confirmation;
+- second client cannot bypass;
+- status reports exact effective scope.
+
+### Proposal C — topic contract clarification, only if needed
+
+Before proposing code, determine and document:
+
+- publication idempotency support;
+- cursor ordering;
+- retention gap signaling;
+- payload limits;
+- event immutability;
+- query-by-correlation or artifact key.
+
+Prefer contract documentation/tests over new APIs when existing behavior suffices.
+
+## 13. Definition of done
+
+GhostNet v1 is done when:
+
+- doctrine is independently buildable and fully covered by normative tests;
+- a supported Styrene daemon can sign, publish, retain, and return exact artifacts through public APIs;
+- net and incident views rebuild from public events within declared retention;
+- report corrections/retractions and forks behave deterministically;
+- priority and disclosure policy produce bounded safe projections;
+- no GhostNet code or state is required inside `styrened`;
+- no private key crosses into GhostNet;
+- receive-only claims state their actual enforcement level;
+- at least the spool adapter and one receive-only live radio adapter pass conformance;
+- an end-to-end exercise survives a partition without duplicate storms or silent state corruption;
+- all legal/frequency/operator assumptions are deployment configuration, not universal defaults.
+
+## 14. Immediate next increment
+
+Implement **Phase 0 in the GhostNet repository**:
+
+1. create workspace/crate skeleton;
+2. define doctrine IDs/envelopes and canonical encoder;
+3. commit report/net/incident JSON Schemas;
+4. add golden vectors;
+5. define `StyrenePort` and `FakeStyrenePort`;
+6. add dependency-boundary tests;
+7. draft detached-signing and transmission-policy upstream proposals.
+
+Do not continue implementing daemon persistence or GhostNet RPC services on the exploratory Styrene branch.
