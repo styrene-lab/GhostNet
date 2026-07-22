@@ -7,6 +7,7 @@ mod canonical;
 mod clock;
 mod incident;
 mod net;
+mod policy;
 mod report;
 mod window;
 
@@ -16,6 +17,11 @@ pub use incident::{
     ApplyTransition, IncidentChain, IncidentError, IncidentState, IncidentTransition,
 };
 pub use net::{ApplyRevision, NetError, NetRevision, NetRevisionChain};
+pub use policy::{
+    ActorAuthorization, BearerFacts, Confidentiality, DisclosureClass, EmissionRequest,
+    EnforcementLevel, PolicyDecision, PolicyOutcome, Posture, PostureDirective, ReasonCode,
+    evaluate_emission, select_directive,
+};
 pub use report::{
     ReportArtifact, ReportError, ReportLedger, ReportOperation, ReportStatus, ReportView,
 };
