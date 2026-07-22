@@ -1,6 +1,6 @@
 use ghostnet_styrene::{
     ArtifactKey, FakeStyrenePort, Fault, IdentityRef, PollRequest, PublishRequest, StyreneError,
-    StyrenePort, TopicPath,
+    StyrenePort, TopicPath, run_baseline_conformance,
 };
 
 fn artifact(index: u8) -> ArtifactKey {
@@ -25,6 +25,12 @@ fn poll() -> PollRequest {
         after: None,
         limit: 100,
     }
+}
+
+#[tokio::test]
+async fn fake_passes_shared_baseline_conformance() {
+    let fake = FakeStyrenePort::new(IdentityRef("local".into()));
+    run_baseline_conformance(&fake).await.expect("conformance");
 }
 
 #[tokio::test]

@@ -3,12 +3,14 @@
 //! Production implementations consume only supported public SDK or RPC
 //! contracts. This crate must never import `styrened` internals.
 
+mod conformance;
 mod contract;
 mod fake;
 
 use async_trait::async_trait;
 use thiserror::Error;
 
+pub use conformance::run_baseline_conformance;
 pub use contract::{
     ArtifactEvent, ArtifactKey, ArtifactPage, CapabilitySnapshot, CapabilityState,
     DetachedSignature, IdentityRef, PollRequest, PublishReceipt, PublishRequest, SignRequest,

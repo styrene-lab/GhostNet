@@ -70,6 +70,11 @@ dependencies = [
 [[package]]
 name = "ghostnet-adapter-api"
 version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "thiserror",
+ "tokio",
+]
 
 [[package]]
 name = "ghostnet-cli"
@@ -87,6 +92,11 @@ dependencies = [
 [[package]]
 name = "ghostnet-store"
 version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "thiserror",
+ "tokio",
+]
 
 [[package]]
 name = "ghostnet-styrene"

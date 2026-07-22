@@ -4,8 +4,10 @@
 //! and private key material.
 
 mod canonical;
+mod clock;
 
 pub use canonical::{CanonicalError, body_hash, canonicalize, signature_input};
+pub use clock::{Clock, ClockQuality, ClockReading, FakeClock};
 
 /// Identifies the initial Phase 0 workspace contract.
 pub const CONTRACT_VERSION: u32 = 1;
@@ -14,7 +16,10 @@ pub const CONTRACT_VERSION: u32 = 1;
 mod tests {
     use serde_json::{Value, json};
 
-    use super::{CONTRACT_VERSION, CanonicalError, body_hash, canonicalize, signature_input};
+    use super::{
+        CONTRACT_VERSION, CanonicalError, Clock, ClockQuality, FakeClock, body_hash, canonicalize,
+        signature_input,
+    };
 
     const SCHEMA: &str = "https://ghostnet.styrene.io/schema/operational-report-v1";
 
@@ -87,6 +92,24 @@ mod tests {
         assert_eq!(
             signature_input("schema\0other", b"{}"),
             Err(CanonicalError::InvalidSchema)
+        );
+    }
+
+    #[test]
+    fn fake_clock_advances_deterministically() {
+        let clock = FakeClock::new(
+            1_000,
+            ClockQuality::Uncertain {
+                maximum_skew_ms: 25,
+            },
+        );
+        clock.advance(250);
+        assert_eq!(clock.now().unix_ms, 1_250);
+        assert_eq!(
+            clock.now().quality,
+            ClockQuality::Uncertain {
+                maximum_skew_ms: 25
+            }
         );
     }
 

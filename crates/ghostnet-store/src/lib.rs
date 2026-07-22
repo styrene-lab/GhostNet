@@ -3,6 +3,10 @@
 //! This crate owns drafts, preferences, cursors, policy audit, and derived
 //! views—not Styrene messages, receipts, identities, or propagation queues.
 
+mod port;
+
+pub use port::{LocalStorePort, MemoryLocalStore, StoreError, StoredView, ViewCommit};
+
 /// A retained-event cursor opaque to doctrine code.
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventCursor(String);
