@@ -8,6 +8,7 @@ mod clock;
 mod incident;
 mod net;
 mod policy;
+mod policy_extension;
 mod report;
 mod window;
 
@@ -21,6 +22,10 @@ pub use policy::{
     ActorAuthorization, BearerFacts, Confidentiality, DisclosureClass, EmissionRequest,
     EnforcementLevel, PolicyDecision, PolicyOutcome, Posture, PostureDirective, ReasonCode,
     evaluate_emission, select_directive,
+};
+pub use policy_extension::{
+    ComposedPolicyDecision, ExtensionDisposition, PolicyExtensionResult, RestrictionLevel,
+    compose_policy,
 };
 pub use report::{
     ReportArtifact, ReportError, ReportLedger, ReportOperation, ReportStatus, ReportView,
