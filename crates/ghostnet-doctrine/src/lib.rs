@@ -9,6 +9,7 @@ mod incident;
 mod net;
 mod policy;
 mod policy_extension;
+mod projection;
 mod report;
 mod window;
 
@@ -26,6 +27,10 @@ pub use policy::{
 pub use policy_extension::{
     ComposedPolicyDecision, ExtensionDisposition, PolicyExtensionResult, RestrictionLevel,
     compose_policy,
+};
+pub use projection::{
+    OmissionReason, ProjectionError, ProjectionForm, ProjectionForms, ProjectionPermission,
+    ProjectionPlan, ProjectionProfile, ProjectionSource, project,
 };
 pub use report::{
     ReportArtifact, ReportError, ReportLedger, ReportOperation, ReportStatus, ReportView,
