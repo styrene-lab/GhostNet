@@ -6,15 +6,23 @@
 mod canonical;
 mod clock;
 mod incident;
+mod net;
 mod report;
+mod window;
 
 pub use canonical::{CanonicalError, body_hash, canonicalize, signature_input};
 pub use clock::{Clock, ClockQuality, ClockReading, FakeClock};
 pub use incident::{
     ApplyTransition, IncidentChain, IncidentError, IncidentState, IncidentTransition,
 };
+pub use net::{ApplyRevision, NetError, NetRevision, NetRevisionChain};
 pub use report::{
     ReportArtifact, ReportError, ReportLedger, ReportOperation, ReportStatus, ReportView,
+};
+pub use time::{Time as UtcTime, Weekday};
+pub use window::{
+    NetWindow, OneShotWindow, WeeklyWindow, WindowError, WindowEvaluation, WindowOccurrence,
+    utc_date,
 };
 
 /// Identifies the initial Phase 0 workspace contract.
