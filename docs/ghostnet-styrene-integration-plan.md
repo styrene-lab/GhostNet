@@ -1,5 +1,7 @@
 # GhostNet–Styrene Implementation Plan
 
+> **Workspace authority:** Every task in this plan is constrained by [`../WORKSPACE-CHARTER.md`](../WORKSPACE-CHARTER.md). A task that would move GhostNet operational ownership into Styrene proper must stop for an explicit charter amendment.
+
 ## Status
 
 **Implementation plan constrained by the policy/client-overlay architecture.** This plan supersedes any earlier implication that GhostNet domain models, SQLite repositories, or RPC services should be added directly to `styrened`.

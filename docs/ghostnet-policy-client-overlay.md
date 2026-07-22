@@ -1,5 +1,7 @@
 # GhostNet Policy/Client Overlay on Styrene
 
+> **Workspace authority:** This architecture implements the binding boundary in [`../WORKSPACE-CHARTER.md`](../WORKSPACE-CHARTER.md). If this document becomes inconsistent with the charter, the charter controls.
+
 ## Status
 
 **Proposed architecture and ownership contract.** This document supersedes the exploratory approach of embedding GhostNet domain services and persistence directly in `styrened`.
