@@ -356,7 +356,7 @@ Emission intents:
 - `path_request`;
 - `adapter_control`.
 
-`s​​​​ilent_rx` permits no emission intent, has zero TX budget, and allows no transmit-capable bearer. Leaving it requires explicit operator confirmation and successful substrate policy application when machine enforcement is requested.
+`silent_rx` permits no emission intent, has zero TX budget, and allows no transmit-capable bearer. Leaving it requires explicit operator confirmation and successful substrate policy application when machine enforcement is requested.
 
 ## 11. Policy decision API
 
