@@ -1,0 +1,2702 @@
+PAGES=50
+
+===== PAGE 1 =====
+
+GhostNet
+Version 1.5
+Stopgap Comms Solutions
+S2 Underground
+1
+
+===== PAGE 2 =====
+
+Printing Instructions
+This guide is intended to be printed by individual users using a wide variety of consumer grade printers.
+The original intent for this guide is to be printed “Actual Size”, the dimensions of which are 4 x 6 inches. This
+pairs well with 4 x 6 laminating pouches, and a variety of hole-punches for incorporation into a field binder
+or bound together with ordinary zip ties.
+Larger versions can be printed as well. For those with restrictive eyesight, the smaller font sizes may be
+frustrating. By selecting “Fit to Page” in the print settings, this document will “stretch” appropriately to
+fill an entire page, with no loss of resolution. When combined with sheet protectors, this makes a great
+addition to any SOP binder.
+Step 1: Verify and Download
+Check to make sure you have the file of the
+latest version.
+The most recent file will be uploaded to our
+GitHub page here: https://github.com/s2underground/GhostNet
+Step 2: Print
+Print Actual Size, Duplex, Flip on Long Edge
+If your printer has a High-Quality setting, use
+that. Higher quality paper is also recom-
+mended, but this document is optimized for
+low-grade copier paper as well.
+Step 3: Cut and Laminate
+Cut out each page, cutting on the outside of each bounding box. The
+colored frame on each page serves as a cutting guide, but also match-
+es the color-coordination of our other products and publications. If
+you are printing Actual Size, you will have a decent amount of waste.
+However, in order to make each page line up perfectly using most
+printers (while also fitting laminating pouches) this is the option that
+will work for most people. However, if you want to experiment by
+printing multiple pages per sheet of paper, feel free to do so.
+Laminate each page using 4x6 laminating pouches if so desired. 5 mil
+thickness is preferred. Self-sealing laminating pouches can work for
+those who do not have a heat source or laminator.
+Step 4: Hole Punch and Bind
+Using a standard planner hole punch, punch
+each laminated page in the order so desired.
+If some pages are not needed, feel free to
+leave out of the binding process. Likewise,
+for full waterproofing users may wish to
+print out extra copies of important pages
+and leave intact, to prevent water ingress
+via the punched holes. Depending on your
+hole punch, you may want to include these
+in a field binder, or bind together with
+paracord, zip ties or metal rings. The choice
+is up to the end user.
+GhostNet © 2024 by S2 Underground is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+2
+
+===== PAGE 3 =====
+
+HomePlan - Basic
+NOTE: When filled out, this is a sensitive document!
+Consider destruction procedures to prevent loss of PII.
+Use this page to document various important details that lie outside the scope of radio communications,
+but are important communications tools nonetheless.
+Family Password
+(A password that can be used
+by family members to verify
+authenticity of a message from
+someone else)
+Home Rally Point
+(A common location that all family
+members could evacuate to in the
+event of a fire in the home.)
+Family Recognition
+Symbol
+(A hand-drawn symbol that can be
+placed on signal panels, messages
+left at missing persons boards,
+or other meeting points. Can
+also serve as a challenge code if
+necessary.)
+*Sketch your symbol in the
+space provided to the right*
+Lost Contact Plan
+(General instructions for what to
+do in the event that a family/team
+member does not answer any
+communications after a predeter-
+mined period of time.)
+3
+
+===== PAGE 4 =====
+
+Trusted Contacts
+NOTE: When filled out, this is a sensitive document!
+Consider destruction procedures to prevent loss of PII.
+Name FCC Callsign Alternate Callsign Challenge/Response
+The Need for Aliases In some very rare situations, the use of approved FCC callsigns may be above
+the level of acceptable risk. From open warfare, to adversarial ham radio operators interfering with
+communications during a time of unrest or disaster recovery, it is a good idea for all radio operators to
+maintain an alternate callsign to use if necessary. This callsign should NOT be used while FCC regulations
+are applicable, however, we must remember why the regulations exist in the first place...to allow operators
+to practice their radio skills in a peacetime environment. This allows radio operators to gain experience,
+and develop the habit of adhering to the best practices of radio, with the full intention of operating more
+clandestinely if needed during a crisis. In other words, following the rules in peacetime, but in a contingent
+situation being able to operate more privately. With this in mind, if a radio operator had to start operating
+clandestinely, it would be absolutely crucial to know what your network's alternative callsigns are. In short,
+if you and your buddy need to stop using your real name on the air, you need to know the callsign that each
+of you will go by. This is crucial for digital data modes like Winlink or JS8Call, where the software needs a
+callsign to be input before a message can be sent. As such, you need to know your buddy's alter ego before
+the crisis, if one day you both recognize the need to operate more covertly.
+4
+
+===== PAGE 5 =====
+
+GhostNet Overview
+GhostNet is the overarching term for a collection of communications networks set up to allow users
+around the world to exchange information without relying on pre-established infrastructure. Far from
+being just an emergency plan, GhostNet is intended to ease the transition of radio technology into everyday
+life. Though radio networks cannot truly replace the internet, we hope that we can replace a substantial
+portion of a person’s daily information requirements, and promote a culture of off-grid information sharing.
+Weekly JS8Call Nets on 40m
+Once per week (or more often, based on world events), users can gather on JS8Call for a brief chat in a
+casual atmosphere. JS8 is simple to use, easy to work with, and extremely common among radio hams.
+Users that are perhaps not as experienced in other HF data modes might find JS8Call to be an easy way
+to maintain contact. JS8 also serves as a great meeting point in the event of catastrophic communication
+loss; if a major societal event is occurring, simply hop on JS8 to find out what’s going on and to coordinate
+other communications plans.
+Data Bridges (On Multiple Bands)
+What About My Baofeng?
+In the world of HF radio, everything is a trade-off. The configurations, fre-
+Unencrypted analog communi-
+quencies, and antennas needed to communicate over long distances are
+cations are not generally recom-
+not best suited for local comms, and vice versa. Therefore, to allow users
+mended for use in non-permissive
+to have the best chance of success with extreme-long range comms,
+environments. Even using brevity
+networks have been established to allow links between continents and
+codes and other EMCON proce-
+regions, at the time and frequency that is most effective for each link.
+dures, voice recognition, direction
+Understandably, one weekly net, on only one or two bands is not robust
+finding, and meta-data analysis
+enough to handle substantial message traffic. When we start to consider
+make analog voice comms a risk
+global partners, and the 24 hours in a day, we realize that a more sub-
+on the modern battlefield. However,
+due to their low cost and extreme
+stantial plan is needed to allow users around the world to communicate.
+popularity, handheld VHF/UHF
+Users in North America can usually only link up with Europeans during
+radios will always have a place in
+certain times of day. Similar situations appear with other long-range links, such as USA/Australia, Mediterranean/South America, Far East/
+emergency preparedness or for
+Europe, etc. As such, various comm plans have been established to allow
+local Line of Sight comms. The
+communications to occur between major regions, at the times of day
+GhostNet is not meant to replace
+local VHF/UHF traffic, though
+when there is the highest chance of success. In due time, we hope to
+these options are supported as a
+last-ditch measure for those that
+incorporate major relay stations which can facilitate the movement of traffic 24/7. In this way, a person wishing to communicate with another
+continent can wait for the data bridge to open at a certain time of day,
+need it. Rather, GhostNet plans are
+then use antenna configurations, power levels, frequencies, and data
+best served as a more strategic,
+modes that are more suited to long-range communications instead of
+region-wide communications
+more local contacts.
+network using HF transceivers.
+Receive-Only Options (For Decoding RTTY, JS8)
+To incorporate those who do not have the ability to transmit radio messages, various networks have
+been established to allow users to receive crucial information. Radio Teletype, despite being an ancient
+communication method, is a great tool for transmitting one-way communications, news updates, or other
+critical information to a wide audience. Those wishing to monitor various JS8Call networks or Data Bridges can also do so with a simple Software Defined Radio (SDR) receiver, a computer/phone, and an appropriate
+antenna. Understanding that radio communications are difficult, complex, and boring, special emphasis has been placed on creating networks for users who don’t want/need to dedicate so much time to radios.
+In short, we have simple and easy-to-understand networks that users can monitor cheaply and without
+any technical knowledge at all. And since receiving messages does not require a license (in the US, at
+least), anyone can listen in. Various tutorials have been created (and are continuing to be made) guiding
+users step by step through the whole process. The goal for Receive-Only comm networks is to make the
+process as easy as possible, and incentivize many people to start treating radio as a viable information
+source, rather than a novelty.
+Ion2G ALE Networks (“Right Now” Comms)
+A bit more advanced than JS8, several ALE networks are set up for persistent communication. Automatic Link Establishment protocols are the future of HF radio, and a gold standard for determining the best band/
+frequency to maintain a comm link. ALE removes the guesswork of which band to choose based on time
+of day, or other propagation factors. Simply fire up the program, and the software will determine the best
+frequency for you automatically. This makes comm plans obsolete, and allows for “right now” communica-
+tions to be possible at any time of day.
+5
+
+===== PAGE 6 =====
+
+GhostNet Concept
+Establishing a truly global communications plan is difficult, simply due to the physics of ionospheric propa-
+gation. There is no one plan that will allow the globe to communicate at the exact same time; various factors
+such as time of day, frequency, and scheduling conflicts make this a challenge. Even if a solution can be
+agreed upon, scheduling conflicts would add in another layer of complexity. Therefore, multiple networks are
+required. We can get by with two main concepts for communication: Local comms nets, and long-range links
+with other continents or major population centers. This way, a person can get their gear set up for local infor-
+mation exchange during one comm window, and if so desired can switch their gear and data modes to make
+contact with extremely long range regions, when band conditions allow for the highest chance of success.
+GhostNet Provides Two Main Paths of Info Exchange
+40m Networks
+For more local communications throughout a region,
+set up on a schedule that is most convenient for
+people within that region
+Scheduled weekly every Thursday night at times con-
+venient for those working standard business hours.
+Data Bridges
+A variety of networks using bands, times, antenna
+configs, and data modes best for making long
+range contacts.
+Scheduled weekly, every Saturday with time
+windows to allow for multiple DX contacts.
+Most users will likely find great utility in local communications throughout a region. For instance, if an
+incident were to occur within North America, most people in that region would likely tune in to JS8Call on
+40m to obtain more information. This is easy to do with a wide variety of equipment, and can be done even in
+a comparatively small location. Using a local 40m network, comms can be reliably established even in the
+worst of times, using minimal gear, and very little power.
+However, the gear, space, power, and experience needed to make that same network functional around the
+world is quite a challenge. Different antenna arrangements, and an extensive knowledge of band conditions
+is usually required to make reliable links with contacts at extremely long ranges. The average radio operator
+can easily make contact throughout Europe, but making a contact at any time of day from Sweden to Australia
+is another story entirely. Band conditions alone require very specific parameters to be met to ensure the
+highest chance of success. Therefore, we need to establish specific times of day, freqs, and antenna configs to
+make these long range comms reliable.
+Though seemingly complex, the plan is quite simple. Need to check in to a local net, or see what’s going
+on throughout your region? Pick up this guide and flip to the card for your local area. Fire up whatever HF
+transceiver you have (or even just a receiver) and tune in.
+Need to send an email around the world? Flip the card over, find the link you want to make, wait until the
+appropriate Data Bridge comm window opens up, and give it your best shot. This also allows for more
+complicated relay stations to be set up in the future. For instance, a person in the US might be able to briefly
+make limited contact with Australia on 80m, but contact might be sketchy or difficult to maintain. To send a
+full email, they might have to relay longer messages through stations in Africa or the Mediterranean. This
+comm plan allows for the network to grow and eventually make that a reliable option.
+Leaving Room for Automatic Link Establishment
+Ideally, ALE technology would make the concept of Data Bridges irrelevant. Even with enough power, reliable
+contact can be made at will without waiting for a comm window. These Data Brides are made with the portable operator in mind who might have to rearrange his/her antenna to make long range contacts. With
+ALE, there is no guesswork to determine which band or time of day is most appropriate for a data link, as
+the software computes this automatically. This is why ALE is the gold standard for military communications
+links around the world. However, among radio amateurs, ALE is still in its infancy. Ion2G is the front-runner
+software package intended to encourage more ALE-based comms in the ham radio world, but the antenna
+and transceiver requirements make ALE cost prohibitive for most radio operators.
+However, since ALE is the future, we can still allow for an ALE comm window. ALE is not magic, it simply
+chooses the best frequency to make a link between two points. At the moment, Ion2G in particular can only
+really be used for simple text messages, or voice calls. Sending emails must still be done using traditional
+Winlink P2P methods. This means that ALE can remove the guesswork when it comes to frequency choice, but
+the time of day must still be chosen by the operator*, and using different data modes (like RTTY) still requires
+manual decision making by the radio operator. One must remember that cutting-edge technology (in the ham
+world anyway), is perhaps not the most reliable in a serious emergency. Therefore, we can allow for the use
+of Ion2G by creating a specific time window for its use, but we also want to allow for other more manually
+selected networks to function using the equipment that most people already have.
+*Ion2G is best used by leaving the software to run 24/7. However, this is not the best option for most radio operators as 1- it ties up resources, and 2- the clicking of relays in the radio 24/7 is not appealing to most people. Various work-arounds exist to make Ion2G a viable persistent system, but as this
+software is still in development trusting it with one’s life is not advised unless a highly reliable backup solution is also in place...like a Data Bridge.6
+
+===== PAGE 7 =====
+
+Emergency C2 Nodes
+In the event of incidents occurring that require more active monitoring or response from average citizens,
+ad hoc Tactical Operations Centers may be required for monitoring the situation. Command and Control
+(C2) nodes may also be needed to coordinate the response of community members. In the event the situ-
+ation becomes untenable, or if breakout operations are necessary, various considerations and equipment
+choices can ensure that communications can be maintained, even if on the run.
+Communications are a Priority
+No Command and Control is possible without communication with other units, groups, or communities.
+Among a prepared citizenry, which is not likely to be as organized, hierarchical, or disciplined as a formal
+military unit, communications will be difficult during the best of times. If there is any hope of maintaining
+even the most basic coordination during a time of crisis, extremely robust plans and standards must be
+in place. Constant training and practice must be routinely carried out, specifically with communications
+equipment, to ensure that at a moment’s notice, alternative communications plans can instantly put in place, without any loss of capability. Snap drills simulating a widespread cellular/internet outage are
+great for ensuring skills do not become rusty.
+HF vs VHF/UHF Radios and the
+Fog of War
+Though handheld VHF/UHF radios are far more com-
+mon, if a C2 Node needs to relocate to ensure safety, or
+in the worst case, is on the run and being pursued by
+vastly superior forces, chances are the escapees will
+quickly be far out of range of Line of Sight communi-
+cations. In that case, HF radio is really the only feasible
+option to maintain contact without using preestablished
+infrastructure. HF radio equipment must be as compact
+and lightweight as possible, in the event that evasion
+plans are enacted. Maintaining small QRP (low-power)
+HF transceivers may not be as powerful as larger 50-
+100 watt radios, but smaller rigs are easier to take with
+you when you break out of encirclement, break contact
+from an ambush, survive a drone strike, or any number
+of serious issues. QRP radios allow the possibility of
+establishing emergency C2 nodes upon rallying locals
+following an attack. Though usually discarded as being
+underpowered, a lot can be done with little power using
+digital modes such as JS8Call, VarAC, Winlink, or any
+other data modes.
+Waking up in the middle of the night to
+the distant thumping of artillery rounds
+is never pleasant.
+What do you do? Do you stay put and take cov-
+er, or do you enact your escape plan before
+you become encircled by enemy forces? Who
+do you need to talk to, or coordinate with?
+And how will you do this? And how will you
+communicate with those around the region
+to share the news, or determine where the
+front lines are?
+All of this requires substantial communica-
+tions planning, equipment, expertise, and ded-
+ication even when you don’t know what to do.
+When you are groggily standing in your living
+room, listening to the war inching closer, it
+would be preferable to be combat effective,
+instead of the only option being running for
+one’s life. Having a plan to get comms up,
+rallying local contacts, beginning an incident
+response plan, and getting ready for the fight
+ahead makes you a valuable asset to your
+community, instead of a noncombatant.
+Setting Expectations
+If you are in the middle of a crisis that requires you to relocate for your personal safety, it is unrealistic
+to expect a professional TOC to be set up, with all the amenities and perfect communications. You may
+be cold, tired, hungry, and living out of a vehicle...yet still expected to provide critical communications
+for your community during a crisis. Obviously, the bare minimum communications and battle tracking
+capabilities are the only feasible options in situations of desperation. If you can get an HF radio up on
+JS8Call, that might be the best you can do.
+Expectations must be tempered in
+the civilian environment; it is a hard
+to expect someone to establish
+communications in extreme circum-
+stances. However, nothing worth
+having is free...and nothing worth
+doing comes easy. For a minimum
+investment, the average person can
+be vastly more prepared. And for
+a moderate investment, can be in-
+finitely capable in a changing world.
+7
+
+===== PAGE 8 =====
+
+GhostNet Survivability
+We all live in strange and uncertain times. What is certain, however, is that accurate information is necessary
+for survival. Consequently, censorship has become a household term as most citizens around the world
+become victims of information warfare. This plainly obvious truth, while largely unspoken in the ham radio
+community, is a fact of life for most of the Earth.
+Therefore, network survivability must be a priority, but not in the ways that we traditionally think of. Yes, we
+must prepare for power outages, systems going down, or any number of natural disasters. The ham radio
+world is well prepared for these contingencies. What tends to get ignored, are the more nefarious communi-
+cations issues. Repeaters being kinetically targeted. Ham radio club members being arrested. Jamming. And
+of course, surveillance. These real world events are not fear-mongering, these events have already occurred
+and are fairly routine around the world. We mustn’t dwell on this negativity, but we have to acknowledge
+that a substantial portion of the ham radio infrastructure is not entirely suited to operate in a contested or
+non-permissive environment. What good is a radio network if it reports directly to agencies that are targeting
+it in the first place?
+And what does this mean for those of us who do wish to operate in a less-than-friendly environment?
+Organization will be haphazard: No net control or “main” station means that a single airstrike cannot disrupt
+communications...taking out the leader won’t work when there is no one leader. This makes for haphazard
+and disorganized communications, but it’s the best that we can hope for in a situation of desperation.
+Competing Interests Cloud Information Exchange: It’s easy to create echo chambers, and only allow the free
+speech that a particular group of people agree on. However, if one has the very broad goal of simply allowing
+others to communicate with each other over long distances, when all other methods of communication
+are either surveilled or not available, ideology, politics, and personalities will become a problem over time.
+Everyone is different, and has different ideas of solutions to the world’s problems. With no strong, top-down
+leadership, a system such as this has the potential to descend into cliques, political echo chambers, and
+general chaos. As HF radio is not super popular right now amongst the general public, these kinds of
+communications networks tend to attract the more dedicated and altruistic personalities, which is why this
+is not a large problem for now. Over time, as censorship becomes even more constricting, it becomes ever
+more important for every user to be the best person they can be, and reflect the goodness they wish to see
+in the world.
+The Issue of Timing: One of the first questions we must ask ourselves when responding to any issue is: How
+much time do we have to work with? Though this idea is a concern with more formalized public-service
+incident and Rescue organizations, from a more “prepared citizenry” perspective, timing is more important.
+Unlike public services, which have strict “work the problem until it’s solved, escalating assistance to higher
+levels as needed until mission complete” mindset, the average citizen might have to “break contact” while
+working an incident if it is determined that not enough time remains to be of any use.
+Complications and the Fog of War: “No plan survives first contact”. This phrase, a common utterance on the
+battlefield, also most certainly applies to the entire field of communications...especially the communications
+on the battlefield. Reliable communications in combat, while rarely given credit when things go well...is the
+most often cited complaint when people get killed. Communications is not alluring to most, but if you don’t
+get it right, your chances of survival are remote. This is why understanding the unique nature of combat
+is necessary for success; if comms are good, clean, and efficient during peacetime, they might be barely
+successful during wartime. But if comms are nonexistent during the best of times, it will be impossible to
+establish comms during the worst of times. Communications in war is often times utter chaos; an adventure
+of utter madness, with no one knowing what’s going on until the combat situation has reached a conclusion.
+Thus, we must often times choose the communications methods that are not the best, or even the most
+efficient...but rather the comms methods that are functional, rugged, reliable, repeatable, and accessible by
+the lowest common denominator. However, despite the assertations that “simple is best”, a certain level of
+complexity is required in order to ensure that all the bases are covered, and as many situations as possible
+are planned for.
+A Plan Comes Together All of this means that there is no one single communications method...
+each communications choice can compliment each other method. 20m HF transmissions can be used for extreme-long-range comms, with 40m filling regional comms requirements, and VHF/UHF comms can
+handle close range messaging needs. There are other options, such as Automatic Link Establishment
+programs, which are vastly more capable (and automated). Communications, much like training, defaults to
+the lowest common denominator. If you have a high speed HF ALE data-link setup, but the person you need
+to talk to has a Baofeng, your communications efforts will be in vain. Everything is a balance...a balance of
+what everyone on the net is capable of, all being influenced by the unpredictable and confusing nature of the
+Fog of War.8
+
+===== PAGE 9 =====
+
+Architecture of Privacy
+Operational Security (OPSEC) is of great concern to those wishing to establish communications networks in non-permissive environments. However, if maximum OPSEC procedures were to be followed 24/7, no
+one would ever communicate at all. Therefore a careful balance must be struck, allowing for some com-
+munications to be completely public (for the masses to consume), while other communications methods
+are only shared with trusted users, or those who have a vested interest in a local area (semi-trusted
+entities). Trust is a finite resource, and once it’s gone, it’s very difficult to obtain again. Why does this matter
+for communications?
+- You need to exchange information and communicate with people, but powerful entities have invested
+significantly in making that difficult. You want to find like minded people, but you need to communicate to
+do that, and all internet based comms are surveilled. You need to organize, but the moment you get too
+popular, you meet Icarus’s fate. Everything is a balance between keeping your head down, and flying too
+close to the sun (so to speak). GhostNet should enable everyone to participate at their own pace (and risk
+level), allowing people to assume an appropriate level of risk in order to make progress, but also not take
+on so much risk that safety is compromised. GhostNet should allow people to ride the line between doing
+nothing, and risking it all.
+- You may have friends or family that know your cell phone number, but you wouldn’t give out that cell
+phone number to just anyone. On the other hand, you may program in national calling freqs into your
+handheld radio, with the full intention of maybe having to talk to strangers during an emergency. There
+are many layers of communication between these two examples, and many ways of building networks on
+varying levels of trust.
+Modular Privacy
+With Operational Security (OPSEC) being a very important consideration, GhostNet comms can fit into any
+local or private communications plan. If you need to make contact with trusted contacts, or even people
+you don’t know (but have a shared interest, such as for community defense), GhostNet hopes to enable
+this. On a more strategic level, GhostNet can fill a need for strategic communications, where no
+pre-organized solution is available. If an entity doesn’t wish to use GhostNet, anyone can duplicate the
+idea fairly easily, and tailor a plan to their own needs. Communications cannot be established after a
+disaster, only before....but most people still will not plan for this. So even if a group of prepared citizens
+wants to create their own plan, GhostNet can temporarily serve as something, where nothing currently
+exists.
+*Radio based communications can require a license, depending on the situation. For daily use in a questionably-permissive environment (such as
+the reagular ham radio hobby), a license would be required. However, in an apocalyptic-level emergency where users are no longer concerned
+with regulations, many radio modes can technically be used regardless of callsign. This means that privacy, while non-existent under normal ham
+radio operating conditions, is extremely feasible in the event of an emergency.
+9
+
+===== PAGE 10 =====
+
+“What’s the Point?”
+Understandably, such a seemingly complicated plan/infrastructure is bound to result in the question “Why
+even bother with all this?”. Though the answers should be fairly obvious, below are few concepts that are
+perhaps not adequately explained in the field of emergency communications:
+- He who owns the wires, owns the communication. All internet communications are vulnerable to
+censorship, surveillance, entrapment, manipulation, and information warfare. Granted, this can apply to
+all communications on Earth, but there is a reason that powerful entities have spent substantial portions
+of defense budgets on information warfare and censorship tools. You can jump from platform to platform,
+being banned from one social media site before moving to the next. But the inconvenient truth is that radio
+is exceptionally difficult to influence by anyone. Though this may change in the future, radio is the ONLY
+option for communicating over long distances, without using anyone else’s infrastructure.
+- Comms can’t be established after a disaster, only before. No meaningful comms network has ever been
+set up after a natural disaster strikes, and certainly not after a man-made disaster (such as war) breaks
+out in a region. During a crisis, people tend to be rather busy as the time-saving conveniences that make
+our modern society function stop working. There are only so many hours in the day, and if a person has
+to spend a lot of time establishing even the most basic comms links (and assuming risk doing so), this is
+time lost that could have been better spent on other tasks. It’s better to create the plan, practice it, and
+integrate it into daily life NOW, so that when all other comms are shut down or censored, the transition to
+radio is as seamless as possible.
+- A couple of “prepper freqs” is not good enough. Shouting into your radio handset on doomsday is hardly
+likely to be effective. In modern times, even during significant emergencies, traditional voice comms that
+hams are known for are extremely ineffective. If we factor in the sheer number of people who own radios
+(even HF radios), we can clearly see that more significant network planning is needed. If the HF bands are
+so busy that the average user has a hard time breaking through on the average sunny Saturday afternoon,
+during a time of emergency, comms won’t be possible at all. Thus the need for more substantial networks,
+modes, and methods that can handle higher volumes of varying kinds of traffic.
+- The average citizen is now playing for keeps. No one lives forever, and in today’s world many people are finding out how true that adage really is. As such, resiliency in the face of an airstrike/raid is paramount.
+If a ham radio group cannot survive even a basic raid, they are of no help when the chips are down. This
+means that a “work-in-progress” plan is better than no plan at all. And more importantly, a
+non-hierarchical framework is essential for the network’s survival in the event of kinetic targeting.
+Typical Use Case Examples
+Standard natural disaster preparedness: A great use of the GhostNet would be to serve as a common
+network that many people can use to share news regarding natural disasters which may have degraded
+cellular networks.
+Decentralized, uncensorable, off-grid news network: The unique nature of HF radio makes censorship very
+very difficult. If someone wanted to stop a station from transmitting, they would have to either jam that sta-
+tion, or physically visit the actual location of the station, and physically stop the transmission. As the world
+discovered from the Cuban Jamming incident of 2021, even military grade jamming is not entirely effective
+enough to totally stop all communications. Where there is a will, there is a way, and JS8Call (and other
+tools) make alternative communications not just possible, but a reliable alternative for the average user.
+Group Messaging: JS8Call is a powerful group messaging tool. Due to the nature of using offsets, many
+people can send messages at the same exact time, only being limited by the time one is transmitting them-
+selves. A listen-only user can pull up JS8Call and automatically decode multiple messages simultaneously,
+receiving messages from many different regions. JS8’s store-and-forward capability allows users to send
+messages far beyond their own station’s range. This forms a very basic form of a mesh network, which
+although not a true mesh, still offers many of the capabilities of exchanging messages far beyond the line
+of sight of just one station.
+ATAK Compatibility: Through the use of various plugins, the TAK suite of software can function within JS-
+8Call. Obviously sending extremely high amounts of CoTs data is not best suited to HF radio, but this could
+be a useful feature for those who wish to integrate HF comms into their TAK network.
+GhostNet is simply meant to help ensure communications. It’s not
+intended to replace anything, or override any pre-existing networks or
+plans. If you want to use it, Great! If not, that’s fine too. But it’s there for
+those that need a reliable plan, where nothing similar currently exists.
+10
+
+===== PAGE 11 =====
+
+Data Bridge Overview
+North America-Europe Data Bridge
+Established almost entirely on 20m, as this has the best chance of success over such a distance, while
+also being accessible to most people. Set up during the hours of 1800-2000 GMT so as to take advantage of
+afternoon DX potential.
+Europe-Australia Data Bridge
+Established on 20m, with an additional plan for 80m. Due to the long range, very short text-based options
+like JS8Call and VarAC will be most reliable. RTTY for blind transmissions or for maintaining comms when
+other modes are not ideal.
+Australia-South Pacific Data Bridge
+Established on 20m, with an additional plan for 40m. Due to the combination of low population density and
+long range, most comms will have to use the traditional DX bands for “semi-local” comms to be reliable. 40m can also be used more effectively due to open ocean eliminating vegetation/terrain restricting ground
+waves. However, ocean conditions can also hinder transmissions, so relying on the F2 layer of traditional DX
+bands can also help to ensure reliable comms.
+North America-Australia Data Bridge
+Established almost entirely on 80m, as this has the best chance of success over such a distance. This
+will limit users to those who have an 80m antenna system, but due to distance this is the best chance
+for reliable success. Set up during the hours of 1200-1400 GMT due to 80m being most useful when both
+continents are in darkness (mostly), while also considering the feasibility of operating hours for those on a
+tight schedule..
+11
+
+===== PAGE 12 =====
+
+12
+In the event GhostNet communications are needed,
+For those who have the resources to spare, simply keeping an eye on the predetermined JS8Call
+GhostNets can be established at will. Chances are,
+freqs throughout the day can be quite helpful. Setting up a receive-only JS8Call arrangement and just
+if a major incident is underway of grave importance,
+leaving it running all day and night can be a great way to receive critical indications and warnings
+someone will be talking about it on GhostNet. Hopping
+of world events in real time. Though this may be a bit resource intensive for some, running JS8Call
+on JS8Call to check for message traffic, or firing up
+around the clock requires very little CPU power, especially in receive-only mode. Though it would be great to see JS8Call being used to share information 24/7, right now JS8 is more of a hobby for hams than a tool for circumventing censorship/targeting. However, in due time JS8Call’s unique character-
+Ion2G during a crisis is not only helpful for sharing
+information, but also great practice for when GhostNets
+might be needed for more substantial emergencies.
+istics are great for group messages, and the heartbeat feature is a very resilient way to make sure
+comms networks are functional at any time of day.
+Ad Hoc Crisis Nets
+NA/AUS Data Bridge (20m, 80m)
+AUS/PAC Data Bridge (20m, 40m)
+EUR/AUS Data Bridge (20m,80m)
+NA/EUR Data Bridge (20m)
+Saturday
+0000Z
+0100Z
+0200Z
+0300Z
+Persistent Comms Networks
+0400Z
+0500Z
+0600Z
+0700Z
+0800Z
+0900Z
+1000Z
+1100Z
+1200Z
+1300Z
+1400Z
+1500Z
+1600Z
+1700Z
+1800Z
+1900Z
+2000Z
+2100Z
+2200Z
+2300Z
+GhostNet AUS (40m)
+GhostNet EUR (40m)
+America (40m)
+GhostNet North
+Thursday
+0000Z
+0100Z
+0200Z
+0300Z
+0400Z
+0500Z
+0600Z
+0700Z
+0800Z
+0900Z
+1000Z
+1100Z
+1200Z
+1300Z
+1400Z
+1500Z
+1600Z
+1700Z
+1800Z
+1900Z
+2000Z
+2100Z
+2200Z
+2300Z
+GhostNet Schedule
+Note that the time of day is listed in ZULU time (UTC). This means that the comm window can technically be across the International
+Date Line (and therefore the next day), depending on where you are in the world. For instance, the GhostNet for North America starts
+at 0100Z. This is technically the next day, on Friday morning ZULU time. Local to North America, this translates to Thursday night.
+
+===== PAGE 13 =====
+
+GhostNet North America
+Weekly HF radio communications network. For efficiency, this will largely be a
+data-only net, with voice comms only being used in an emergency to coordinate
+further link-ups.
+Weekly Every Thursday Night
+0100-0130 UTC 0130-0200 UTC 0200-0230 UTC 0230-0300 UTC
+JS8Call (40m)
+NVIS
+7.107 MHz
+Use Offsets to
+find a clear space
+to transmit. All
+messages along
+the band will be
+decoded anyway, so
+pick any offset that’s
+available.
+further comms. Groups shall be used to organize traffic and all
+stations shall monitor at minimum @GHOSTNET and
+@GSTFLASH. See below for complete list of Group Names.
+@GHOSTNET - Generalized group for tagging routine messages.
+Also very useful for identifying callsigns not previously known.
+@GN(Country Three Letter Code)(State Two-Letter Code) - For
+example: “@GNUSASC” is the GhostNet group for South Carolina,
+USA. For regional comms directed to a specific state. State-level
+organizations may choose to further divide into districts within a
+state or other geographic area.
+@GSTFLASH - Emergency FLASH traffic: Any station in receipt of
+a GSTFLASH message shall transmit at once to highest level HQ
+within range via any means necessary.
+Winlink P2P
+(Vara, USB)
+NVIS
+7.107 MHz
+Stations wishing to exchange emails may do so during this comm
+window. Use Vara HF Peer-to-Peer Connection with
+designated callsigns to avoid linking with formal Winlink nodes.
+Handshakes start at 0135Z, data burst as long as it takes. Use the
+JS8Call window to determine callsigns, and the order of stations
+sending emails. Emails should be posted to outbox BEFORE comm
+window to maximize efficiency.
+RTTY
+7.077 MHz
+45.45 Baud
+Use short RTTY bursts to transmit blindly to stations that missed
+check-in. Stations missing windows are to use RTTY presets on
+radio to communicate problem.
+If contact is re-acquired, can re-send critical msg traffic that was
+missed earlier. If so desired, RTTY can also be used to send traffic
+to SWL-only stations during this window.
+HF Voice
+Simplex LSB
+(40m)
+7.190 MHz
+ONLY FOR USE IN A DIRE EMERGENCY, NOT A STANDARD NET
+HF voice freq shall be monitored for the last five minutes of all
+comm windows, no matter how the window flexes. If a station
+misses all prior check-ins, stations with highest likelihood of
+comm success will initiate voice calls for missing station as
+required. If station is expected to participate in the net, but is still
+not heard, proceed with Emergency PACE plan.
+Though set up to be a weekly event, during contingent circumstances this plan can be used for battle tracking incidents as needed.
+Due to Time Zones, these times are technically the next day (Friday). Locally to North America, this comm window is Thursday Night.
+All Times GMT Details
+NOTE: NOT STANDARD JS8 CONFIG, YOU MUST CHANGE THE FREQ!
+Offset chosen based on availability. For standard message traffic,
+check-ins and POSREPs. Heartbeats sent below offset of 1000 Hz.
+If many stations are present, JS8 can be used to allocate freqs for
+13
+
+===== PAGE 14 =====
+
+North America Data Bridges
+40 meters is a great band for region-wide communications. Long-range data links are
+perhaps best served by the more traditional DX bands, but 40m offers a good blend of
+range and ease-of-use as it is usually the lowest band of frequencies that most radio
+amateurs are capable of transmitting on regularly.
+Weekly Every Saturday
+1800-1900 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+North America-Europe
+Data Bridge
+previous page.
+1900-2000 UTC - Ion2G ALE Comm Window. Use provided config
+file for frequency list, or refer to Ion2G setup page for complete
+frequency list. Best for point-to-point comms between known users/callsigns.
+North America-Australia
+Data Bridge
+1200-1300 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+1300-1330 UTC - Ion2G ALE Comm Window. Use provided config
+file for frequency list, or refer to Ion2G setup page for complete
+frequency list.
+1330-1400 UTC - JS8Call Net on 80m @ 3.575 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+Use this blank space for notes, such as converting comm windows into your local time.
+14
+
+===== PAGE 15 =====
+
+GhostNet Europe
+Weekly HF radio communications network. For efficiency, this will largely be a
+data-only net, with voice comms only being used in an emergency to coordinate
+further link-ups.
+Weekly Every Thursday Night
+All Times GMT Details
+1800-1830 UTC 1830-1900 UTC 1900-1930 UTC 1930-2000 UTC
+JS8Call (40m)
+NVIS
+7.107 MHz
+Use Offsets to
+find a clear space
+to transmit. All
+messages along
+the band will be
+decoded anyway, so
+pick any offset that’s
+available.
+NOTE: NOT STANDARD JS8 CONFIG, YOU MUST CHANGE THE FREQ!
+Offset chosen based on availability. For standard message traffic,
+check-ins and POSREPs. Heartbeats sent below offset of 1000 Hz.
+If many stations are present, JS8 can be used to allocate freqs for
+further comms. Groups shall be used to organize traffic and all
+stations shall monitor at minimum @GHOSTNET and
+@GSTFLASH. See below for complete list of Group Names.
+@GHOSTNET - Generalized group for tagging routine messages.
+Also very useful for identifying callsigns not previously known.
+@GN(Country Three Letter Code)(State Two-Letter Code) - For
+example: “@GNUSASC” is the GhostNet group for South Carolina,
+USA. For regional comms directed to a specific state. State-level
+organizations may choose to further divide into districts within a
+state or other geographic area.
+@GSTFLASH - Emergency FLASH traffic: Any station in receipt of
+a GSTFLASH message shall transmit at once to highest level HQ
+within range via any means necessary.
+Winlink P2P
+(Vara, USB)
+NVIS
+7.107 MHz
+Stations wishing to exchange emails may do so during this comm
+window. Use Vara HF Peer-to-Peer Connection with
+designated callsigns to avoid linking with formal Winlink nodes.
+Handshakes start at 1835Z, data burst as long as it takes. Use the
+JS8Call window to determine callsigns, and the order of stations
+sending emails. Emails should be posted to outbox BEFORE comm
+window to maximize efficiency.
+RTTY
+7.077 MHz
+45.45 Baud
+Use short RTTY bursts to transmit blindly to stations that missed
+check-in. Stations missing windows are to use RTTY presets on
+radio to communicate problem.
+If contact is re-acquired, can re-send critical msg traffic that was
+missed earlier. If so desired, RTTY can also be used to send traffic
+to SWL-only stations during this window.
+HF Voice
+Simplex LSB
+(40m)
+7.190 MHz
+ONLY FOR USE IN A DIRE EMERGENCY, NOT A STANDARD NET
+HF voice freq shall be monitored for the last five minutes of all
+comm windows, no matter how the window flexes. If a station
+misses all prior check-ins, stations with highest likelihood of
+comm success will initiate voice calls for missing station as
+required. If station is expected to participate in the net, but is still
+not heard, proceed with Emergency PACE plan.
+Though set up to be a weekly event, during contingent circumstances this plan can be used for battle tracking incidents as needed.
+15
+
+===== PAGE 16 =====
+
+Europe Data Bridges
+40 meters is a great band for region-wide communications. Long-range data links are
+perhaps best served by the more traditional DX bands, but 40m offers a good blend of
+range and ease-of-use as it is usually the lowest band of frequencies that most radio
+amateurs are capable of transmitting on regularly.
+Weekly Every Saturday
+1800-1900 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+North America-Europe
+Data Bridge
+previous page.
+1900-2000 UTC - Ion2G ALE Comm Window. Use provided config
+file for frequency list, or refer to Ion2G setup page for complete
+frequency list. Best for point-to-point comms between known users/callsigns.
+Europe-Australia Data
+Bridge
+2000-2100 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+2100-2130 UTC - Ion2G ALE Comm Window. Use provided config
+file for frequency list, or refer to Ion2G setup page for complete
+frequency list.
+2130-2200 UTC - JS8Call Net on 80m @ 3.575 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+Use this blank space for notes, such as converting comm windows into your local time.
+16
+
+===== PAGE 17 =====
+
+GhostNet Australia
+Weekly HF radio communications network. For efficiency, this will largely be a
+data-only net, with voice comms only being used in an emergency to coordinate
+further link-ups.
+Weekly Every Thursday Night
+All Times GMT Details
+0700-0730 UTC 0730-0800 UTC 0800-0830 UTC 0830-0900 UTC
+JS8Call (40m)
+NVIS
+7.107 MHz
+Use Offsets to
+find a clear space
+to transmit. All
+messages along
+the band will be
+decoded anyway, so
+pick any offset that’s
+available.
+NOTE: NOT STANDARD JS8 CONFIG, YOU MUST CHANGE THE FREQ!
+Offset chosen based on availability. For standard message traffic,
+check-ins and POSREPs. Heartbeats sent below offset of 1000 Hz.
+If many stations are present, JS8 can be used to allocate freqs for
+further comms. Groups shall be used to organize traffic and all
+stations shall monitor at minimum @GHOSTNET and
+@GSTFLASH. See below for complete list of Group Names.
+@GHOSTNET - Generalized group for tagging routine messages.
+Also very useful for identifying callsigns not previously known.
+@GN(Country Three Letter Code)(State Two-Letter Code) - For
+example: “@GNUSASC” is the GhostNet group for South Carolina,
+USA. For regional comms directed to a specific state. State-level
+organizations may choose to further divide into districts within a
+state or other geographic area.
+@GSTFLASH - Emergency FLASH traffic: Any station in receipt of
+a GSTFLASH message shall transmit at once to highest level HQ
+within range via any means necessary.
+Winlink P2P
+(Vara, USB)
+NVIS
+7.107 MHz
+Stations wishing to exchange emails may do so during this comm
+window. Use Vara HF Peer-to-Peer Connection with
+designated callsigns to avoid linking with formal Winlink nodes.
+Handshakes start at 2035Z, data burst as long as it takes. Use the
+JS8Call window to determine callsigns, and the order of stations
+sending emails. Emails should be posted to outbox BEFORE comm
+window to maximize efficiency.
+RTTY
+7.077 MHz
+45.45 Baud
+Use short RTTY bursts to transmit blindly to stations that missed
+check-in. Stations missing windows are to use RTTY presets on
+radio to communicate problem.
+If contact is re-acquired, can re-send critical msg traffic that was
+missed earlier. If so desired, RTTY can also be used to send traffic
+to SWL-only stations during this window.
+HF Voice
+Simplex LSB
+(40m)
+7.190 MHz
+ONLY FOR USE IN A DIRE EMERGENCY, NOT A STANDARD NET
+HF voice freq shall be monitored for the last five minutes of all
+comm windows, no matter how the window flexes. If a station
+misses all prior check-ins, stations with highest likelihood of
+comm success will initiate voice calls for missing station as
+required. If station is expected to participate in the net, but is still
+not heard, proceed with Emergency PACE plan.
+Though set up to be a weekly event, during contingent circumstances this plan can be used for battle tracking incidents as needed.
+17
+
+===== PAGE 18 =====
+
+Australia Data Bridges
+40 meters is a great band for region-wide communications. Long-range data links are
+perhaps best served by the more traditional DX bands, but 40m offers a good blend of
+range and ease-of-use as it is usually the lowest band of frequencies that most radio
+amateurs are capable of transmitting on regularly.
+Weekly Every Saturday
+North America-Australia
+Data Bridge
+1200-1300 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+1300-1330 UTC - Ion2G ALE Comm Window. Use provided config
+file for frequency list, or refer to Ion2G setup page for complete
+frequency list.
+1330-1400 UTC - JS8Call Net on 80m @ 3.575 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+Europe-Australia Data
+Bridge
+2000-2100 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+2100-2130 UTC - Ion2G ALE Comm Window. Use provided config
+file for frequency list, or refer to Ion2G setup page for complete
+frequency list.
+2130-2200 UTC - JS8Call Net on 80m @ 3.575 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+Australia-South Pacific
+Data Bridge
+0800-0900 UTC - JS8Call Net on 20m @ 14.107 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+0900-0930 UTC - JS8Call Net on 40m @ 7.107 MHz
+Use same Ghostnet groups and naming conventions as on
+previous page.
+0930-1000 UTC - Ion2G ALE Comm Window. Use provided
+config file for frequency list, or refer to Ion2G setup page for
+complete frequency list.
+Use this blank space for notes, such as converting comm windows into your local time.
+18
+
+===== PAGE 19 =====
+
+GhostNet Best Practices
+Any decentralized, uncensorable platform is a double-edged sword. Offering on the one hand truly free
+speech, but on the other providing a network for malign actors to influence. On the radio waves, there is no
+“block” button, and users may hear opinions that they do not agree with. This is even more true of a network
+like the GhostNet, which has no Net Control, no single point of failure. To us, this is a an acceptable com-
+promise toward the goal of attaining real free speech. However, as the overall goal is information exchange
+that is helpful for the average person, below are some best practices that can help us all make the most of
+the platform. Users will get out of GhostNet what they put into it; garbage in, garbage out. Let’s work toward
+providing quality content for all:
+Check in Early for Testing
+A major part of GhostNet is the ability to test gear, and check in with friends. However, with such a small
+comm window (and hundreds of users), the waterfall can get pretty busy. As such, if you are just beginning
+or testing out gear, feel free to hop on 30 minutes to an hour before the actual comm window starts. There is enough persistent traffic 24/7 to check your gear before the meeting time, so that we can save a bit of
+bandwidth for communication.
+Try to Limit CQs/MSG checks/SNR Reports During Comm Window
+All of these features are excellent, and should certainly be used. However, with so many users active during
+the comm windows, it would be a good idea to do these checks before or after the window. Turning off Au-
+toreplies during the comm window is encouraged. One user requesting an SNR report from the @GhostNet
+tag causes dozens of rigs to transmit simultaneously...and if a different person does this ever minute or two,
+most people’s inboxes are filled with SNR reports instead of news reports, intel updates, etc. Likewise, if you
+want, feel free to share a brief news report or two during the comm window. Sharing information is what this
+is all about!
+Be Mindful of QRP Stations
+Always remember that one often transmits farther than their antenna can hear. It is quite common for more
+high powered stations to accidentally transmit over smaller stations. Remember the golden rule of radio:
+Only use enough power to complete the communication. Remember, we’re trying to give the smaller stations
+a shot, as QRP rigs are extremely common transceivers for beginners. We don’t want to alienate newer oper-
+ators because they don’t have a really powerful rig, or a super efficient antenna.
+Understand the Cultural Barriers
+Ham radio has a unique culture. Sometimes this culture is not great, and really discouraging towards new
+users. As much as we might not like to talk about it, it’s the truth. Some operators don’t like new things, and
+don’t respect the effort we have undertaken to simply provide another communication option. Some other
+networks think that the GhostNet is hostile towards their own work (which it most certainly is not!). Hams
+have been observed trying to intentionally jam the network, and generally cause trouble. No plan is perfect,
+but we are at least trying to improve communications in a time when humanity’s freedoms are at risk. It is
+with this in mind that we move forward, helping people where we can, and learning a lot along the way. The
+unspoken cultural issues within amateur radio are obvious to any newcomer, but let’s remind ourselves that
+the culture is changing for the better...even if we have a long way to go.
+Use Common Sense
+Though perhaps a dying virtue throughout the general public these days, simply observing what’s going
+on and making rational decisions is really helpful in the field of radio. Again, with radio there’s very little
+content moderation. If it weren’t for the FCC’s regulations there would be no rules at all, and even so most
+radio etiquette is all but impossible to enforce. Radio is the last bastion of the technical ability to remain
+free to speak. With that comes great responsibility and the duty to ensure that the goodness we wish to see
+in the world is reflected in our actions. If someone is sharing a valuable information report, or is providing
+updates on a world even in real time, it might not be a super great idea to rag-chew right next to them. If
+the band is a bit busy, and you have a smaller group of friends you’d like to contact, feel free to move to a
+clear freq. The main freq is just a common gathering place; a tool for all of you to use. And remember, these
+Best Practices are just helpful tips. Not hardline rules. It would be foolish for anyone to expect any type of
+enforcement of these recommendations, though many will certainly try. There’s no need to shout someone
+down for the tiniest transgression of these helpful tips; we’re all learning together and people sometimes
+make mistakes. The self-policing nature of radio is what turns off many new users, so lets encourage and
+guide each other, rather than cracking down on the smallest error. We’re all in this together, for better or
+worse. We may all be strangers separated by distance, but we all want to make the world a better place. So
+let’s build a team and work together toward the common goal of helping each other in these tough times.
+19
+
+===== PAGE 20 =====
+
+Malign Actors
+Despite our best efforts to create a wholesome project, various issues have become problematic since the
+launch of this Net. Below are some of the concerns to be aware of.
+Cultural Problems
+Though somewhat perplexing to new radio amateurs, cultural problems comprise nearly 100% of the issues
+on ham radio, and are by far the Number One reason new operators feel uncomfortable fitting in. The fact
+that this much text has been dedicated to addressing this problem (in a pocket-able field guide) should
+confirm the seriousness of the cultural problems within the world of radio. Though it is uncomfortable to
+discuss, these problems need to be addressed in the interest of moving forward and improving the GhostNet.
+Poaching
+NICE NETWORK YOU’VE
+The ham radio world is full of clubs and groups, and there tends to be a lot of over-
+GOT THERE
+lap among users who may be members of multiple groups. However, the GhostNet
+was not intended to be a free advertising service for other networks. While we
+want to allow users to feel comfortable in creating their own GhostNets, we also
+want to remind everyone that the farther you get from the GhostNet’s main freqs,
+TTPs, and operating schedule, the farther you get from the intended purpose of the
+GhostNet. Feel free to mimic our work on your own, but be mindful of mission-creep
+that might pull your attention from the main GhostNet plan. Be extremely wary of
+users that want you to change frequency to their own net, especially if that network
+belongs to a group that places radio communications behind a paywall. Multiple
+users have reported hams intentionally jamming GhostNet comm windows with
+SNR requests, then saying “hmm, this band sure is busy. Come join me on my own
+freq!”...which turns out to be a paid, members-only radio club.
+WOULD BE A SHAME IF
+SOMEONE USED IT TO
+RECRUIT PEOPLE INTO A
+CLOSED, PAID RADIO CLUB
+Cliques, Bullying, and Deception
+In the absence of a highly organized Net Control, power vacuums are inevitable. Be mindful of anyone who
+claims to be operating as Net Control. Most hams strive to improve efficiency, but sometimes these efforts
+are really just attempts to control other people. More often than not, this results in hams bullying users
+into following their arbitrary rules, or using their airwaves as their own fiefdom. GhostNet was created with
+the good intentions of working alongside preexisting groups, and have gone above and beyond to ensure
+our work has not interfered with any other network. Despite this, other groups have attempted to take over
+GhostNet comm windows, using their own software, reporting procedures, infrastructure, etc. Do not let oth-
+er radio amateurs bully you into you into joining their own network if you don’t want to. If you are a member
+of another ham radio group or club, that’s great, but please keep your own procedures on your own network
+and respect the work that has been done here. Nothing will be officially supported by the S2 Underground
+beyond what is published in this guide. Also be mindful of people who want you to join a network, or use their
+reporting format. Someone might say to you “hey, try this report format, or this software, it’s really efficient
+and cool!”. That may be true, and we applaud attempts to grow and improve network efficiency. However, in
+many cases these claims of “efficiency” are less about improving a network, and more about getting users
+to use a common format, which is intercepted over the airwaves and published on a closed network behind
+a paywall. You may think you’re using a neat tool which improves efficiency, but in reality you are jamming the airwaves with a proprietary tool/format that is nothing more than a way to generate paid content for other people. Don’t end up the unwitting writer/content creator for another group that steals your work, and
+secretly charges other people money for it. Not everyone in the ham radio world has good intentions, which
+is a fact not often repeated aloud but is nonetheless true.
+These Issues Are Real
+Understandably, reading these somewhat harsh words might be discouraging to new users who are not
+aware of the cultural problems we face. Most radio hams are also highly likely to be offended by discussing
+these topics. More drama within the community is annoying, but we need to talk about these topics in the
+open, because they have caused real world problems: The user who is afraid to transmit in a life or death
+emergency because some Elmer chastises them for using “their” repeater. The user who wants to receive
+the news regarding serious world events, but can’t because someone is describing their entire shack over
+the radio. Or the radio amateur that joins a club, and over time slowly begins to enjoy radio less and less,
+because of hams creating barriers to growth. The GhostNet is intended to refresh the world of radio, and
+really challenge users to think outside the box when it comes to preparedness, as well as the daily use of
+radio. So let’s move forward despite the hate, and do the best we can to improve the world around us.
+20
+
+===== PAGE 21 =====
+
+Emissions Control (EMCON)USMC EP EMCON SOP
+EMCON Guidelines
+1
+RADIO
+ROUTINE
+Transmissions: RADIO ROUTINE. Any and all radio calls are authorized. ¹
+Emitters: Any and all comm emitters are authorized. All non-comm emitters are authorized:
+PED, vehicles, generators, radars.
+Adversary: IMPROBABLE (45%) ES collections or EA. REMOTE (5%) threat of receiving fire
+(IDF).
+Scenario: Garrison or friendly country. Training, evaluations, and administrative movements.
+Note: Even during training, leaders should limit radio calls to mission-critical information.
+Standard for most amateur radio in a permissive environment.
+2
+RADIO
+ESSENTIAL
+Transmissions: RADIO ESSENTIAL. Mission-critical and emergency radio calls ONLY. ² ³
+Emitters: Any and all comm emitters are authorized. All non-comm emitters are authorized. Emitters are SHUT OFF except when in use. Constant emitters (BFT / JBC-P, ALE / 3G ALE
+HF, and ANW2) OR (standard Meshtastic and Ion2G ALE) are restricted or OFF. Non-essential
+PED is OFF.
+Adversary: PROBABLE (80%) ES collections or EA. IMPROBABLE (45%) threat of effective
+IDF. ⁴
+Scenario: Friendly, neutral, or hostile country. Contingency operations or pre-hostilities.
+Note: EMCON 2 is the desired standard for operations.
+Note: Emitters that are normally constant can be turned on for brief periods during sched-
+uled comm windows, for data exchange. Unencrypted analog transmissions generally not
+recommended at this level.
+Transmissions: RADIO SILENCE: NO voice radio calls. Text and burst data only. HF ideal. Wire.
+Emitters: Selected bands are restricted, receive-only, or OFF. Constant emitters (BFT /
+JBC-P, ALE / 3G ALE HF, and ANW2) OR (standard Meshtastic and Ion2G ALE) are OFF.
+Unencrypted UHF black gear is OFF. Non-comm emitters are restricted or OFF. Passive receivers—GPS, GBS—are restricted or OFF. Voice CFF / CAS are OFF.
+3
+Adversary: HIGHLY PROBABLE (95%) ES collections or EA. PROBABLE (80%) threat of IDF.
+RADIO
+Scenario: Conflict. Enemy is collecting and targeting. Precision IDF weapons are in range.
+Note: Some units, executing fast-moving operations without key equipment, cannot rely on
+SILENCE
+chat.
+Note: Constant-emitter features of JS8Call are not recommended at this level. Turn OFF au-
+tomatic heartbeats and replies. Passive receiving is generally okay, but make sure to verify
+that automatic transmissions are OFF. SCHEDULE short comm windows. NVIS antennas for
+localized HF operations ideal for reducing DF potential.
+4
+BLACKOUT
+Transmissions: BLACKOUT. NO radio calls—voice or data—are authorized.
+Emitters: ALL emitters are OFF. ALL radios, ALL PED are OFF. Batteries are OUT, generator
+power is off. ALL non-comm emitters are OFF. Vehicles are OFF. Lights are OFF.
+Adversary: NEARLY CERTAIN (99%) ES collections or EA. HIGHLY PROBABLE (95%) threat of
+IDF.
+Scenario: Conflict. Enemy is collecting and targeting. Precision IDF weapons are activated.
+Note: When missiles are inbound, units avoid being located, but cannot operate long at
+EMCON 4
+Note: This level will be rarely used by prepared citizens, but is useful in the event of stra-
+tegic homeland threats such as enemy reconnaissance flights over US soil or for operation
+within military occupation zones when active collection methods are regularly used.
+Notes:
+1. Specific EMCON actions taken under each option are defined by each unit for each operation. Restrictions on
+calls, nets, bands, and equipment are clearly defined by unit SOP.
+2. Unit PACE plans specify alternate comms.
+3. For emergency radio calls, leaders violate EMCON for safety, enemy engagement, or CASEVAC.
+4. Adversary descriptions are ICD 203 language on the likelihood of enemy action. An actual attack or EA may
+not yet have occurred.
+Passive GPS Receivers are generally authorized at all EMCON levels, as long as all emissions from the device
+(Bluetooth, WiFi, etc) are turned OFF. Satellite communicators are considered to be Constant Emitters as most
+commercial satellite messengers constantly ping satellite networks.
+21
+
+===== PAGE 22 =====
+
+USMC EP EMCON SOP
+Reducing Emissions
+While not a concern for those operating radios in a friendly and civil environment, the use of radios as a tool
+sometimes precludes many of the operating habits currently used by the majority of the amateur community.
+Below are the Ten Commandments of EMCON as described in the USMC Electromagnetic Protection Emis-
+sions Control Standard Operating Procedure. The TEXT IN GREEN describes recommended adaptations and
+interpretations for a prepared citizenry.
+Technique Guidelines
+1 TALK Less
+TALK less. TRANSMIT only mission-critical information.
+TALK short. TALK correct.
+‘Ragchewing’ not recommended. Think before transmitting.
+2 SCHEDULE Less MINIMIZE required reports. SCHEDULE comm windows.
+Do NOT send NSTR reports.
+3 MOVE
+MOVE units. MOVE radios. When in doubt, MOVE.
+Do not “yardsale” comms gear. Keep all items in your pack
+until needed. Prioritize setups that maximize the ability to
+break down quickly. Be ready to move at a moments notice.
+4 CHAT CHAT. Do NOT Call. CHAT reports, requests, and brevity codes.
+Text-based data modes are preferred for efficiency.
+5 SIGNAL
+SIGNAL movement, tactical action, and convoys with one-
+arm hand and arm signals.
+Non-radio-based signals are also needed to round out a
+comms plan at the local level. Pre-established rally points
+are also helpful additions to this category.
+6 WIRE COMMUNICATE between stationary positions with comm wire
+and field phones.
+7 MASK Antennas
+PLACE CP, vehicle, and manpack antennas behind barriers,
+buildings, woods, or hills.
+Directional antennas are recommended for targeted comms.
+8 REDUCE Power SHUT it OFF when not in use. SET radio to low power.
+9 PRIORITIZE LPD Nets
+COMMUNICATE on radio nets that have LPD.
+KNOW which nets are more vulnerable.
+Data modes are less vulnerable and offer the opportunity for
+encryption, if the need arises in contingent situations.
+10 PLAN Simple Flexible Ops
+PLAN operations that require less radio calls.
+PLAN less nets.
+Simple is best.
+Be considerate of working hours, sleep schedules, technical
+knowledge gaps, and operational experience of the populace.
+NOTE: The tactics described are provided verbatim from doctrine and therefore are more for reference.
+Obviously, many of the procedures from military doctrine do not perfectly translate into usage by citizens,
+thus the TEXT IN GREEN notes and additions. However, knowing the textbook answers (along with the adap-
+tations) sometimes helps establish (and adapt) local procedures.
+22
+
+===== PAGE 23 =====
+
+Authorized Emitter MatrixUSMC EP EMCON SOP
+Below is a sample of the recommended emitters for each EMCON level. As always, there are more excep-
+tions to real-world usage than can be described in a manual, so experiences may vary. Just because the
+manual indicates a technology is safe to use, it may not be advisable for use in your specific situation.
+Also consider the constant use of emitters, versus the use during a comm window. For instance, at EMCON
+Level 3, Satellite messengers are not recommended for constant use. However, briefly turning one on to use
+during a short comm window may be authorized.
+Tool Mode EMCON 1 EMCON 2 EMCON 3 EMCON 4
+Analog VHF/UHF VOICE, FM YES MAYBE NO NO
+Digital VHF/UHF VOICE, FM YES YES NO NO
+Digital VHF/UHF TEXT YES YES MAYBE NO
+HF (Unencrypted) SSB VOICE YES YES NO NO
+HF (Unencrypted) DATA2 (TEXT) YES YES MAYBE NO
+HF (Unencrypted) DATA (ALE) YES YES MAYBE NO
+HF (Encrypted w/ OTP) DATA (TEXT or
+CHAT via ALE) YES YES YES NO
+Satellite Messenger TEXT YES YES NO NO
+Satellite Phone VOICE YES YES NO NO
+Meshtastic
+(w/o OFF switch) TEXT YES YES NO NO
+Meshtastic
+(w/ OFF switch) TEXT YES YES YES NO
+Field Telephones1 WIRE YES YES YES YES
+Non-Radio Signals1 Panels, hand
+signals, etc YES YES YES YES
+UAS Platforms- YES YES NO NO
+PEDs- YES YES NO NO
+Receive-Only Equipment1 ANY YES YES YES3 YES3
+Notes:
+1 - Technically not emitters, but helpful to have on the chart as a reminder
+2 - Though varying widely, most data modulation modes offer similar enough vulnerabilities to be classified
+together. Some modes are more efficient and faster than others, so understanding each modulation method
+is helpful.
+3 - Some “receive-only” consumer electronics contain Bluetooth and WiFi emitters. This should be factored
+in and turned OFF during periods of heightened EMCON levels. If a consumer electronic does not have the
+ability to be completely powered off (or signals mitigated) this must be considered as well.
+23
+
+===== PAGE 24 =====
+
+Readiness Conditions
+FM 71-1
+REDCON 1
+Full Alert: Unit Ready to Move and Fight:
+WMD Alarms and hot loop equipment stowed. OPs pulled in.
+All personnel alert and mounted on weapons. Weapons manned.
+Engines started.
+Company team is ready to move immediately.
+REDCON 2
+Full Alert: Unit Ready to Fight:
+Equipment stowed (except hot loop and WMD alarms)
+Precombat checks complete
+All personnel alert and mounted in vehicles; weapons manned and
+charged, round in chamber, weapon on safe.
+(NOTE: Depending on tactical situation and orders from local command-
+er, dismounted OPs may remain in place.
+All (100 percent) digital and FM communications links operational
+Status reports submitted IAW TF SOP
+Company team ready to move within 15 minutes of notification
+REDCON 3
+Reduced Alert:
+50 percent of the unit executes work and rest plans
+Remainder of the unit executes security plan. Based on the command-
+er’s guidance and the enemy situation, some personnel executing the
+security plan may execute portions of the work plan
+Company team is ready to move within 30 minutes of notification.
+REDCON 4
+Minimum Alert:
+OPs manned; one soldier per platoon designated to monitor radio and
+man turret weapons.
+Digital and FM links with TF and other company teams maintained
+Company team is ready to move within one hour of notification.
+STAND-TO
+Stand-To encompasses all actions take to bring the company to a max-
+imum state of preparedness. Times for Stand-To are derived from TF
+commander’s OPORD. Unit SOP should specify Stand-To requirements,
+which will usually include procedures for sending and receiving reports,
+use of accountability checks for personnel and equipment, and criteria
+for assuming REDCON levels 1 and 2.
+MOPP
+READY
+MOPP 0
+(ZERO) MOPP 1 MOPP 2 MOPP 3 MOPP 4 Command
+Mask Carried Carried Carried Carried Worn1 Worn Worn
+Overgarment Ready3 Available4 Worn1 Worn1 Worn1 Worn
+Overboots Ready3 Available4 Available4 Worn Worn Worn
+Gloves Ready3 Available4 Available4 Available4 Available4 Worn
+Helmet
+Cover Ready3 Available4 Available4 Worn Worn Worn
+Protective
+Undergarment Ready3 Available4 Worn2 Worn2 Worn2 Worn2
+1. In hot weather, coat or hood can be left open for ventilation.
+2. The chemical protective undergarment is worn under the BDU (this primarily applies to armor vehicle crewmen and SOF).
+3. These items must be available to the soldier within two hours, with a second set available within six hours.
+4. These items must be positioned within arms reach of the soldier.
+24
+
+===== PAGE 25 =====
+
+Basic Incident Response
+Immediate Concerns
+Step 1: Physical Security
+Don’t Panic. Establish personal security FIRST! All other comms and incident response actions can wait
+until you are secure. If security is not guaranteed, some level of tactical comms might be prioritized over
+personal safety, depending on the tactical situation and the nature of the emergency.
+Step 2: Establish Comms, Determine Players, Send 5 W’s
+Once personal safety is established, the originator of the incident/distress call shall make every effort to
+establish a communications net and transmit a brief description of the incident. The 5 W’s of Who, What,
+When, Where, and Why are a good format to stick to, if no other format exists. If a Troops-in-Contact
+report, or a SALUTE report is preferred, use that format instead. If the originator of the incident report is
+unable to establish an Incident Response Comms Net, other Net participants shall make every effort to
+coordinate a response as needed. As a prepared citizenry is often non-hierarchical, there are no Command
+requirements (beyond local group SOPs), so whomever is capable of maintaining the Nets and passing
+communications, is the primary party responsible for such action until no longer able.
+In the more likely scenario of a person simply hearing of a national event, and wishing to obtain more
+information, tuning in to the appropriate radio communications net would be a good idea. Chances are, if
+something substantial is going on, people will be sharing information on the GhostNet.
+Battle Tracking
+Step 3: Establish TOC, Staff Functions Begin
+A Tactical Operations Center, appropriate to the incident, is to be established as needed. All staff functions
+begin to work the issue as their skillsets and capabilities allow. Intelligence and Operations maintain the
+primary responsibilities of Threat Assessments and Friendly Forces, respectively. Logistics, Weather, Med-
+ical, Administrative, and dedicated Communications experts also contribute as able. Amongst a prepared
+citizenry, most of the standard TOC functions (such as Battle Tracking) will fall to a single person. Do the
+best you can, and realize that perfection is not possible. Realistic expectations of operational capabilities
+are paramount to maintaining even the smallest measure of effectiveness.
+Once a good Battle Rhythm is established, start working on improving effectiveness. Try to improve
+communications networks, and get some of the more advanced options (like Ion2G ALE or Winlink) up
+and running to make contact with personnel near the affected area. These more advanced actions take
+time, and will not be possible to create prior to the incident. Even though very basic comms are the bare
+minimum, highly efficient data exchange networks will need to be the eventual end goal if time, skill, and
+prior planning makes it possible.
+Step 4: Reassess Situation and Response, Schedule 2-Minute
+Drills, Assess Logistical/Personnel Needs
+As the incident progresses, people fall into the roles they have trained for. As a citizen-based response will
+not have a strong Command element like traditional Incident Command Structures, consideration must
+be given to logistical and personnel constraints that will affect operations. Ensure that clear schedules
+are communicated. For multi-day incidents be aware that personnel tracking incidents will be volunteers
+with other obligations which might dictate their retirement from the operation at a critical juncture. Create
+a template and a schedule for Two-Minute Drills, which allow each responding entity to convey a status
+update from their department quickly and efficiently. Be mindful of logistical needs, particularly energy
+requirements. Maintain flexibility as plans change.
+Follow-On Actions
+Step 5: Hotwash, After Action Review, Logistical Recovery
+As an incident comes to a close, or begins to settle in for the long haul, logistical capabilities must be
+considered. Personnel issues will be paramount as prepared citizens often are not capable of assisting with incident recovery 24/7. Conducting Hotwashes/AAR’s will help increase efficiency, identify deficiencies,
+and improve response efforts for the next incident.
+25
+
+===== PAGE 26 =====
+
+Incident Response Monitoring
+Basic Monitoring Capabilities
+The capabilities listed below are intended to help concerned citizens track events in real time, without
+forgetting a particular capability or tool. Not every item listed will be necessary for every event, but this
+checklist can be helpful for setting up an ad hoc monitoring station, listening post, or TOC as needed.
+Signals Intelligence (SIGINT)
+ADS-B receiver - Aircraft Monitoring
+KrakenSDR Passive Radar - For limited Passive Radar capability, as well as Direction Finding capabilities.
+SDR w/ Scanner feature - For identifying signals of interest in a local area.
+Laptop, Tablet, or PC capable of running Windows or Linux OS - For processing signals with an SDR. Note:
+Several options exist for processing SDR signals on an Android smartphone, so this can be an option for
+limited work. However, for more substantial SIGINT processing tools, most smartphones do not have the
+processing (or CPU cooling capabilities) to get the job done, making a laptop or tablet the best overall
+choice.
+Imagery Intelligence (IMINT)
+Satellite Imagery - Helpful to download before internet connections are lost. Also, basic SRTM elevation
+data would be helpful to have on hand to make maps with if needed. If internet connection is not available,
+intercepting weather imagery from orbiting satellites would be useful as well.
+Drone Imagery - For local imagery collection.
+Magnified Optics - A good pair of binoculars of a spotting scope is very helpful for local observation.
+Thermal Optics - Consumer grade thermal optics provide substantial force multiplication.
+Night Vision Optics - Mandatory for observation of the local area at night.
+Communications Intelligence (COMINT)
+ACARS receiver (HF and VHF bands) - Configured to decode ACARS traffic from aircraft in the local area.
+L-Band Antenna for SDR - For intercepting commercial aviation SATCOM ACARS messages.
+General Purpose Scanner - Preferably with trunking capability. For monitoring unsecured local comms.
+SDR w/ Scanner feature - Additional tool for monitoring unsecured comms in a local area.
+HF Transceiver - Communication and information sharing/collection tool.
+Laptop, Tablet, or PC capable of running Windows or Linux OS - For interfacing with an SDR or Transceiver.
+Handheld Analog VHF/UHF Transceiver - Can be used for unsecured local comms, but also can be used
+to monitor local ham radio repeater networks in a time of crisis. These info networks are historically
+unreliable for HUMINT purposes, but worth monitoring to determine how widespread an incident is.
+Measurements and Signatures Intelligence (MASINT)
+CBRN detection networks - Though reliant on internet connections, various CBRN detection networks
+allow users around the world to be aware of increases in baseline HAZMAT activity. Weather Station/Kestrel Meter - Establishing WX sensors early on during a crisis is helpful for determin-
+ing weather patterns, which in turn aid weather forecasts.
+Human Intelligence (HUMINT)
+Local Sneakernet - Information shared by physical, face-to-face meetings with people in a local area.
+Text-Based Word-of-Mouth Information Exchange - Simply texting local contacts (or trusted/high-confi-
+dence sources) directly can provide real-time intelligence of the situation on the ground. Even if cellular
+networks are overwhelmed, text-based services (either standard SMS messages or satellite-based
+communications) can be very effective.
+Open Source Intelligence (OSINT)
+Social Media Feeds - If internet access permits, social media can be a valuable source for determining
+what’s going on around the world. Social media will be the only source of information that most people
+have, despite being heavily censored, surveilled, and increasingly unreliable. In a case of total devastation,
+internet access will be limited or nonexistent. Plan accordingly, and use OSINT tools as long as they
+are available, but always plan for that data link to be interrupted, censored, or subject to Information
+Operations.
+26
+
+===== PAGE 27 =====
+
+Help! My JS8Call Isn’t Working!
+Follow this checklist in the event your receive-only JS8Call setup is not working.
+SDR Functioning?
+1 - Check to see if your SDR is plugged in.
+2- If using a WebSDR, check that you have clicked the button to “start audio” within the web browser.
+If using VBCable, your sound bar should look like this
+Check Audio Cables and Settings
+1 - If using Virtual Audio Cables, check to make sure
+that VBCable is selected as the output device.
+2- If using a physical USB SDR, check that your
+antenna connection has not become unscrewed, either
+at the SDR itself or the antenna.
+Check Time Sync
+1 - Make sure you have run BKTTimeSync, and that a connection to an appropriate server/GPS has been
+made. Without super-accurate time, JS8Call will not decode messages as depicted below:
+If messages are between the green lines
+on the waterfall, they will be decoded. If
+not, either your or the transmitting station’s
+time sync is off and no messages will be
+decoded.
+This is what a proper time sync should look
+like, all messages within the green.
+Check Audio Sources within JS8
+1 - Check to make sure your audio settings are
+appropriate for the SDR you are using. Depicted
+below is what your settings should look like if using
+VBCable with an online SDR:
+27
+
+===== PAGE 28 =====
+
+Platform Overview
+JS8Call
+Primarily an HF-based platform that, when installed on a computer linked to an HF radio, provides
+the operator with keyboard-to-keyboard texting capabilities. JS8 excels at weak-signal interception,
+and is well known for it’s comparatively user friendly interface. JS8 can also be used to relay
+messages to stations BLOS, and is also capable of sending automated “heartbeat” messages to all
+stations, providing instantaneous confirmation of range. Groups can also be established, creating ad
+hoc nets as needed, with every station being notified of a group message, regardless of that station’s
+callsign. As a result, JS8Call can be used to easily create medium-to-long range communications
+networks as needed. And if a person knows which Group to follow, it’s not necessary for everyone to
+know each other’s callsign. JS8 can also easily be used with custom, user-defined callsigns, in the event of a cataclysmic emergency. JS8 is ideal for monitoring 24/7 as it requires little power, and the
+automated Heartbeat messages periodically confirm that you are on the net. All the while, you can
+receive messages, including messages from all over the world via JS8 relays. By primarily staying
+on JS8, one’s own station can be readily available to relay others’ messages as well. Though far from
+perfect, JS8 is the closest to an all-in-one solution for medium-long range text-based comms.
+Ion2G HF-ALE
+One of the most effective Automatic Link Establishment platforms for civilian HF radios. This
+program, when installed on a computer linked to an HF radio (with compatible antenna), allows
+operators to remove the guesswork of which HF band will work best for their intended communica-
+tion. In short, ALE software such as this simply “scans” all of the HF bands, and automatically selects
+the best one for a link to be established between two or more radios. This provides the advantages
+of being very hard to direction find, and very resistant to jamming, albeit with a much more complex
+system that is relatively new to civilian HF radio. ALE is tough to implement on the civilian side of
+radio comms, but with better SDR-based radios, and easier to use software coming to the market,
+ALE technology is a very valuable addition to any comm plan. However, the somewhat developmental
+nature of ALE software is still not reliable enough to forgo the usual contingency communication
+methods (such as JS8Call), which are much more established, reliable, and easy for everyone to use
+with most hardware and antenna systems.
+WinLink
+The undisputed champion of HF data connections, WinLink is one of the only email clients for sending
+emails over HF radio. Comprising of a global network of gateways, WinLink is one of the most reliable
+methods of sending emails with zero local infrastructure. However, there are some significant dis-
+advantages. Any connection whatsoever to internet servers presents very serious data privacy and
+censorship concerns. Additionally, WinLink developers routinely verify callsigns on their platform,
+so using WinLink without an FCC-approved callsign, even during an emergency, will result in your
+account being deleted. We have verified this personally many times. Gatekeeping behavior such as
+this is normally a dealbreaker for reliable communications. However, WinLink can be used in Peer-to-
+Peer mode, completely bypassing WinLink gateways to send an email from one radio, to another.
+This eliminates the main benefit of using WinLink (the global network of internet gateways), but is
+censorship proof and hard to tamper with, either by authorities or by the developers themselves.
+Meshtastic
+A relatively new addition to the world of communications, Meshtastic has become the primary tool
+for communities centered around low-power mesh communications using DIY LoRa (Long Range)
+devices. The extremely low cost of equipment, and the compatibility of Meshtastic with the TAK suite
+of software has resulted in Meshtastic becoming an extremely popular platform for short-medium
+range text based communication, or CoT-style data exchange. Though this seems like a miracle
+platform, the nature of open-source, grassroots development undertaken by volunteers means
+that Meshtastic as an enterprise solution has had trouble getting out of the developmental phase.
+Meshtastic will be hard pressed to replace military-grade comms tools, and it is quite buggy at times.
+But Meshtastic is a fantastic, low-cost addition to any comm plan, and is one of the most reliable
+ways to run ATAK effectively without using cellular data.
+28
+
+===== PAGE 29 =====
+
+Ion2G Setup and Configuration
+Standard Config Works
+As you install Ion2G ALE, the base configuration works fine to make contacts. However, you will need to
+check a few settings to make sure everyone is on the same page.
+1 - Load Codeplug: Without a codeplug, you will talk
+to no one. You have three main options: You can
+load the standard codeplug using the “Load from
+Web” button (requires an internet connection). You
+can also load the GhostNet codeplug which can be
+downloaded via a variety of sources. Or you can
+If you already have a
+Codeplug or are using the
+GhostNet Codeplug, select
+Load From File and choose
+the codeplug file.
+manually create a list of channels, choosing fre-
+quencies by hand. If you wish to manually recreate
+the GhostNet freqs without access to the digital
+file, you can do so easily on the next page.
+If you are setting this up
+without internet access,
+If you are starting from
+scratch, and have internet
+access, you can load the
+standard codeplug here.
+and without a pre-es-
+tablished codeplug file,
+you will need to go to
+Settings -> Channels ->
+Click the Plus symbol
+on the upper right, and
+add in each channel
+manually.
+2 - Set Self Address: It’s not super clear in the docu-
+mentation, but you cannot transmit at all unless you
+set a self address for each of the networks you want
+Put your callsign here
+to operate on. This setting is not cross-referenced
+with any database, so in the event of an apocalyptic
+Check this box
+emergency, or for MARS work, any callsign will
+be accepted by the software. To change this, click
+Settings -> ALE Self Addresses -> Click Plus symbol
+at upper right to add New ALE Address.
+Put your callsign in the Address box, select a network
+in the drop down menu, and check the box marked
+Primary. You will need to create a Self Address for
+each of the networks you operate on. This is just
+putting in your callsign for each of these networks.
+When using the standard code-plug, this means you
+will need 3 addresses, one for HFN, HLN, and HFN
+AQC. If using the GhostNet, you will need an additional
+address for that.
+3 - Check Audio Source: This is not set automatically, you need to select your audio input and output
+manually. Go to Settings -> Audio and select the appropriate input and output audio sources from the drop
+down menus.
+4 - Check Radio CAT Control: If you are familiar with setting up JS8Call or FT8, this should be familiar.
+This is found under Settings -> Radio Control. Make sure the appropriate radio is selected, along with the
+correct CI-V address, com port, and baud rate. If any of these settings do not match your radio, comms will
+not be successful.
+5 - Disable Bands not compatible with your antenna: Using the standard codeplugs, BE CAREFUL! Most
+people do not have 160m, 80m, or 60m antennas, but these freqs are a part of the standard codeplugs. This
+means that your radio will try to transmit on theses freqs, even if your antenna is not tuned for it. This can
+damage your transceiver.
+29
+
+===== PAGE 30 =====
+
+Channel Name Frequency (USB)
+01GHOSTNET 3598.5 kHz
+02GHOSTNET 7104.5 kHz
+WORKING WORKING
+GhostNet ALE Frequency List
+DRAFT DRAFT
+Note: All of the frequencies are intended for data
+modes, not voice transmissions. This is for sever-
+al reasons mostly pertaining to the efficiency of
+data transmissions.
+ALE, by its very nature, is not necessarily a
+low-power mode. Thus, smaller QRP transceiv-
+ers will have trouble maintaining strong links
+with other ALE stations. By restricting ourselves
+to data-only modes during ALE nets, we can
+squeeze as much efficiency out of the system as
+possible. In other words, you will probably not
+be able to use Ion2G to make a voice phone call
+using a QRP radio. However, sending a text might
+be more feasible. Developments are being made
+in the world of ALE, and as technology improves
+more reliable links can be established by equip-
+ment that today is less than desirable.
+03GHOSTNET 7106.5 kHz
+04GHOSTNET 7108.5 kHz
+05GHOSTNET 10128.5 kHz
+06GHOSTNET 14111.5 kHz
+07GHOSTNET 14113.5 kHz
+08GHOSTNET 14115.5 kHz
+09GHOSTNET 18108.5 kHz
+10GHOSTNET 28108.5 kHz
+This is a work-in-progress, so some problems
+may be reported with these freqs. Expect future
+updates to address any concerns that may be
+present with this rather new communications
+tool. ALE has been around for a long time, but as
+more people begin to use it, more problems be-
+come exposed. Consider these freqs to be a sort
+of Early Alpha version as we begin to implement
+ALE more heavily.
+If you would like to verify your codeplug, or make sure that you have input all channels correctly, below is a
+screenshot of the channels as they are set up in the codeplug file.
+30
+
+===== PAGE 31 =====
+
+GhostNet Receive-Only Options
+Persons limited by a lack of license or transceiver, but still desiring to participate in GhostNets can set up
+a receive-only station to listen in on transmissions. Though there are many ways of doing this, a common
+setup requires the following:
+Needed Hardware
+1 - Software Defined Radio with a Windows (or Linux) PC to run it: A simple SDR dongle can be configured
+to receive HF radio transmissions. Some SDRs are more efficient on HF frequencies, but with an appropri-
+ate antenna any SDR should be sufficient.
+2 - HF Antenna: Suitable for the frequencies you wish to receive. HF antennas for receiving can be built
+more easily than ones used for transmitting, and in a pinch a long, random length of wire will work (albeit,
+not very well).
+3 - GPS Receiver: A simple USB GPS dongle will function perfectly. You may need to install specific USB
+drivers to allow it to function on your particular operation system.
+Needed Software
+1 - A simple SDR software package: A common option is SDR# (also known as SDRSharp). This will be used
+for a variety of tasks, but mostly to ensure that your HF antenna and audio settings are functional.
+2 - Virtual Audio Cable: A common option is VBAudio Cable. Radio signals are received by your SDR, where
+they are displayed as audio. That audio has to be input into the appropriate software in order to be decoded.
+If your radio isn’t “piped in” to software that will hear it, no communications will be heard. Since our SDR is
+a device plugged in to a USB hub, we have to make this connection virtually, with software. VBAudio cable
+is a simple software package to allow the audio from the SDR, to be input into JS8Call, instead of coming
+out of your computer’s speakers.
+3 - JS8Call: The main software package for decoding the bulk of our GhostNet signals, which use the JS8
+protocol. This program will decode the audio that is fed into it (the audio that comes from your SDR) and
+decode those digital signals into plain text.
+4 - FLRig and FLDigi: Supplementary software that is similar to JS8 in that it decodes signals, but
+instead of decoding the JS8 protocol, FLDigi decodes a variety of other signals, such as Radio Teletype or
+RTTY. This software will be needed for GhostNet comm windows that require decoding RTTY.
+5 - BKTTimeSync: Software to set your computer’s time to accurate GPS time. Necessary to decode
+JS8Call messages which rely on a very accurate clock.
+6 - Zadig: Software to install the proper driver for your SDR device.
+Simplified Setup Checklist for Receive-Only JS8Call
+1 - Install SDR# and Complete Setup: Install SDR Software, install appropriate drivers for your SDR dongle.
+2 - Open VBCable: Download VBAudio Cable, open the .exe file, and install the driver.
+3 - Insert SDR, launch Driver Replacement: Plug in your antenna to the SDR, and insert your SDR into an
+open USB port, and use the Zadig software to install the proper driver for your SDR (the Windows operating
+system will automatically install the incorrect driver for most SDRs, so Zadig is needed to correct this
+mistake).
+4 - Note Com Port: With your SDR dongle inserted into your PC, open Device Manager and ensure that your
+SDR shows up under Ports. Note the Comm Port number.
+5 - Open SDR#: Confirm the SDR is working by clicking Settings -> Device, and from the drop down menu,
+select your SDR device. You should see signals coming in on the waterfall. This program is necessary to receive signals using your SDR (if you don’t want to use FLRig/FLDigi). You can pipe the audio from SDR#
+directly into JS8Call using VBCable.
+6 - Install and open BKTTimeSync. This will sync your PC clock to the most accurate time. This is required forJS8Call to decode messages. This app will require an internet connection (not ideal) or a GPS dongle/ internal GPS on your computer/tablet. Alternatively, you can use the Automatic Time Drift function in JS8.
+7 - Install and Open JS8Call: Follow the prompts for installation. When prompted to select a rig, choose
+“none”. Open File -> Settings -> Audio, and under the Input drop down menu, make sure to select the VBAu-
+dio OUTPUT. Remember, your SDR (using the VBAudio cable software) is OUTPUTTING audio, which needs
+to be piped in to the INPUT of JS8Call. This “connects” the audio cable so that JS8Call can hear the audio
+signals that are being received by your SDR. You should now begin decoding JS8 signals.
+8 - Install and open FLRig and FLDigi: These software packages can be set up in a similar fashion as
+JS8Call. FLDigi can be used to send and receive RTTY messages (along with many other data modes). A
+receive-only arrangement can be established using FLDigi as well.31
+
+===== PAGE 32 =====
+
+Last-Ditch Receive-Only Options
+Unfortunately, the sharp reality is that most people will simply not take the appropriate precautions to estab-
+lish a comm plan before comms are lost. Most people will simply be caught unaware and uninformed in the
+event of an incident of some kind taking out internet servers, cellular networks, or satellite ground control
+stations. Nevertheless, how can we help these people at minimum receive some communications?
+The tips below are a suggested standard for absolute last-ditch communications methods, to be used by
+those who have not taken measures to get on HF radio.
+You Still Need a Radio!
+Preferably, prepared citizen should own a small battery powered Shortwave radio. These radios can usually
+receive most radio transmissions on Earth. If you have a shortwave radio, here’s what’s worth monitoring:
+The Gear
+You Have What You Can Receive Best Practices
+- Global news reports
+- Try scanning every hour for the first 24 hrs
+- Any voice comms transmitted by
+following an incident. Though this will burn through
+hams on amateur freqs - All commercial AM/FM signals
+battery power, most shortwave receivers store the
+frequencies on which they received transmissions.
+- With a 3.5mm aux cable and
+In short, if you let your receiver scan for a while
+a USB sound card, can be used
+(or run the scan function throughout the day, as
+Simple
+as a primitive receiver for JS8/ FT8/RTTY messages (which are
+band conditions change), it will build a library of
+Shortwave
+channels that you can quickly change between. Not
+Receiver
+decoded on a computer).
+all shortwave receivers do this efficiently, so check
+your specific model to determine if it’s worth it.
+- At minimum, scan the airwaves with your receiver
+at sunrise and sunset. This conserves maximum
+battery power, and also creates a standard plan for
+those who may be blindly transmitting to others in
+their local area.
+Software
+Defined Radio
+(with antenna
+and Windows/
+Linux PC)
+- All digital HF data modes
+- Most digital voice modes
+- Almost every radio signal in
+existence (depending on the SDR)
+- Weather satellite imagery
+- Weather balloon data
+- Aircraft ACARS data
+- ADS-B/Mode S data
+SDRs have infinite uses. Scanning utilities are useful
+for local traffic. Can also be used to decode modes
+like RTTY and JS8Call in listen-only modes. Requires
+a computer to process signals.
+- Unencrypted, analog local radio
+Analog VHF/UHF
+When not used for limited communications, analog VHF/UHF radios are very useful for scanning local
+traffic
+Transceiver
+- NOAA Weather Radio
+freqs or monitoring local ham radio repeaters for
+(Such as a
+- Local amateur radio repeaters
+information.
+Baofeng)
+- Aviation and Marine traffic
+Handheld
+Scanner
+- Trunked radio signals, such as
+public service traffic
+- All publicly available govern-
+mental agency frequencies
+- All common radio signals used
+for voice communications.
+Scanning local radio traffic persistently is beneficial
+for local events. Be mindful of battery usage.
+32
+
+===== PAGE 33 =====
+
+Rural Line-of-Sight SOI
+*Australia/Pacific, use USA freqs* *Africa, use EUR freqs*
+Band and Mode Details
+VHF DIGITAL
+DMR TIER II STANDARD
+USA TX: 145.105 MHz EUR TX: 145,105 MHz PROWORD:
+Color Code: 7 SPARROW SPARROW
+Groupcall ID Number VHF ANALOG
+USA TX: 146.105 MHz PROWORD: DENALI DENALI
+EUR TX: 144,605 MHz ENCRYPTED VHF
+DMR TIER II STANDARD
+AES-256
+USA TX: 147.105 MHz THIS IS NOT A STANDARD NET,
+ONLY FOR USE IN A SCENARIO
+IN WHICH FCC AMATEUR RADIO
+REGULATIONS NO LONGER EXIST.
+PROWORD:
+SAHARA SAHARA
+USA TX: 445.105 MHz USA RX: 145.105 MHz
+EUR RX: 145,105 MHz
+Timeslot/Repeater Slot: 1
+1105
+USA RX: 146.105 MHz
+EUR RX: 144,605 MHz
+USA RX: 147.105 MHz
+EUR TX: 145,605 MHz EUR RX: 145,605 MHz
+Color Code: 7 Timeslot/Repeater Slot: 1
+Groupcall ID Number 1107
+Urban Line-of-Sight SOI
+Band and Mode Details
+Key:
+*Remove spaces when loading*
+33 91 A8 A9 59 77 C2 D2 B8 43 E4 65 83 89 C3 01
+9F A8 C7 0F 80 B6 B7 03 BB AE 25 41 4E FD 56 4E
+UHF DIGITAL
+DMR TIER II STANDARD
+PROWORD:
+BLUEJAY BLUEJAY
+USA RX: 445.105 MHz
+EUR TX: 436,105 MHz EUR RX: 436,105 MHz
+Color Code: 7 Timeslot/Repeater Slot: 1
+1105
+UHF ANALOG
+PROWORD: EVEREST EVEREST
+EUR TX: 437,105 MHz USA TX: 447.105 MHz Groupcall ID Number ENCRYPTED UHF
+DMR TIER II STANDARD
+AES-256
+USA TX: 446.105 MHz THIS IS NOT A STANDARD NET,
+ONLY FOR USE IN A SCENARIO
+IN WHICH FCC AMATEUR RADIO
+REGULATIONS NO LONGER EXIST.
+PROWORD:
+ATACAMA ATACAMA
+USA RX: 446.105 MHz
+EUR RX: 437,105 MHz
+USA RX: 447.105 MHz
+EUR TX: 438,105 MHz EUR RX: 438,105 MHz
+Color Code: 7 Timeslot/Repeater Slot: 1
+Groupcall ID Number 1107
+Key:
+*Remove spaces when loading*
+D0 49 E2 0C B4 3A 19 52 2A 0D 8D BE EB F3 74 C0
+5A A0 C7 7D 08 F5 A9 0D 09 35 27 EF 62 EC DE 88
+33
+
+===== PAGE 34 =====
+
+GhostMesh
+MESHTASTIC
+915 MHz for
+USA (other
+PROWORD:
+regions, use
+SANDMAN SANDMAN
+permitted
+ISM band)
+Important! - Make sure you set up a
+personal Meshtastic channel BEFORE
+scanning this QR code. This will prevent
+this channel from importing in as your
+"Channel 0", which may result in your
+GPS location being shared with the net.
+ALWAYS SCAN THIS QR CODE FROM
+WITHIN MESHTASTIC APP, NOT A RAN-
+DOM QR SCANNER. Always ensure that
+for GhostNet Meshtastic nodes, your GPS
+location data is not shared with the net.
+Always remember, since this channel
+is available to the public, sensitive data
+should not be shared over this channel.
+BE ADVISED - Scanning this QR code may override your existing Meshtastic settings. Make sure to
+save your pre-existing channel data BEFORE importing the GhostMesh channel.
+Mode: LONG_FAST
+Frequency Slot: 20
+Channel Name: GhostMesh
+Channel Key: u99Hy2GbFLPhP36QGT7VOF8iF6zQs+Lto7hI6itNv/I=
+PERSONAL/TEAM MESHTASTIC
+PROWORD:
+Before laminating, print and paste your personal
+Meshtastic channel settings here in the space provided.
+This will ensure you always have a paper copy of your
+personal Meshtastic channels and encryption data.
+34
+
+===== PAGE 35 =====
+
+BLoS vs LoS Comms Tools
+Creating a communications network that functions on a global scale is challenging, and usually precludes the options that most people have to hand, namely handheld VHF/UHF radios. As the GhostNet is largely a
+more strategic plan and resource, this is an acceptable trade-off.
+In the past, the effectiveness of just picking a random frequency that can be used nationwide has not been
+completely effective. One or two “prepper freqs” that various communities can program into their radios may
+seem like a good idea, but in real-world use this doctrine’s effectiveness is questionable due to the ways that
+these tools are used.
+Different Tools for Different Needs
+HF communications are Beyond-Line-of-Sight (BLoS) communications tools. Handheld VHF/UHF radios
+are Line-of-Sight communications tools. These two communications tools can complement each other, but
+generally not replace each other in most situations. Consequently, where the vulnerabilities of HF radio
+leave off, handheld radios can ease the burden of communications needs. HF radios are strategic tools
+meant for communication between long distances, at higher levels of concern. For instance, calling in a
+report of a robbery or an ambush over HF radio would not be the best use case since someone potentially
+thousands of miles away is not likely to be influenced by an event that only affects one neighborhood or
+street. Conversely, you wouldn’t want to use a handheld radio to share details of an invasion taking place
+around the world, because that international incident is not likely to directly impact those within range of
+your handheld radio. Of course, there are exceptions to this mentality, but for the most part handheld radios
+are best for close-range, tactical communications where seconds count and maneuverability is paramount.
+Whereas HF radio networks are best for exchanging more strategic message traffic from more secure, fixed
+positions in order to keep tabs on events outside of a local area, maintain links with the outside world, etc.
+No potentially life-saving message traffic should be expected to reliably be sent over HF.
+Strategic Level: Usually to share information at the nation-state level.
+Examples: Comms links between states or regions, mostly via HF radio,
+satellite, or internet-based means.
+Comms Specifics: Usually more broad; only local news of a potentially
+wider significance is shared. This level is usually only established by
+“comms guys” as dedication and technical know-how is usually needed to
+run HF networks effectively.
+Operational Level: More regional than Tactical comms, but not as much reach as HF options. Examples: Hurricane Nets, county/city
+specific repeaters, etc.
+Comms Specifics: Usually LoS, but with larger antennas, more
+power, repeaters, etc.
+Tactical Level: Time sensitive, small unit-based comms.
+Comms Specifics: Usually very short range (i.e. a couple of
+miles a best), but more rapid to implement. Also more easily
+accessed by more people as these highly-mobile handheld
+Comms networks can loosely be organized to
+coincide with the levels of warfare.
+radios are readily available and easy to learn how to use.
+Understanding History and Culture
+Most radio communications doctrine comes from military use. In fact, most of the radio doctrine currently in
+use within the ham radio hobby is the direct result of the impact of military radios becoming available to the
+public after WW2. As such, culture and history matter a LOT. Most of the companies or individuals creating
+prepared citizen doctrine regarding the use of radios primarily have experience at lower levels of warfare.
+This is very similar to other communities within the prepared-citizen space; There are infinite companies teaching small unit tactics, but very little emphasis on leading/organizing large groups of people at higher
+levels of operation...there are a lot of former service members training citizens to become platoon leaders,
+but not so many former field-grade officers teaching others how to become senior leaders. This isn’t
+necessarily a bad thing, but from a comms perspective, this does mean that the prepared citizen community
+is skewed in favor of squad-level comms doctrine. Lots of doctrine and tactics are being developed for
+handheld voice comms, for when seconds count. Right now, less priority is placed on longer-range networks
+that are helpful for passing more routine, less-time-sensitive information. However, HF radio can fill a vitally
+needed role in connecting communities around the world, if expectations are managed with regards to what
+HF is beneficial for. HF radio is not simply a “bigger Baofeng”, but a totally different technology intended for
+a different use case. This is important to consider for those who wish to scale-up comms networks beyond the squad/family level.35
+
+===== PAGE 36 =====
+
+Line-of-Sight Concerns
+Meshtastic Integration
+While Meshtastic can be a helpful tool for many, it's best served when used by small groups that are
+within Line-of-Sight of each other. Using Meshtastic in this role does not make use of most of it's benefits.
+However, there may be some use in establishing a dedicated Meshtastic channel for those who already use
+Meshtastic. Meshtastic itself makes use of what is essentially a national calling frequency (i.e. - the default
+"Long Fast" channel), so the implementation of such for GhostNet users may be of some benefit as well.
+At minimum, it doesn't take much effort to add to a user's channel list, so even if it's never used it won't be
+a burden. This integration also lays the groundwork for additional features and support as the Meshtastic
+project develops.
+Expediency vs Security...and Risk Management As with most ideas in the world of communications, the balance of security versus capability must be
+considered for each specific situation. It is very hard to create a communications plan with both ideas in
+mind. For the most part, many communications plans are either based on military doctrine, or emergency
+management doctrine, with very little crossover between the two communities on even the most basic
+features that are needed. Almost all military doctrine, for instance, assumes that most radio communica-
+tions will be encrypted by default...non-encrypted comms are usually not even discussed at great length. On
+the other hand, encrypted comms are not only rare to see in the world of emergency management, but also
+illegal for non-professionals to use in many cases (such as in the world of amateur radio).
+So, the conundrum becomes apparent...relying on emergency management comms doctrine in a warzone
+might summon an artillery strike within 60 seconds of transmitting, but on the other hand using encrypted
+comms during a widespread hurricane disaster response might also not be super effective.
+Everything is a balance, and every risk that appears, has a mitigation technique. The use of radios in war
+relies on the Emissions Control (EMCON) doctrine to ensure that comms can occur, and be as safe as
+possible considering the overall risk. Disaster communications usually require more open communication
+techniques, but also may consider the need for increased security in some situations. Sometimes, even a di-
+saster response is not entirely a permissive environment, and thus transmitting one's Personally Identifiable
+Information (PII) over the airwaves for anyone to see is probably not the best idea in all circumstances.
+Though very challenging to incorporate into real-world practice and use, the entire GhostNet idea intends to
+bridge this unique gap: To allow for a common standard to be adopted by those who need it during peace-
+time conditions, but also leave the door open for more security-conscious use if it's needed at some point. The VHF/UHF options provided are intended to achieve this effect, albeit due to the nature of LoS comms, the
+practicality of such may be questionable over long distances.
+Where this plan may be of some value is the expediency that comes with a predetermined plan. In short, a
+group of people can rapidly get together, and already have their radios speaking the same language. When seconds count, this will save precious time if/when it's needed. When you need to grab a rucksack and go at
+a moment's notice, having the ability to not worry about what frequencies to use will be helpful. Since this
+plan isn't too complicated, and backwards compatible with most radios that are in common use, it is also
+easy to incorporate comms with a variety of users. This allows for a rapid, ad hoc, comms hierarchy to stand up really quickly. For example, a team leader/radioman can have a digital radio to work with other teams,
+and individual team members can still use their Baofengs amongst themselves as needed.
+Expectation Management: Even considering the widespread implementation of the GhostNet plan,
+it’s astronomically unlikely for anyone to actually make contact with another human being via the use of
+these shared frequencies. Contact may be made in more populated areas, but the utility and usefulness of
+such link-ups is debatable.
+Nevertheless, having a freq or two stored in a radio’s codeplug may provide piece of mind for those who
+want to have some sort of last-ditch plan, even if it’s very unlikely to be helpful. However, care must be
+taken to not rely on these specific procedures to the point of gaining a false sense of security. What would
+be extraordinarily ill-advised would be for someone to program in these freqs, and think they’re all set with
+a solid plan that needs no additional work. This is the reasoning as to why these freqs are included in the
+GhostNet only hesitantly, and with much warning.
+This LoS plan was created solely for those who only have a Baofeng or other low-cost handheld radio.
+These tools can provide a lot of capability for some people in certain situations, however the vulnerabilities
+and trade-offs should be known, planned for, and mitigated wherever and whenever possible. The digital
+portions of this plan serve to help users move towards these ends, and encourage the adoption of digital
+radio use on a more widespread scale.
+36
+
+===== PAGE 37 =====
+
+CrisisNet Concept
+The challenges of standing up a communications plan during a disaster or contingent situation are numer-
+ous. As such, taking the basic precautions to get a plan together before a crisis is paramount. This is one
+of the main functions of the GhostNet, which not only serves as a training network, weekly information ex-
+change medium, but can also serve as an emergency network in response to a groundbreaking world event.
+However, with the wide-ranging possibilities to plan for, sometimes a more tailored, incident-specific plan is
+needed. From a communications perspective, the urgency by which citizens may want to engage in off-grid
+comms may vary from crisis to crisis. For instance, rushing home from work to activate an HF radio plan
+might be overkill for a 15 minute social media outage. However, if cell networks, internet connections, and
+even satellite options all go down at the same time (and stay down for hours), this may warrant a more
+serious and dedicated response.
+Real World Lessons Learned
+In the months that the GhostNet has been adopted, one important question has remained: At what point
+is it worth going through the effort to set up an HF radio to see what traffic the GhostNet can offer? In the
+(unlikely) event of a complete and simultaneous blackout of cellular and internet-based comms, the answer
+is clear...the GhostNet (or other HF comms) may be your only way of maintaining contact with the outside
+world. But what if an incident occurs that falls short of an Apocalyptic scenario, but still impacts routine
+communications platforms? At what point should the GhostNet take a higher priority, and what actions
+should citizens take (comms wise) if various incidents occur?
+The Challenges of Decentralization
+A highly decentralized (but still somewhat coordinated) communications plan such as the GhostNet is
+largely limited by the platforms and software that is available. These technological barriers, combined with
+a decentralized ecosystem, largely result in a lot of inefficiency and much disorganization. In the chaos of
+a dramatic world event, the fog of war results in even more complications. The GhostNet plan is already a
+system by which citizens will get out of it what they put into it. Dedicated and serious citizens will benefit
+greatly from taking a more deliberate approach to their communications preparedness. However, the Ghost-
+Net also appeals to a wider audience of more casual users, who may only wish to check in during standard
+nets and likely are not interested in incident response. Additionally, the GhostNet was designed for the
+working man (or woman) in mind. Having a simple guide for knowing what is worth leaving work for, may
+be beneficial for those who have to remain at their workplace and carry on as usual during a cataclysmic
+national event. This enables small, decentralized groups and communities around the world to know when
+to link up via HF radio.
+A CrisisNet is really simple
+Personal Judgment
+Think of it as a standard weekly JS8Call
+Due to the above factors, users will have to exercise best judg-
+net, but instead of on a schedule, it's
+ment when enacting any part of this entire plan.
+stood up in an instant in response to a
+You may wake up one day to find your internet is out, and your
+specific crisis event. As the GhostNet
+cellphone doesn't work. You may have a storm impact your area,
+itself is a decentralized communica-
+which knocks out the power. A missile might strike your local
+tions plan, a MAJOR part of a CrisisNet
+TV station.
+is simply knowing when to stand one
+Throughout any range of scenarios one can dream up, from the
+up. This is not controlled from the
+most benign and innocent, to the most nefarious, communica-
+top-down, any user can establish a
+tions will be important in any case....but equally important will be
+CrisisNet for their own needs. However,
+exercising the personal judgment to know when to use certain
+using the Activation Criteria guidance
+communications tools. HF radio will not be the sole solution
+on the following page, we can all
+to everything, but you will need to have the understanding to
+generally be on the same standard
+discern when this tool might be most beneficial. When you have
+for what to do if certain events occur.
+a hammer, not every problem is a nail.
+Nothing should change from the weekly
+This discernment will come as an operator gets more experi-
+nets, to establishing a CrisisNet, except
+ence, but in the meantime the STRADCON and CrisisNet concepts
+for the topic.
+can help guide users in making better decisions regarding the
+Now the plan should be a bit more
+timing and means of using radios in varying situations. Having
+clear...and the weekly JS8Call nets,
+a plan to communicate is important, but knowing when to use
+RTTY, Winlink, and ALE procedures
+all of these procedures is paramount. This will largely be a
+should all make more sense. The week-
+judgment call on the part of citizens who are cut off from the
+ly nets should prepare us for standing
+outside world.
+up a CrisisNet at any time.
+37
+
+===== PAGE 38 =====
+
+CrisisNet Activation Criteria
+The CrisisNet concept is simple: If any of the events on the chart below occur, the Recommended Comms
+Posture is listed to the right. Keeping things as simply as possible, a "CrisisNet" is simply the name for the
+collective networking on JS8Call as a response to a current event. A volcano erupts? Locals on the next
+island over can hop on JS8Call and see if any information is being passed...this is a "CrisisNet". Locals in
+the affected area can provide information, others can check in with regional contacts, more complex and
+specific data transmission can get set up and take place, all by initially coordinating on JS8Call as per the
+instructions on pages 11-18. The "CrisisNet" concept is simply to have a word to describe the act of getting on
+JS8Call via the GhostNet procedures, and provide a way to link readiness (i.e. the STRADCON process) with
+real-world events (listed below).
+Incident Recommended Comms Posture
+All-Hazard National Planning
+Scenarios, 1-15
+As described and outlined by the U.S. Homeland
+Security Council to include: Nuclear Detonation,
+Biological Attack, Chemical Attack, Major Earth-
+quake, Major Hurricane, Radiological Attack, IED
+Attack, Major Cyberattack.
+*Also can include similar incidents that take
+place around the world.
+If inside affected area, consider security FIRST!
+If outside affected area, recommend STRADCON 1.
+Recommend distribution of tactical-level comms as
+required, pre-programmed with all necessary freqs
+and comms procedures.
+Use standard comms net procedures for each region
+to establish a CrisisNet (i.e. hop on JS8Call, 7.107mhz,
+and see if anyone is passing information).
+If not affected by the comms outage, recommend
+STRADCON 3. If affected by the comms outage, and traditional internet-based/cellular comms are heavily
+Major Internet and/or
+impacted, shift to STRADCON 2 or 1 (depending on the
+severity of the outage).
+Cellular Outage
+Multiple national/regional cellular and/or in-
+ternet outages of unknown origin and/or scope
+affecting multiple companies and networks.
+Examples include: Multiple cyberattacks affect-
+ing multiple, totally separate systems.
+If not affected by the comms outage, recommend
+Minor/Single-System Outage
+National/regional cellular and/or internet out-
+STRADCON 3. If affected by the comms outage, and traditional internet-based/cellular comms are heavily
+age of unknown origin and/or scope affecting
+impacted, shift to STRADCON 2 or 1 (depending on the
+only one major network. Also includes IT outag-
+severity of the outage).
+es that originate from only one source.
+Examples include: Nationwide or regional cel-
+lular outage affecting only one cellular carrier.
+*If outages spread to multiple networks, consid-
+er upgrading the severity of this crisis.
+38
+
+===== PAGE 39 =====
+
+Strategic Radio Condition
+(STRADCON) Concept
+“How concerned do I need to be?” - “Should I set up my radio?”
+HF Radio is difficult. Not only because the concepts of shortwave radio signals are challenging to understand,
+but also because a lot of work is required to set up an HF radio. Instead of being able to simply sit on one’s
+couch and push a PTT button, HF radio often requires setting up a large antenna outdoors, running coax
+cable, and setting up a computer to work with the radio. For someone who just got off of a long work shift,
+setting up an HF radio is the last thing they might want to do.
+Consequently, creating a system of readiness conditions (or Strategic Radio Conditions) may be worthwhile
+for setting a standard for establishing strategic HF radio networks like the GhostNet. This concept can be
+applied to any radio network, but primarily is geared toward HF data modes, or plans similar to the GhostNet.
+In short, the STRADCON concept is solely intended to create a standardized process for answering the ques-
+tions of: "How concerned do I need to be?" and "Should I set up my radio?". Admittedly separate questions
+with separate answers, however if the response is "We're going to STRADCON 1", anyone can know that this
+means a very serious incident has occurred, and that emergency communications plans should be enacted.
+Whereas a posture of STRADCON 3 might not warrant someone dropping what they are doing, to set up their
+HF radio. During a more routine disaster, significant time is often lost due to citizens not knowing that an incident has happened; for some people, several hours may pass before an internet and/or comms outage
+is noticed. Someone at work may only notice the outage because they didn't get a text from their spouse at
+the usual time, or that a few coworkers didn't come back from their lunch break. Once a comms outage is
+noticed, however, one must understand what to do and have a pre-established plan for what happens next.
+Strategic Nature of HF Radio
+Due to the unique nature of HF radio measures, the extreme long-range of shortwave radio is more of a
+strategic asset. As such, the STRADCON concept is really only best suited for HF radio and will be challenging to implement in a more tactical role...this plan/concept is simply not needed for handheld VHF/UHF radios
+as handheld radios are easy to set up and use quickly. Not so with most HF radios, which require several
+minutes to set up and are not usually able to be set up easily while on the move.
+The CrisisNet concept, when used with STRADCON levels, provides a quick and easy method for knowing how
+much to prioritize using HF radio. A team lead can tell a radio operator "take us to STRADCON 2, we're going
+to be halted here for a while", and the entire team will know what that means. This process is intended to
+reduce the downtime for regional comms, so that precious time is saved for communities in knowing what's
+happening outside their immediate area. If a serious incident occurs, saving time with comms is beneficial in
+reducing the workload of the citizen who will undoubtedly have much more to do than worry about radio.Predicting Communications Outages
+Most Amateur Radio networks operate under the assumption
+that a total communications blackout of cellular, land-based
+internet, submarine comms cables, and satellite networks
+REDCON REDCON
+could strike at any moment. While planning for the worst-
+case scenario is preferable, most of the time comms outages
+are localized and short-lived. As cyberattacks become part
+of everyday life over the next few years, outages of critical
+systems will likely become routine, possibly to the point that
+traditional “emergency” comms methods become a burden.
+MOPP MOPP
+EMCON EMCON
+With a communications disaster taking place every day,
+expecting someone to drop everything they are doing to go
+string up an HF antenna is not a realistic expectation.
+On the other hand, sometimes communications disasters (or
+at least the potential for such) can be predicted. While the day
+Think of this system as a blend of the
+and hour of a comms outage can’t be known beforehand, the
+mentality behind MOPP, REDCON, and
+increased potential for cyberattacks or other malign actions
+EMCON procedures: A gear-based plan of
+certainly can be. The weeks leading up to a major political
+how prepared to be, that can scale based on
+election, major holiday seasons, at times of heightened inter-
+national tensions...all of these situations would be great times
+to increase the priority of resilient communications.
+the likeliness of needing specific radio tools at the strategic level (to monitor regional/ national/global events).
+39
+
+===== PAGE 40 =====
+
+STRADCON Criteria
+Full Alert: All Radio Communications Tools Deployed and Net-
+working
+Personal security established in the local area. For small teams/groups, handheld radios distributed and turned
+ON.
+STRADCON 1
+HF radio antennas emplaced and SWR verified to be within
+acceptable safety limits for the radio.
+HF radio (and computer) turned ON, tuned to GhostNet freq on JS8Call (and/or other freq specific to team SOP) and networking.
+Second HF radio (if available) turned ON, scanning ALE net.
+Full Alert: All Radio Communications Tools Deployed and Ready
+to Transmit.
+Personal security established in the local area. For small teams/groups/elements, handheld radios distributed
+STRADCON 2
+and turned OFF.
+HF radio antennas emplaced and SWR verified to be within
+acceptable safety limits for the radio.
+HF radio equipment DEPLOYED, but NOT turned on or transmitting.
+STRADCON 3
+Reduced Alert:
+HF radio equipment CARRIED, but NOT deployed.
+HF antennas ready to deploy.
+Batteries fully charged and packed for movement.
+STRADCON 4
+Minimum Alert:
+All radio equipment readily accessible within one hour. Batteries
+charging.
+Important Note! - Don’t Forget EMCON Concerns!
+These Radio Conditions are irrespective of whatever EMCON level may be in place. Personal security
+always takes precedent over generalized procedures, so there may be times when it is not appropriate
+to transmit or follow the readiness levels indicated above. These STRADCON levels generally are best
+emplaced when EMCON levels are more permissive of networked communications. You may find yourself
+in a situation where you need to operate at STRADCON 1, but the tactical situation in your area makes radio
+transmissions ill-advised. In all cases, EMCON takes priority to STRADCON. As most people will find them-
+selves operating at EMCON Level 1 conditions most of the time (even if a national event/crisis is unfolding),
+having some guidance for how to prioritize radio comms may be beneficial. Most importantly, having this
+guidance in place before a crisis, will allow prepared citizens to independently and simultaneously know
+what to do, and all be able to link up via HF radio, all without any top-down guidance whatsoever. Again,
+considering the strategic nature of HF radio, these STRADCON criteria are a very niche idea, but a concept that is most certainly needed in the event that national/regional communications outages become more
+routine and frequent. In wartime, this standard will likely not be of much use...the EMCON concerns of a
+combat zone make these procedures largely irrelevant, or require customizing to each user's needs that
+a common universal standard isn't really helpful. However, much like the rest of the GhostNet plan, these
+criteria are merely a stopgap solution to long-term strategic problems that currently do not have any
+satisfactory solution. User experiences may vary, along with the real-world usefulness of this standard.
+40
+
+===== PAGE 41 =====
+
+Recommended HF Gear List
+Expectation Management
+Almost all HF radios themselves are developed for the Amateur Radio community. As such, users must be
+aware of the history and culture that results in a heavily influenced commercial market.
+Virtually no one has designed a radio based on what is technically possible...all radios are based on what’s
+possible within the bounds of the FCC’s (frequently arbitrary and capricious) rules. Over the years, this has
+resulted in a very unique commercial market; HF radios use technology that is basically the same as that
+during the 1930’s, but costs the price of a modern smartphone. Most new radio operators are shocked by this.
+Telling someone that they will need to shell out the cost of an iPhone to use a radio in much the same way
+that their great-grandparents did, is a hard pill to swallow sometimes. In the HF radio world, everything is
+very unjustifiably expensive. You’ll frequently find used radios that were discontinued decades ago for sale
+at close to their original retail price. You may find someone on eBay selling antennas made from cheap wire
+and PVC pipe...and selling them for hundreds of dollars. And in general, you’ll find that brand new “cutting
+edge” radios have features that should have been standard on radios decades ago. Consequently, you may
+spend thousands of dollars to only be completely underwhelmed by what HF radio can do when compared to
+modern comms infrastructure.
+Unquantifiable Value
+So what’s the point? The entire reason for accepting these trade-offs
+is that HF radio is really the only option for long-range, point-to-point
+communication without using pre-established infrastructure. HF
+radio has plenty of faults, is not the most reliable due to varying solar
+weather, and it’s expensive and frustrating to set up. This is why most
+people avoid it altogether. But for those that stick with it, and get a
+very basic plan together with others (such as the GhostNet), HF radio
+proves it’s unquantifiable wealth during times of crisis.
+How much is a tourniquet worth to you, when you’re bleeding out? Pay-
+In radio, almost no one asks what can be
+ing $30+ for a brand new CAT tourniquet may seem to be a steep price
+done within the laws of physics...they only
+at the time of purchase, but the value it has when it’s saving your life
+ask what can be done within the current
+is incalculable. Investing in HF radio requires a similar mindset; when
+FCC regulations. If it's against the rules,
+cellular, internet, and satellite systems go down for any reason (and
+all innovation is shut down due to the
+thus leaving HF radio as the only option), the value in being able to talk
+cultural problems among hams. A can-do,
+push-the-limits mentality is very much
+to someone outside your region is simply priceless. The side benefit to
+discouraged within the ham radio com-
+radio lies with being able to get more routine use out of it, instead of
+munity, thus the stagnation of innovation...
+sitting it on a shelf and forgetting about it.
+and why we have to pay thousands for
+Gatekeeping
+1930's technology.Due to the above factors, there’s sometimes quite a bit of gatekeeping when it comes to learning about
+radios. Currently, there’s no way to legally use the GhostNet HF radio plan without at least a General Class
+Amateur Radio license as designated by the FCC. Unlike GMRS and LMR for handheld radios, there’s no way
+to circumvent the Amateur Radio community and legally use radios in a pay-to-play fashion (i.e. just buying
+a GMRS license). This detail, combined with the outrageous expenses of HF radio equipment has resulted
+in severe elitism over the years; so much so that very few people want to openly explain things. This is why
+many ham radio operators are not enthusiastic to teach concepts...they don’t want to run the risk of someone
+realizing that self-restraint is really the only thing keeping unlicensed persons off the airwaves. Technically
+speaking, anyone can physically buy all of this gear, set everything up, and communicate on HF radio without
+a license (albeit illegally). Since there’s no physical barrier stopping anyone from doing this, many hams
+gatekeep the knowledge side of things, protecting “their” hobby from unlicensed users. While it’s not advis-
+able to violate FCC regulations (and also not advisable to encourage others to do the same), most hams carry
+this to the extreme and refuse to acknowledge even a purely hypothetical war-gaming situation.
+Therefore, approaching the hobby from the perspective of what is technically possible often yields poor
+results; the entire ham radio community, from multi-billion-dollar corporations down to the individual user,
+is skewed in favor of what is technically possible within the legal limits of what the FCC imposes. Say that a
+user (purely hypothetically) doesn’t care about the FCC regulations...that person would still be at the mercy
+of a radio marketplace that DOES care about FCC regulations. So even if a person is not concerned with
+regulations (like in a SHTF scenario where the FCC no longer exists), their radio would be handicapped to
+comply with federal code anyway. If HF radios could be built and operated with no baud limits, no bandwidth
+limitations, no power limits, and allow anonymity, theoretically the average person’s communications needs
+could be met by the radio built without the rules in mind. As is, even in a disaster situation where the rules no
+longer matter, our radios were built to operate under these rules and regulations.
+41
+
+===== PAGE 42 =====
+
+Recommended HF Gear List
+HF Transceivers
+Generally speaking, HF transceivers (i.e. radios capable of transmitting and receiving) are broken up into
+three categories:
+Basestation Radios: Huge, chunky
+Mobile Radios: This category of radio is a bit of a mis-
+rigs that are meant to sit on a desk. Usu-
+nomer. The “Mobile” name refers to their intended use...
+ally capable of transmitting at 100w. Great
+for installing inside a vehicle. As such, these radios have
+for blasting out a lot of power without the
+less power than a Basestation model, but are also more
+radio overheating, and often found cheap
+compact and easier to power from a 12v source (the most
+on the secondary market. Not usually
+common power source used by HF radios). Can easily
+recommended for a first-buy, as modern
+be converted into a “manpack” style radio, to be carried
+Mobile radios are usually more desirable
+inside a rucksack. These are a good compromise between
+by most prepared citizens. However, if you
+weight and power, but if you need to operate off-grid for long periods of time, that weight (and the batteries/solar
+need to transmit on digital modes a lot,
+the superior heat dissipation basestations
+panels) gets really heavy, really quickly. These radios are
+offer may be helpful for some. For most
+best served for roles where comms have to closer to a
+others, Mobile radios are usually a better
+zero-fail/highly-reliable operating environment, but also
+fit, even set up permanently in a location.
+somewhat easily carried.
+Popular Models: Icom 7100, Icom 7300
+Popular Models: Yaesu FT-891, Xeigu G90
+Portable Radios: Usually smaller, more compact, self-contained units that are only a few pounds in weight for maximum portability. This small size usually comes at a trade-off...lower power and/or the
+lack of an antenna tuner. Consequently, Portable radios (sometimes called “QRP” radios in ham radio
+slang, meaning “low-power”) usually are best paired with Resonant Antennas to squeeze the most
+potential out of the radio (and due to the lack of a tuner). Usually these radios offer better power con-
+sumption, and are a little easier to charge on the go (such as the IC-705, which has an internal battery).
+However, due to their low-power most users need to use good technique and experience in working with
+antennas. Consequently, Portable radios can be just as reliable as Mobile radios if utilized correctly.
+Popular Models: Icom IC-705, Xeigu X6100, Lab599 Discovery TX-500, (tr)uSDX.
+Note: Right now, there aren’t any “handheld” HF transceivers. A few companies are developing such, but this
+is cutting-edge at the moment, and not on the commercial market. This is mostly due to the antenna being
+the biggest burden...the radio can be very small, but trailing 60ft of wire is often counterproductive to any sort
+of tactical movement.
+Cables, Connectors, and Adapters
+As one might expect, various bits of kit are required to connect everything together.
+Cables: You will need at least one coaxial (coax)
+Connectors and Adapters: There
+cable to connect your radio to your antenna. Due to
+are a few commonly used connectors in
+efficiency loss, it’s preferable to get as short of a cable
+as possible. However, your antenna arrangement and
+the radio world. Most frequently used are BNC or PL-239/SO-239 connectors. Less
+type will dictate what length of coax you need. Some
+common (but becoming more popular) are
+antennas rely on the coax cable itself to for part of the
+Type N connectors. You may get lucky and
+antenna system, so research is needed to determine
+find that your antenna, your coax, and your
+what length of coax works best for your antenna.
+radio all use the same type of connector, but
+Regardless of length, always buy the best quality coax
+most of the time you will probably need an
+you can afford. Coax is NOT something you want to
+assortment of adapters to make everything
+pursue a budget option for; high-quality (and expen-
+work. Again, don’t go with the cheapest option
+sive) coax will drastically increase your transmission
+available for adapters and connectors. Higher
+range and make your life easier all around.
+quality adapters make everything work more
+smoothly, and ease in troubleshooting later.
+Austere Conditions
+Amateur Radio is usually a fair-weather hobby. Consequently, most cables/connectors are not waterproofed
+for operating in the rain. Most of the time, DIY options are needed to keep connection points and antenna
+circuitry dry. Coax cable itself is mostly waterproof, so if you can keep your connection points dry, this will go
+a long way toward being able to use your radio system in wet-weather conditions.
+42
+
+===== PAGE 43 =====
+
+Recommended HF Gear List
+Antenna Options
+Antenna choices usually fall into two categories: Resonant or Non-Resonant (AKA “Tuned”). Your choice of
+radio will dictate what type of antenna you need.
+Resonant: Doctrinally speaking the “best”
+type of antenna, meaning the most efficient
+and the type that jives with your radio the
+best. The trade-off is size. You will need
+enough ground space to string up at least 70+
+feet of wire in as straight of a line as possi-
+ble. For small backyards, this is sometimes a
+no-go. However, for those with the space for
+them, Resonant antennas are always rec-
+ommended over “tuned” antennas because
+they’re more forgiving, easier to work with,
+and it’s harder to fry your radio using one.
+These vary widely in construction, from the
+eBay special manufactured in someone’s
+garage (and charged a premium for), to more
+professional multi-band antennas to allow
+for more options (at the cost of length and
+the frequent need to get these antennas re-
+ally high off the ground, such as throwing up
+in a tree). Some resonant antennas use load-
+ing coils to cheat physics a bit, and shorten
+the overall length of the system (Buddipole
+in particular revolutionized this model of
+operating), however the trade-off is a higher
+“Q” factor (meaning that the bandwidth the
+antenna can hear is “thinner” so you may
+need to frequently adjust the antenna if you
+need to change freqs a lot. Also of note, if
+you use resonant antennas, you probably
+will need an Antenna Analyzer (SWR meter)
+to ensure your antenna is in fact resonant
+on the bands you want to transmit on. Some
+radios have this function built in themselves,
+but you may want to use a NanoVNA SWR
+meter (or another model) anyway.
+Popular Brands and Models:
+Chameleon: LEFS 8010, EMCOMM series
+BuddiPole: BuddiPole system, BuddiStick
+System (definitely recommend an Antenna
+Analyzer for BuddiPole options, for ease
+of use)
+Non-Resonant (“Tuned”): These antennas operate
+much differently than Resonant antennas and require
+the use of a tuner. Some radios have tuners built in,
+others require you to buy a separate tuner to hook up
+between the radio and the antenna. These antennas are
+often more compact, and able to access more bands/
+frequencies than resonant options. These antennas
+usually rely on a matching transformer to make the
+wire part of the antenna shorter, but safe to transmit on.
+This also allows you to use really any piece of metal or
+wire that you can find to transmit on. Fence wire, metal
+rooftops, and rain gutters, have all been used with some
+level of success by those who live in confined spaces
+and don’t have room for a full blown resonant antenna.
+However, don’t forget that with these kinds of antenna,
+there’s always compromise. Tuners do NOT increase
+the capabilities of your antenna, a horrible antenna
+emplacement will yield horrible results. Tuners just trick
+your radio into being happy, and thinking that the wire
+antenna (or whatever the tuner is attached to) is safe
+to transmit on without blowing up the radio. Otherwise,
+if you hook up a bad antenna to your radio and key up
+the mic, all of that power is not going out through the
+antenna...it’s getting reflected back into the radio which
+will probably fry it. This is why you may need a tuner. The
+benefits for tuned antennas are mostly felt in situations
+where space is limited. In that case you may have to get
+as much wire up in the air as possible, and slap on a
+tuner in order to make it work with your radio.
+Popular Brands and Models:
+Chameleon MPAS system (either the Lite or the
+standard versions.
+Antennas made by cottage vendors for the HOA market
+are usually tuned antennas as well, so the options are
+many. Chameleon is just the largest company making
+antenna systems that rely on a matching transformer
+and require a tuner to operate.
+Antenna systems are usually the cause of most swearing and outbursts of rage when it comes to radios.
+Taking the time to do things right and follow the instructions of your antenna is super important. In the field of
+physics, there is no such thing as a free lunch, and there are trade-offs everywhere. Compact antennas can
+work, but generally suck to start with. Gigantic long-wire antennas are annoying to set up, but vastly better
+in every way as far as physics are concerned. If you live in an apartment or urbanized area, you may have to
+go the non-resonant route and hope for the best. This is why most low-power portable radios usually don’t
+have tuners inside them, and you’re expected to use a resonant antenna. The manufacturers know that the
+end user isn’t going to waste that precious transmit power by using a tuner anyway, since resonant antennas
+are more efficient. Likewise, a lot of Mobile and Basestation radios will have internal tuners, due to largely
+being used in Homeowners Association territory (where most antenna theory regarding “Stealth antennas”
+is developed).
+43
+
+===== PAGE 44 =====
+
+Recommended HF Gear List
+Computers, Software, and Digital Interfaces
+If you want to take part in the GhostNet, you will need to be familiar with working digital modes such as
+JS8Call. Unlike the old days of simply firing up a radio and keying the hand mic, these newer digital modes allow for text/chat-based software to work instead of just relying on voice comms. So instead of you
+controlling your radio by pressing the PTT on the hand mic, your computer plugs in to the radio and handles
+everything for you. For all of this to work, you need a few things:
+The Computer: Any
+PC or laptop will work,
+but most software for
+ham radio was devel-
+oped for the Windows
+operating system. As
+such, you can get most
+of these software pack-
+ages to work on Linux
+systems, but there’s no
+guarantee. As distasteful
+Windows is for privacy
+and security, for most
+people it’s begrudgingly
+still a more preferable
+option to get started.
+Rig Control Software: If you want to hook up your computer to your
+radio, you need a way for that computer to control the radio. This is where
+Rig Control software comes in. Sometimes radio manufacturers will provide
+their own Rig Control software for use with their own radios. Other times,
+you need to provide your own more generic solution. The most popular
+options that work with most radios are FLRig or Omni-Rig. (FLRig is more
+user friendly).
+For some modes, you need “CAT Control” or Computer-Aided Transmission
+Control. This is a feature that allows your computer to automatically change
+freq, operating mode, etc, without you having to touch the radio. Not all
+radios can do this, but most HF radios can. Check with the manufacturer of
+your radio to see what settings you need to put into FLRig, in order for CAT
+control to work. In FLRig, go to CONFIG -> Transceiver and put in the data
+for your radio. At minimum, you will need to put in the make and model, the
+baud rate, and the comm port that your radio is using (check under Device
+Manager in your PC settings).
+Digital Interfaces: If you want to use digital modes like JS8Call, you will need a way for your radio
+to accept digital signals. Most HF radios on the market today are essentially using technology from
+the 1930’s. As such, most HF radios are analog only. So we need a third-party piece of hardware to get
+everything to work. There are a few options, but by far the most popular is the DigiRig. This is a small box
+that plugs in to your radio on one side, and your PC (via a USB port) on the other side. This small box is
+basically an interface between your radio and your computer, that converts audio from your computer
+into a digital signal to be transmitted by your radio.
+The DigiRig box itself is standardized to work with pretty much any radio, but you will probably have to
+buy a cable for it specific to your radio. You may also need driver software to allow the Digirig to work
+with your computer.
+Some companies (such as ICOM) are producing radios (like the IC-705) that don’t need this special
+third-party hardware, but for most radios on the market today, a DigiRig is the best option for allowing
+your radio to use digital modes.
+Specialty Software: There are
+lots of different kinds of software
+used to communicate over HF radio.
+JS8Call (what the GhostNet heavily
+relies on) is a common program to
+allow keyboard-to-keyboard mes-
+sages to be sent over the airwaves.
+WinLink is a tool that allows sending
+rudimentary email-like messages.
+Ion2G is an advanced program to
+essentially create primitive 2G net-
+works over HF radio. The sky is the
+limit with regards to what programs
+you want to use for different pur-
+poses. JS8Call is a great platform to
+start with as it’s the easiest to set up
+and is the bedrock of the GhostNet.
+Time Sync Software: For almost all digital data modes, a
+very helpful tool is BktTimeSync. This software allows the use
+of GPS satellites (or an internet connection) to set the clock
+on your PC. This might not seem necessary, but for modes
+like JS8Call, your PC’s clock must be within a few seconds of
+accuracy, otherwise messages won’t decode. This is an often
+forgotten aspect of modes like JS8Call, so don’t forget to run
+BktTimeSync whenever you start up JS8.
+Note: This is not necessarily required for JS8, there are
+work arounds that allow JS8 to work truly off-grid, without
+relying on satellites for accurate time. Much false information
+surrounds this topic; many people think JS8Call won’t work
+without an internet or satellite connection, but THIS IS FALSE.
+JS8Call can sync to the appropriate time using the trans-
+missions of others, all completely, truly, and utterly off-grid.
+BktTimeSync is just more convenient to use if satellites are
+available to use for accurate time.
+44
+
+===== PAGE 45 =====
+
+Recommended HF Gear List
+Powering Your Radio
+Once you get your first HF radio, you might take it out of the box and be rather dismayed to find bare wires
+sticking out of the back of it, instead of a power cable. Some radios might not come with a cable at all.
+Powering HF radios is by far the most neglected aspect of operating a radio, and the solutions vary widely
+depending on what kind of radio you have. Generally speaking, the power options for each class of radios are
+as follows:
+Portable and Mobile Radios: Remember, this
+category of radio is designed to be installed in a vehicle,
+so almost all options for powering these radios revolve
+around the use of 12v batteries. Almost all solutions for
+such are homebrew, with very few commercial options
+readily available that don’t require some knowledge of
+electronics. Some Portable radios can be powered by
+an internal battery pack, or a standard USB power bank
+(albeit usually at a lower transmit power).
+Basestation Radios: Usually the
+easiest to power, because many come
+with a standard AC power cable for
+plugging in to a wall outlet of a dedicated
+power supply. These radios are not
+usually powered from a battery source,
+but this could be an option for many (with
+a bit of work).
+Traditional Battery Assembly
+For most people seeking to use a Mobile or Portable radio off-grid, most solutions are DIY in nature and re-
+quire some knowledge of electrical circuitry. Here’s what you will need to build your own radio power system:
+Battery - Varies by cell chemistry, with the most common for radio use being LiFePo4 (also known as “LFP”).
+These batteries will usually come with two bare wires for connecting to a Solar Charge Controller
+Solar Charge Controller - For charging the battery safely with a solar panel. Hooking up a solar panel
+straight to a battery is a recipe for disaster and could result in either killing your battery, or setting it on fire.
+Make sure you get a solar charge controller that is specific for the chemistry (and voltage) in your battery.
+One of the only brands that provides charge controllers safe for LFP batteries is Genasun.
+Solar Panel(s) - The most popular means of charging radio batteries in the field, off-grid. You will probably
+need much more solar charging capability than you think. Voltmeter/Multimeter - Optional, but handy to know your battery’s state of charge.
+Plugs, connectors, wire, etc: All needed for hooking everything up. The connectors needed will vary widely
+based on what battery you get.
+AC Adapter - Optional, but useful in charging the battery from a wall outlet if you need to operate a radio and
+solar charging isn’t available.
+Commercial Options
+Now that battery technology has improved significantly over the
+past few years, commercially-available batteries that require
+no DIY efforts are feasible. Portable Power Stations or “Solar Gener-
+ators” are very popular options that work great for those who don’t
+want to build their own battery solution. In the past, these self-con-
+tained power stations produced a lot of feedback unsuitable for
+radio use; radios need a relatively “clean” power source, free of
+interference that causes buzzing when transmitting or receiving.
+Now, most name-brand Portable Power Stations provide a 12v plug
+that is “clean” enough to use with radio without much interference.
+So for those that want the most pre-made system available, just
+buy the manufacturer’s 12v cigarette lighter cable for your radio and
+plug it in to a Portable Power Station. Simple as that.
+Modern Portable Power Stations are now
+a feasible option for running radios in the
+field, if users are aware of their limitations
+and potential EMCON concerns.
+Disadvantages
+Pre-made options are not without downsides. For instance, 12v cigarette lighter plugs are not known for
+being reliable, and can be frustrating to work with as the slightest bump might dislodge the plug, turning
+off your radio. For most people, this is negligible, but worth considering for field use in harsh conditions.
+12v cigarette lighter plugs also can’t carry that much amperage, so running 100w of power usually isn’t
+possible. For smaller rigs less than 50w, most of the time it works fine without overheating. Additionally, the
+cheaper Chinese-made 12v plugs might cause interference (usually due to the poor solder work done on the
+inside)...90% of the interference caused by 12v plugs can simply be solved by getting a higher-quality plug.
+45
+
+===== PAGE 46 =====
+
+Notes46
+
+===== PAGE 47 =====
+
+GhostNet ____________
+Template47
+
+===== PAGE 48 =====
+
+GhostNet ____________
+Template48
+
+===== PAGE 49 =====
+
+Rural Line-of-Sight SOI
+Band and Mode Details
+VHF DIGITAL
+DMR TIER II STANDARD
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+VHF ANALOG
+PROWORD:
+TX Freq: RX Freq:
+ENCRYPTED VHF
+DMR TIER II STANDARD
+AES-256
+THIS IS NOT A STANDARD
+NET, ONLY FOR USE IN A
+SCENARIO IN WHICH FCC
+AMATEUR RADIO REGULA-
+TIONS NO LONGER EXIST.
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+Key:
+Urban Line-of-Sight SOI
+Band and Mode Details
+UHF DIGITAL
+DMR TIER II STANDARD
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+UHF ANALOG
+PROWORD:
+TX Freq: RX Freq:
+ENCRYPTED VHF
+DMR TIER II STANDARD
+AES-256
+THIS IS NOT A STANDARD
+NET, ONLY FOR USE IN A
+SCENARIO IN WHICH FCC
+AMATEUR RADIO REGULA-
+TIONS NO LONGER EXIST.
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+Key:
+49
+
+===== PAGE 50 =====
+
+Rural Line-of-Sight SOI
+Band and Mode Details
+VHF DIGITAL
+DMR TIER II STANDARD
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+VHF ANALOG
+PROWORD:
+TX Freq: RX Freq:
+ENCRYPTED VHF
+DMR TIER II STANDARD
+AES-256
+THIS IS NOT A STANDARD
+NET, ONLY FOR USE IN A
+SCENARIO IN WHICH FCC
+AMATEUR RADIO REGULA-
+TIONS NO LONGER EXIST.
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+Key:
+Urban Line-of-Sight SOI
+Band and Mode Details
+UHF DIGITAL
+DMR TIER II STANDARD
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+UHF ANALOG
+PROWORD:
+TX Freq: RX Freq:
+ENCRYPTED VHF
+DMR TIER II STANDARD
+AES-256
+THIS IS NOT A STANDARD
+NET, ONLY FOR USE IN A
+SCENARIO IN WHICH FCC
+AMATEUR RADIO REGULA-
+TIONS NO LONGER EXIST.
+PROWORD:
+TX Freq: RX Freq:
+Color Code: Timeslot/Repeater Slot:
+Groupcall ID Number
+Key:
+50
