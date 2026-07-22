@@ -82,6 +82,8 @@ pub enum ReasonCode {
     BearerCannotTransmit,
     ConfidentialityUnavailable,
     EmergencyConfirmed,
+    ExtensionRestricted,
+    InvalidExtensionClaim,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq)]

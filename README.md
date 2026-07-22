@@ -18,6 +18,7 @@ Start here:
 - [GhostNet Policy/Client Overlay](docs/ghostnet-policy-client-overlay.md) — architecture
 - [GhostNet Doctrine Kernel](docs/ghostnet-doctrine-kernel.md) — operational semantics
 - [Styrene Integration Contract](docs/styrene-integration-contract.md) — public client boundary
+- [Layered Policy Architecture](docs/layered-policy-architecture.md) — compiled safety invariants and future extension boundary
 - [Integration Friction Register](docs/integration-friction-register.md) — known risks and gates
 - [Implementation Plan](docs/ghostnet-styrene-integration-plan.md) — phased delivery
 
