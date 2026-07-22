@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ghostnet.styrene.io/schema/adapter-capability-v1",
+  "title": "GhostNet Adapter Capability v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "adapter_id",
+    "api_version",
+    "bearer",
+    "max_payload_bytes",
+    "ack_model",
+    "confidentiality",
+    "can_transmit",
+    "extensions"
+  ],
+  "properties": {
+    "adapter_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "api_version": {
+      "const": 1
+    },
+    "bearer": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "max_payload_bytes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "ack_model": {
+      "enum": [
+        "none",
+        "transport",
+        "custody",
+        "operator"
+      ]
+    },
+    "confidentiality": {
+      "enum": [
+        "none",
+        "link",
+        "end_to_end"
+      ]
+    },
+    "can_transmit": {
+      "type": "boolean"
+    },
+    "extensions": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+      }
+    }
+  }
+}

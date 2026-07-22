@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ghostnet.styrene.io/schema/detached-signed-envelope-v1",
+  "title": "GhostNet Detached Signed Envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "body",
+    "body_hash",
+    "signer",
+    "algorithm",
+    "signature",
+    "signed_at_ms"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "pattern": "^https://ghostnet\\.styrene\\.io/schema/[a-z0-9-]+-v[0-9]+$"
+    },
+    "body": {
+      "type": "object"
+    },
+    "body_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "signer": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "algorithm": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$"
+    },
+    "signed_at_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    }
+  }
+}
