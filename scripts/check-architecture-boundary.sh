@@ -55,9 +55,9 @@ require_text WORKSPACE-CHARTER.md '^\*\*Canonical and binding for this workspace
 require_text README.md 'WORKSPACE-CHARTER\.md' \
   'README must link the workspace charter'
 require_text docs/ghostnet-policy-client-overlay.md 'WORKSPACE-CHARTER\.md' \
-  'policy/client architecture must link the workspace charter'
+  'operating modality architecture must link the workspace charter'
 require_text docs/ghostnet-styrene-integration-plan.md 'WORKSPACE-CHARTER\.md' \
-  'implementation plan must link the workspace charter'
+  'operating modality integration plan must link the workspace charter'
 
 for schema in net-definition incident-transition operational-report detached-signed-envelope projection adapter-capability; do
   if [[ ! -f "schemas/v1/${schema}-v1.schema.json" ]]; then
@@ -65,8 +65,9 @@ for schema in net-definition incident-transition operational-report detached-sig
   fi
 done
 
-# GhostNet production code may use released public Styrene client crates, but it
-# must not import daemon internals or reach into a sibling source checkout.
+# GhostNet production code may use released public Styrene extension crates, but
+# it must not import daemon internals, reach into a sibling checkout, or expose
+# a second communications execution facade.
 scan_production_sources \
   '(^|[^[:alnum:]_])(styrened::|use[[:space:]]+styrened|extern[[:space:]]+crate[[:space:]]+styrened)' \
   'production GhostNet source imports styrened internals'
@@ -79,6 +80,10 @@ scan_production_sources \
 scan_production_sources \
   '(CREATE[[:space:]]+TABLE[^;]*(messages|receipts|propagation|path_table|identities)|struct[[:space:]]+(MeshTransport|NetOpsStore))' \
   'production GhostNet source duplicates Styrene substrate persistence or transport ownership'
+
+scan_production_sources \
+  '(trait[[:space:]]+StyrenePort|fn[[:space:]]+(apply_tx_policy)[[:space:]]*\(|async[[:space:]]+fn[[:space:]]+(apply_tx_policy)[[:space:]]*\()' \
+  'production GhostNet source exposes a parallel Styrene communications facade'
 
 if find . -path './.git' -prune -o -type d -name 'styrene-netops' -print | grep -q .; then
   fail 'styrene-netops belongs neither in GhostNet nor Styrene proper; use ghostnet-doctrine'
@@ -103,5 +108,5 @@ if (( failures > 0 )); then
 fi
 
 printf 'Architecture boundary check passed.\n'
-printf '  GhostNet: doctrine, policy, workflows, projections, client state, adapters\n'
-printf '  Styrene: identity, authorization, transport, routing, native persistence and receipts\n'
+printf '  GhostNet: signed OM profiles, doctrine, artifacts, projections, workflows and views\n'
+printf '  Styrene: identity, authorization, policy, messaging, tunnels, egress, persistence and receipts\n'

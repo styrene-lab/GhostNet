@@ -1,6 +1,6 @@
 # GhostNet
 
-> **Internal workspace boundary:** GhostNet is the operational doctrine and coordination layer; [Styrene Mesh](https://styrene.io) is the general-purpose sovereign communications substrate. Styrene makes communication possible. GhostNet defines how a group uses it coherently before, during, and after disruption.
+> **Internal workspace boundary:** GhostNet is an operational mode within [Styrene Mesh](https://styrene.io). Styrene owns identity, authorization, policy evaluation, messaging, tunnels, transport, routing, persistence, and receipts. GhostNet contributes signed operating-modality profiles, doctrine, workflows, projections, and operator views.
 >
 > The binding ownership rules for this repository are in **[WORKSPACE-CHARTER.md](WORKSPACE-CHARTER.md)**. Architecture and implementation work must conform to that charter.
 
@@ -8,23 +8,24 @@
 
 ## Product direction
 
-GhostNet turns resilient communications paths into prepared operations: scheduled nets, incident activation, signed situation reports, alerts and requests, disclosure policy, constrained-link delivery, receive-only postures, and operator exercises. It is an independent client and policy layer over Styrene's public SDK/RPC boundary, with optional supervised adapters for other bearers.
+GhostNet turns Styrene's resilient communications capabilities into prepared operational modalities: scheduled nets, incident activation, signed situation reports, alerts and requests, disclosure profiles, constrained-link projections, receive-only postures, and operator exercises. Operators activate signed OM profiles inside the same Styrene instance and retain the same portable identity.
 
-GhostNet does **not** implement a competing MANET, routing stack, communications daemon, identity store, propagation queue, or private-key system. Those substrate concerns remain with Styrene or the selected bearer.
+GhostNet does **not** implement or wrap a competing MANET, messaging system, tunnel layer, routing stack, communications daemon, identity store, policy substrate, propagation queue, or private-key system. Those substrate concerns remain with Styrene. GhostNet defines domain artifacts and workflows that request Styrene capabilities through public extension contracts.
 
 Start here:
 
 - [Workspace Charter](WORKSPACE-CHARTER.md) — canonical product boundary and ownership matrix
-- [GhostNet Policy/Client Overlay](docs/ghostnet-policy-client-overlay.md) — architecture
+- [GhostNet Operating Modality Architecture](docs/ghostnet-policy-client-overlay.md) — architecture
 - [GhostNet Doctrine Kernel](docs/ghostnet-doctrine-kernel.md) — operational semantics
 - [Styrene Integration Contract](docs/styrene-integration-contract.md) — public client boundary
-- [Layered Policy Architecture](docs/layered-policy-architecture.md) — compiled safety invariants and future extension boundary
+- [Layered Policy Architecture](docs/layered-policy-architecture.md) — compiled invariants and unified Styrene policy ownership
+- [Policy Engine Selection](docs/policy-engine-selection.md) — Cedar primary, Regorus compatibility, bounded WASM helpers
 - [Integration Friction Register](docs/integration-friction-register.md) — known risks and gates
 - [Implementation Plan](docs/ghostnet-styrene-integration-plan.md) — phased delivery
 
 ## Workspace architecture guardrail
 
-GhostNet is a policy/client overlay; Styrene is the general-purpose communications substrate. Run this check before committing changes to GhostNet code, manifests, or architecture documents:
+GhostNet is a signed Operating Modality within Styrene; Styrene remains the sole communications and policy-enforcement system. Run this check before committing changes to GhostNet code, manifests, or architecture documents:
 
 ```bash
 scripts/check-architecture-boundary.sh
