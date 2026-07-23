@@ -2,197 +2,191 @@
 
 ## Status
 
-**Canonical and binding for this workspace.** This charter defines what GhostNet is, what Styrene Mesh is, and which project owns each responsibility. Proposed code, schemas, documentation, and upstream contributions must conform to it.
+**Canonical and binding for this workspace.** This charter defines the ownership boundary between GhostNet Operating Modalities and Styrene Mesh. Proposed code, schemas, documentation, and upstream changes must conform to it.
 
 If another workspace document conflicts with this charter, this charter controls until an explicit architecture decision amends it.
 
 ## Product definition
 
-**GhostNet is a local-first operational coordination system for degraded communications environments.** It turns available communications paths into prepared, repeatable operations through scheduled nets, incident activation, signed reports, priorities, disclosure policy, constrained-link projections, emission discipline, and operator workflows.
+**Styrene Mesh is the sovereign communications system.** It owns identity, authorization, unified policy evaluation, messaging, tunnels, transport, routing, queueing, persistence, attachments, receipts, and final outbound enforcement.
 
-**Styrene Mesh is the general-purpose sovereign communications substrate.** It provides identities, authorization, secure transport, routing, messaging, topic distribution, persistence, attachments, telemetry, markers, receipts, interfaces, and store-and-forward behavior without requiring Internet or cloud infrastructure.
+**GhostNet is a family of signed Operating Modality (OM) profiles within Styrene.** A GhostNet OM contributes operational doctrine, domain artifact semantics, workflows, projections, posture requests, and operator views. It does not create a second program, identity, inbox, policy authority, or communications path.
+
+A portable Styrene identity remains independent of the active OM. An authorized operator can switch among signed profiles such as `NYC_EMS1_FIRE`, `NYC_EMS1_MED`, `NYC_EMS1_PD`, `NYC_EMS1_CIV`, or Standard without changing identity or installing another client.
 
 The durable distinction is:
 
-> **Styrene makes sovereign communication possible. GhostNet defines how a group uses that capability coherently before, during, and after disruption.**
+> **Styrene communicates and enforces. GhostNet describes an operational modality Styrene can activate and apply.**
 
-Or, stated as an engineering boundary:
+## Relationship and dependency direction
 
-> Styrene owns what the communications substrate authorizes, sends, receives, retains, routes, and acknowledges. GhostNet owns what the operational application defines, drafts, decides, projects, schedules, and displays.
-
-## Relationship
-
-GhostNet is an independent client and policy layer over Styrene's public SDK/RPC contracts. Styrene is a preferred substrate, not a source tree into which GhostNet is embedded.
-
-GhostNet may also supervise external bearer adapters such as Meshtastic, JS8Call, Winlink, RTTY, ALE, and file/QR hand carry. Those adapters project GhostNet artifacts; they do not turn GhostNet into a replacement transport stack.
-
-The dependency direction is one-way:
+GhostNet OMs are signed configuration and policy artifacts consumed through Styrene's public mode-extension contracts. They are not installed executable applications and do not wrap Styrene's SDK/RPC API behind a competing application service.
 
 ```text
-GhostNet operator surfaces
+Styrene operator surfaces
         ↓
-GhostNet orchestration and doctrine
+Styrene commands, policy, messaging, and tunnels
         ↓
-GhostNet-owned public integration ports
+Public Operating Modality extension contracts
         ↓
-Styrene public SDK / RPC contracts
-        ↓
-Styrene daemon, persistence, RNS/LXMF, and interfaces
+GhostNet OM manifests, doctrine predicates, artifacts, projections, and views
 ```
 
-Styrene proper must not depend on GhostNet.
+Styrene core must not depend on GhostNet-specific concepts. Generic extension contracts must remain useful to non-GhostNet modes.
 
 ## Ownership matrix
 
-| Concern | Styrene owns | GhostNet owns | Prohibited overlap |
+| Concern | Styrene owns | GhostNet OM contributes | Prohibited overlap |
 |---|---|---|---|
-| Cryptographic identity | Key custody, identity lifecycle, signing implementation, verification | Opaque identity references and requests to sign canonical artifact bytes | GhostNet private-key storage or direct signing-key APIs |
-| Authorization | Substrate RBAC, peer blocking, caller permissions | Operational roles for issuing net/incident artifacts | GhostNet bypassing a Styrene denial or replacing RBAC |
-| Transport and routing | RNS/LXMF, paths, links, TCP/UDP/Serial-KISS/I2P interfaces | Bearer selection policy and safe projection plans | GhostNet routing tables, packet forwarding, or native transport forks |
-| Messaging and topics | Publication, polling, retention, protocol envelopes, generic events | Topic naming conventions and signed GhostNet payload schemas | GhostNet-specific topic implementation inside `styrened` |
-| Persistence | Native messages, topics, attachments, receipts, queues, transport state | Drafts, preferences, cursors, policy audit, adapter config, rebuildable views | GhostNet daemon tables duplicating substrate state |
-| Store-and-forward | Native queueing, retries, propagation, protocol receipts | Priority/TTL policy and interpretation of custody evidence | A second native propagation or receipt engine |
-| Attachments | Upload, storage, IDs, checksums, download | Disclosure/fetch policy and signed attachment references | Duplicate attachment repository |
-| Telemetry and markers | Generic telemetry and geospatial record services | Operational projections that reference signed source artifacts | Treating mutable projections as GhostNet source truth |
-| Incidents and nets | No GhostNet-specific domain ownership | Net definitions, windows, incidents, reports, corrections, retractions | GhostNet lifecycle types or migrations in Styrene proper |
-| Emission control | Generic daemon transmission classes and enforcement gate | Desired posture, decision policy, confirmations, truthful enforcement label | Client-only controls presented as daemon- or hardware-enforced |
-| Radio applications | Generic interfaces where appropriate | Supervised, bearer-specific sidecars | Embedding JS8Call/Winlink/ALE workflows in Styrene core |
-| Operator experience | Generic Styrene network/product surfaces | GhostNet readiness, incident, report, posture, and exercise workflows | Hidden per-surface policy implementations |
+| Identity | Key custody, lifecycle, signing, verification, portable actor identity | Opaque identity references and OM role bindings | GhostNet identity or private-key store |
+| Authorization and policy | Unified request/decision/obligation contracts, Cedar/Regorus/WASM adapters, trust, activation epochs, final permit/deny | Signed OM policy sources, schemas, scenarios, domain predicates | Separate GhostNet policy authority or bypass of Styrene denial |
+| Messaging and tunnels | Compose/send APIs, addressing, membership resolution, final bytes, encryption, publication, polling | Structured operational actions and artifact semantics | GhostNet publication client, second inbox, tunnel, or topic engine |
+| Egress safety | One authoritative exact-byte gate for every queue, tunnel, adapter, export, and transport | Disclosure labels, projection candidates, requested posture, OM constraints | Alternate path around the Styrene egress gate |
+| Transport and routing | Bearer facts, path selection, routing, retries, queue release, store-and-forward | Requirements and preferences expressed as typed obligations | GhostNet routing, retry, or bearer execution engine |
+| Persistence and receipts | Messages, queues, attachments, delivery state, receipts, activation epochs | Draft semantics, rebuildable domain views, OM-local presentation preferences | Shadow message, receipt, attachment, or propagation stores |
+| Domain semantics | Generic extension host and artifact carriage | Nets, windows, incidents, reports, corrections, retractions, priorities | GhostNet lifecycle tables or services in Styrene core |
+| Projection | Exact-byte construction pipeline and final authorization | Deterministic projection definitions and omission semantics | GhostNet directly selecting/sending around active Styrene policy |
+| Posture | Actual enforcement and truthful evidence level | Requested operational posture and domain reason codes | Client preference represented as daemon/hardware enforcement |
+| Operator experience | One Styrene application, identity, chat/tunnel surfaces, policy explanation | Mode badge, operational views, structured composers, guided workflows | Separate GhostNet operator-facing application |
+| External adapters | Sandboxing, sealed operation permit, execution, audit | Domain projection support and declared adapter requirements | Adapter access to source history, keys, or unrestricted messaging |
 
-## GhostNet SHALL own
+## GhostNet OM SHALL contribute
 
-- net definitions and immutable revisions;
-- scheduled and externally activated communication windows;
-- incident transition artifacts and derived lifecycle;
-- operational reports, alerts, requests, offers, bulletins, corrections, and retractions;
-- canonical artifact schemas and signature-input construction;
-- operational role evaluation layered over substrate authorization;
-- disclosure profiles and constrained-bearer degradation;
-- communications posture intent and decision reason codes;
-- operator confirmations and decision audit records;
-- local drafts, installation preferences, subscription cursors, and rebuildable materialized views;
-- exercise fixtures and constrained-link simulations;
-- supervised non-native bearer adapters.
+- signed and versioned OM manifests and family profiles;
+- net definitions, communication windows, and immutable revisions;
+- incident transitions and derived lifecycle semantics;
+- operational report, alert, request, correction, and retraction schemas;
+- deterministic canonicalization and domain hash/signature-input specifications;
+- compiled doctrine predicates and state machines;
+- OM-specific Cedar schemas, policies, obligations, and scenario vectors;
+- optional reviewed Regorus compatibility policy and bounded helper declarations;
+- disclosure labels, safe projection definitions, and omission metadata;
+- requested posture, confirmation semantics, and stable domain reason codes;
+- operational commands, views, exercises, and authoring guidance.
 
-## GhostNet SHALL NOT own
+## GhostNet OM SHALL NOT own
 
-- Reticulum/LXMF protocol implementation;
+- a standalone messaging, tunnel, topic, or publication client;
+- final authorization or a policy engine separate from Styrene;
 - Styrene private keys or raw signing-key types;
-- daemon-internal service assembly;
-- Styrene message/topic/attachment databases;
-- native propagation queues or receipt state machines;
-- transport path discovery or routing;
-- generic RBAC or peer blocking;
-- a private fork of Styrene IPC;
-- modem/DSP implementations inside the doctrine kernel;
-- universal frequency, callsign, encryption, or legal defaults;
-- claims that a client-side no-send preference guarantees zero RF emission.
+- final destination resolution or group-membership truth;
+- outbound signing, encryption, queueing, retry, routing, or receipts;
+- message, attachment, propagation, or transport persistence;
+- direct sockets, tunnels, transports, or unrestricted adapter execution;
+- a second identity, contact list, inbox, delivery indicator, or operator application;
+- claims that a requested or client-visible posture proves machine or RF enforcement.
 
-## Upstream contribution rule
+## Disclosure-safe egress invariants
 
-A change may be proposed to Styrene proper only when every condition below holds:
+Every externally observable byte and metadata field must pass one Styrene-owned gate immediately before atomic insertion into an execution queue. The gate covers chat, tunnels, files, attachments, previews, exports, telemetry, delayed delivery, automation, and external adapters.
 
-1. **Generic:** it is useful outside GhostNet and contains no GhostNet artifact or workflow concepts.
-2. **Owned:** an existing Styrene subsystem clearly owns the behavior.
-3. **Public:** GhostNet will consume it through a documented public SDK/RPC contract.
-4. **Unified:** CLI, TUI, ACP, local IPC, and remote RPC can share the same command/projection source where applicable.
-5. **Authorized:** permissions, audit behavior, limits, and negative cases are specified.
-6. **Non-duplicative:** it does not introduce a second repository for existing substrate state.
-7. **Negotiable:** clients discover support and limits through capability negotiation.
-8. **Independently reviewable:** the upstream patch can be reviewed and released without requiring GhostNet.
+A permit binds at least:
 
-Current plausible generic upstream proposals are limited to:
+- actor identity and authorization snapshot;
+- active OM bundle, deployment binding, policy hashes, and activation epoch;
+- exact resolved destination and membership version;
+- source artifact and projection hashes;
+- exact outbound bytes and attachment hashes;
+- disclosure labels and satisfied obligations;
+- required transport/confidentiality facts;
+- expiry or single-use nonce.
 
-- bounded detached signing with daemon-managed identity;
-- generic outbound transmission-policy enforcement;
-- topic idempotency/retention contract clarification if existing behavior is insufficient.
+Mutation of any bound value invalidates the permit. `Deny`, `Indeterminate`, timeout, stale state, missing facts, policy failure, or unsupported capability all block emission. Delayed release is reauthorized under current facts. No production path may reach a queue, tunnel, adapter, socket, or transport without a valid sealed permit.
+
+## Policy composition
+
+The unified Styrene policy substrate composes:
+
+1. compiled safety and domain invariants;
+2. Styrene identity and substrate authorization;
+3. Cedar policy as the normative embedded engine;
+4. optional Regorus/Rego compatibility restrictions;
+5. optional bounded WASM helper results;
+6. explicit operating facts and typed obligations.
+
+Restriction is monotonic:
+
+```text
+Permit < RequireConfirmation < Indeterminate < Deny
+```
+
+No later layer may relax an earlier result or inflate enforcement evidence. Policy evaluation has no ambient network, filesystem, process, environment, wall-clock, randomness, private-key, messaging, or tunnel access.
 
 ## Local-state ownership test
 
-Before adding a GhostNet table or durable record, ask:
+Before adding durable state, ask:
 
-> Does this record describe an application decision/draft/configuration/view, or does it describe substrate communications state?
+> Is this a signed OM/domain source artifact or rebuildable presentation state, or is it communications execution state?
 
-GhostNet may persist the former. Styrene owns the latter.
+GhostNet may define the former. Styrene owns the latter.
 
 Allowed examples:
 
-- unsigned report draft;
-- desired posture and operator confirmation;
-- installed net preference;
-- topic cursor;
-- projection/materialized-view cache;
-- policy decision audit;
-- adapter configuration;
-- exercise result.
+- OM source manifests and scenario vectors;
+- unsigned local form drafts as a generic Styrene UI concern;
+- deterministic domain projections and rebuildable views;
+- exercise fixtures;
+- OM authoring preferences.
 
 Forbidden examples:
 
-- duplicate raw Styrene message archive;
-- native delivery receipt ledger;
-- propagation retry queue;
-- copied identity secret;
-- parallel attachment blob store;
-- interface/path table;
-- shadow RBAC membership database.
+- a GhostNet publication workflow ledger;
+- duplicate raw message history;
+- native receipt or retry queues;
+- copied identity secrets;
+- parallel attachment storage;
+- destination-membership or routing truth;
+- shadow policy activation state.
 
-## Enforcement-level vocabulary
+## Generic Styrene extension rule
 
-GhostNet must distinguish:
+A change belongs in Styrene only when it is:
 
-- **Advisory:** a warning or recommendation only.
-- **Client-guarded:** GhostNet refuses to request prohibited transmission, but other daemon activity may transmit.
-- **Daemon-enforced:** Styrene confirms all declared transmission classes and interfaces are covered by a generic enforcement policy.
-- **Hardware receive-only:** transmitting hardware is absent or physically disabled and supporting evidence is available.
+1. useful to non-GhostNet modes;
+2. owned by an existing generic Styrene subsystem;
+3. exposed through a documented public command/projection or extension contract;
+4. shared across applicable Styrene surfaces;
+5. authorized, audited, bounded, and negatively tested;
+6. non-duplicative of existing state;
+7. capability-negotiated and versioned;
+8. independently reviewable and releasable.
 
-No weaker level may be described using language belonging to a stronger level.
+The immediate generic requirement is the **sealed exact-byte egress permit and OM activation contract**, covering messaging, tunnels, delayed delivery, and adapters through one enforcement path.
 
 ## Architecture tests
 
-The workspace guard script is `scripts/check-architecture-boundary.sh`. It must run in CI once code exists and currently validates repository contents directly.
+The workspace guard is `scripts/check-architecture-boundary.sh`. Production work fails review if it:
 
-Production GhostNet source must fail review if it:
-
-- imports from `styrened` or daemon-private modules;
-- uses direct Styrene source-tree path dependencies;
-- introduces private-key/signing-key types outside test fixtures;
-- adds a crate or service named `styrene-netops`;
-- adds GhostNet-specific database tables to Styrene;
-- implements transport/routing internals in doctrine code;
-- labels client-only suppression as machine-enforced receive-only.
-
-Test fixtures may use deterministic test keys, but production APIs remain detached-signature based.
+- describes GhostNet as an independent client, application, messaging layer, or policy authority;
+- imports daemon-private modules or reaches into sibling Styrene source trees;
+- handles private key material;
+- implements direct publication, transport, routing, retry, or receipt ownership;
+- creates shadow communications or policy persistence;
+- exposes a bypass around Styrene's exact-byte egress gate;
+- represents client guarding as daemon- or hardware-enforced silence.
 
 ## Decision protocol
 
-Any intentional exception requires an architecture decision that:
+Any exception requires an architecture decision that:
 
-1. identifies the exact charter clause being amended;
-2. states why a public client-layer implementation is insufficient;
-3. defines ownership, migration, compatibility, and rollback;
-4. includes a non-GhostNet justification for any Styrene upstream change;
-5. updates this charter and the automated boundary checks in the same change.
-
-Silently violating the charter is not an acceptable prototype shortcut. Spikes that cross the boundary must live on clearly labeled non-mergeable research branches.
-
-## Current branch disposition
-
-The Styrene exploratory branch `feat/ghostnet-netops` is research only. Its `styrene-netops` crate and `styrened::NetOpsStore` demonstrate useful validation and persistence ideas but violate the final ownership model and must not be merged into Styrene proper.
-
-Useful tests or algorithms may be reimplemented in this GhostNet workspace under the doctrine/client architecture. They must not be transplanted with direct key custody or daemon-specific persistence.
+1. identifies the exact clause being amended;
+2. explains why the generic Styrene extension contract is insufficient;
+3. defines ownership, migration, compatibility, rollback, and disclosure risk;
+4. supplies a non-GhostNet justification for Styrene-core changes;
+5. updates this charter and automated guardrails in the same change.
 
 ## Review checklist
 
-Every implementation review must answer:
+Every review must answer:
 
-- Is this GhostNet operational semantics or Styrene substrate behavior?
-- Is the dependency through a public contract?
-- Does GhostNet handle any private key material?
-- Is local state a draft/configuration/audit/view rather than substrate truth?
-- Does Styrene already own this queue, receipt, message, attachment, marker, telemetry, identity, or authorization record?
-- What happens under duplicate delivery, reordering, timeout, partition, fork, clock uncertainty, and retention loss?
-- What exact enforcement level is achieved and displayed?
-- Is a proposed upstream change generic and useful without GhostNet?
-- Can GhostNet build and test without a Styrene source checkout?
+- Does this contribute OM semantics, or duplicate Styrene communications execution?
+- Can the user remain in one Styrene application, identity, inbox, and delivery model?
+- Does one Styrene policy substrate make the final decision?
+- Is authorization bound to exact bytes, destination, epoch, and current facts?
+- Can any path reach a queue, tunnel, adapter, socket, or transport without a sealed permit?
+- Are unknown, stale, timed-out, trapped, or unsupported states fail-closed?
+- Are classification and projection transformations monotonic and auditable?
+- Is the displayed enforcement evidence truthful?
+- Is every Styrene-core addition generic and useful without GhostNet?
 
-If any answer is unclear, implementation stops at the boundary and the ambiguity is resolved in design first.
+If an answer is unclear, implementation stops and the boundary is resolved before code proceeds.

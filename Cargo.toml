@@ -1,5 +1,10 @@
 [workspace]
-members = ["crates/*"]
+members = [
+  "crates/ghostnet-adapter-api",
+  "crates/ghostnet-cli",
+  "crates/ghostnet-doctrine",
+  "crates/ghostnet-store",
+]
 resolver = "3"
 
 [workspace.package]
