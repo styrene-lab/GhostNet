@@ -47,6 +47,7 @@ pub const CONTRACT_VERSION: u32 = 1;
 #[cfg(test)]
 mod tests {
     use serde_json::{Value, json};
+    use sha2::{Digest, Sha256};
 
     use super::{
         CONTRACT_VERSION, CanonicalError, Clock, ClockQuality, FakeClock, body_hash, canonicalize,
@@ -83,6 +84,27 @@ mod tests {
             hex(&signature_input(SCHEMA, &canonical).expect("schema must be valid")),
             metadata["signature_input_hex"]
         );
+    }
+
+    #[test]
+    fn canonicalizes_operating_modality_profile_vector() {
+        let profile: Value =
+            serde_json::from_str(include_str!("../../../profiles/nyc-ems1-fire/profile.json"))
+                .expect("profile must be JSON");
+        let expected =
+            include_bytes!("../../../test-vectors/om-profile/nyc-ems1-fire-v1.canonical.json");
+        let canonical = canonicalize(&profile).expect("profile must canonicalize");
+        assert_eq!(canonical, expected);
+
+        let metadata: Value = serde_json::from_str(include_str!(
+            "../../../test-vectors/om-profile/nyc-ems1-fire-v1.vector.json"
+        ))
+        .expect("vector metadata must be JSON");
+        assert_eq!(
+            format!("sha256:{:x}", Sha256::digest(&canonical)),
+            metadata["canonical_sha256"]
+        );
+        assert_eq!(canonical.len() as u64, metadata["canonical_length"]);
     }
 
     #[test]

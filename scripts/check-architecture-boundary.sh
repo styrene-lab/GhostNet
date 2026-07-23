@@ -59,7 +59,7 @@ require_text docs/ghostnet-policy-client-overlay.md 'WORKSPACE-CHARTER\.md' \
 require_text docs/ghostnet-styrene-integration-plan.md 'WORKSPACE-CHARTER\.md' \
   'operating modality integration plan must link the workspace charter'
 
-for schema in net-definition incident-transition operational-report detached-signed-envelope projection adapter-capability; do
+for schema in net-definition incident-transition operational-report detached-signed-envelope projection adapter-capability operating-modality-profile; do
   if [[ ! -f "schemas/v1/${schema}-v1.schema.json" ]]; then
     fail "required Phase 0 schema is missing: ${schema}-v1"
   fi

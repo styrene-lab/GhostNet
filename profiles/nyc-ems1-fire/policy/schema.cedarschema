@@ -1,0 +1,6 @@
+namespace GhostNet {
+  entity Operator in [Role];
+  entity Role;
+  entity Resource;
+  action Transmit appliesTo { principal: Operator, resource: Resource, context: { posture: String, confirmed: Bool } };
+}

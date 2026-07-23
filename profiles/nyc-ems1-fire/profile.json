@@ -1,0 +1,78 @@
+{
+  "schema": "https://ghostnet.styrene.io/schema/operating-modality-profile-v1",
+  "family": "ghostnet.ems1",
+  "profile": "NYC_EMS1_FIRE",
+  "version": 1,
+  "display_name": "NYC EMS1 — Fire",
+  "valid_from_ms": 1735689600000,
+  "compatibility": {
+    "styrene_om_contract": 1,
+    "cedar_contract": 1,
+    "doctrine_contract": 1
+  },
+  "capabilities": {
+    "required": [
+      "policy.cedar",
+      "operation.exact-byte-seal",
+      "operation.release-reauthorize"
+    ],
+    "optional": [
+      "projection.compact-code",
+      "view.operational-map"
+    ]
+  },
+  "roles": [
+    "observer",
+    "participant",
+    "coordinator",
+    "gateway_operator",
+    "net_administrator"
+  ],
+  "artifacts": [
+    {
+      "path": "schemas/v1/incident-transition-v1.schema.json",
+      "sha256": "sha256:9e0da98329e72f091269aeeab415233ad9e88ce732fcda482868a9be4ea2f308"
+    },
+    {
+      "path": "schemas/v1/net-definition-v1.schema.json",
+      "sha256": "sha256:5da7b77a42a32745cb3a75a07055e5128f74fe81b64f5d8652f1a010fe1f0541"
+    },
+    {
+      "path": "schemas/v1/operational-report-v1.schema.json",
+      "sha256": "sha256:160880a29acf4576c8cac3f0574936a53a38c680142b76b76cf44710c0b2adbb"
+    },
+    {
+      "path": "schemas/v1/projection-v1.schema.json",
+      "sha256": "sha256:fd7aae42aebb783767bb608dac95d294ff67cb5012e2fd82a2d6fec550231f72"
+    }
+  ],
+  "policy": {
+    "engine": "cedar",
+    "schema": {
+      "path": "profiles/nyc-ems1-fire/policy/schema.cedarschema",
+      "sha256": "sha256:cc4918b522f7c8bfb57e45982c634fe1303b0510ef5a10ad21a6f4d1cd956db5"
+    },
+    "policies": [
+      {
+        "path": "profiles/nyc-ems1-fire/policy/main.cedar",
+        "sha256": "sha256:021f7d12bba2c6cf0882256eb21cb3c93843600cddf24caf298131b93229599e"
+      }
+    ],
+    "scenarios": [
+      {
+        "path": "profiles/nyc-ems1-fire/policy/scenarios.json",
+        "sha256": "sha256:de8d785d67da4f5121ba74c61710edb87eab9f3cb29a88adae5814f43a939060"
+      }
+    ]
+  },
+  "commands": [
+    "ghostnet.report",
+    "ghostnet.incident.transition",
+    "ghostnet.net.prepare"
+  ],
+  "views": [
+    "ghostnet.active-mode",
+    "ghostnet.incident-board"
+  ],
+  "extensions": {}
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "ghostnet-policy-scenarios-v1",
+  "scenarios": [
+    {"name": "routine transmission", "posture": "routine", "confirmed": false, "expected": "permit"},
+    {"name": "restricted unconfirmed transmission", "posture": "restricted", "confirmed": false, "expected": "deny"},
+    {"name": "restricted confirmed transmission", "posture": "restricted", "confirmed": true, "expected": "permit"}
+  ]
+}

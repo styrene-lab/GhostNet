@@ -11,6 +11,10 @@ Canonical bodies use the restricted RFC 8785 profile implemented by `ghostnet-do
 - no insignificant whitespace;
 - SHA-256 references encoded as `sha256:` plus 64 lowercase hexadecimal characters.
 
+The Operating Modality profile schema is a GhostNet-owned contribution contract. It identifies domain resources, Cedar policy inputs, commands, views, roles, and required generic Styrene capabilities. It does not define installation, trust, activation, identity, policy execution, or egress behavior; those remain Styrene-owned.
+
+Resource hashes cover the exact file bytes at the declared relative path. Bundle signing and trust envelopes are supplied by the generic Styrene OM substrate rather than duplicated here.
+
 The signed-envelope schema carries a canonical body as an object. Its `body_hash` covers only the canonical body bytes. Signature input is:
 
 ```text
