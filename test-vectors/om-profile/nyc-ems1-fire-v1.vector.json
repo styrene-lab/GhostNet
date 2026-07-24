@@ -1,0 +1,6 @@
+{
+  "schema": "ghostnet-om-profile-vector-v1",
+  "profile_path": "profiles/nyc-ems1-fire/profile.json",
+  "canonical_sha256": "sha256:a18977e16ff222ca69f3e868a6941c2c13eb9b58e1989c3cd1292ddbdcc082a7",
+  "canonical_length": 1743
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "ghostnet-policy-scenarios-v1",
+  "scenarios": [
+    {
+      "name": "ordinary direct chat adds no modality restriction",
+      "expected": "permit"
+    },
+    {
+      "name": "Styrene substrate denial remains authoritative",
+      "expected": "substrate-deny"
+    }
+  ]
+}

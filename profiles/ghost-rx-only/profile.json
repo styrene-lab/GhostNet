@@ -1,0 +1,66 @@
+{
+  "schema": "https://ghostnet.styrene.io/schema/operating-modality-profile-v1",
+  "family": "ghostnet.general",
+  "profile": "GHOSTNET_GHOST_RX_ONLY",
+  "version": 1,
+  "display_name": "GhostNet — Ghost RX Only",
+  "valid_from_ms": 1735689600000,
+  "compatibility": {
+    "styrene_om_contract": 1,
+    "cedar_contract": 1,
+    "doctrine_contract": 1
+  },
+  "capabilities": {
+    "required": [
+      "policy.cedar",
+      "operation.exact-byte-seal",
+      "operation.release-reauthorize",
+      "enforcement.hardware-receive-only"
+    ],
+    "optional": [
+      "view.operational-map"
+    ]
+  },
+  "roles": [
+    "observer"
+  ],
+  "artifacts": [
+    {
+      "path": "schemas/v1/operational-report-v1.schema.json",
+      "sha256": "sha256:160880a29acf4576c8cac3f0574936a53a38c680142b76b76cf44710c0b2adbb"
+    },
+    {
+      "path": "schemas/v1/projection-v1.schema.json",
+      "sha256": "sha256:fd7aae42aebb783767bb608dac95d294ff67cb5012e2fd82a2d6fec550231f72"
+    }
+  ],
+  "policy": {
+    "engine": "cedar",
+    "schema": {
+      "path": "profiles/ghost-rx-only/policy/schema.cedarschema",
+      "sha256": "sha256:4f53f2bbcc920913cba0e1ee9886611cd9496ab7abe9151e38ee767b9f8e737b"
+    },
+    "policies": [
+      {
+        "path": "profiles/ghost-rx-only/policy/main.cedar",
+        "sha256": "sha256:70003570c0b81ac11f2dbcd949dcbd046a81b852820b21b41386c38f996e178f"
+      }
+    ],
+    "scenarios": [
+      {
+        "path": "profiles/ghost-rx-only/policy/scenarios.json",
+        "sha256": "sha256:f09e269d1d2c6ffb2ff9e738d2fe95c6969df76d054031d088e57f9548ad454c"
+      }
+    ]
+  },
+  "commands": [],
+  "views": [
+    "ghostnet.active-mode",
+    "ghostnet.incident-board"
+  ],
+  "extensions": {
+    "ghostnet.experience": "advanced",
+    "ghostnet.posture": "silent",
+    "ghostnet.emission": "hardware-blocked"
+  }
+}

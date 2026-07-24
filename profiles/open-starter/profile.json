@@ -1,0 +1,65 @@
+{
+  "schema": "https://ghostnet.styrene.io/schema/operating-modality-profile-v1",
+  "family": "ghostnet.general",
+  "profile": "GHOSTNET_OPEN_STARTER",
+  "version": 1,
+  "display_name": "GhostNet — Open Starter",
+  "valid_from_ms": 1735689600000,
+  "compatibility": {
+    "styrene_om_contract": 1,
+    "cedar_contract": 1,
+    "doctrine_contract": 1
+  },
+  "capabilities": {
+    "required": [
+      "policy.cedar",
+      "operation.exact-byte-seal"
+    ],
+    "optional": [
+      "operation.release-reauthorize",
+      "projection.compact-code"
+    ]
+  },
+  "roles": [
+    "participant"
+  ],
+  "artifacts": [
+    {
+      "path": "schemas/v1/operational-report-v1.schema.json",
+      "sha256": "sha256:160880a29acf4576c8cac3f0574936a53a38c680142b76b76cf44710c0b2adbb"
+    },
+    {
+      "path": "schemas/v1/projection-v1.schema.json",
+      "sha256": "sha256:fd7aae42aebb783767bb608dac95d294ff67cb5012e2fd82a2d6fec550231f72"
+    }
+  ],
+  "policy": {
+    "engine": "cedar",
+    "schema": {
+      "path": "profiles/open-starter/policy/schema.cedarschema",
+      "sha256": "sha256:550457cf8e384acb93c0c22c4a2f8660c152b992e09cf15cd0c4c0d3eda5ae06"
+    },
+    "policies": [
+      {
+        "path": "profiles/open-starter/policy/main.cedar",
+        "sha256": "sha256:b1dbb50289847244f2484af3c636585a38046a3bff46c032afb88e2452f9547c"
+      }
+    ],
+    "scenarios": [
+      {
+        "path": "profiles/open-starter/policy/scenarios.json",
+        "sha256": "sha256:f0cb4fb438ecf11c83739714c8f6fe34bf4ca037ff5eebc1135e829df2547d5c"
+      }
+    ]
+  },
+  "commands": [
+    "ghostnet.report"
+  ],
+  "views": [
+    "ghostnet.active-mode"
+  ],
+  "extensions": {
+    "ghostnet.experience": "starter",
+    "ghostnet.posture": "routine"
+  }
+}
