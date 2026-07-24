@@ -1,0 +1,26 @@
+{
+  "schema": "ghostnet-policy-scenarios-v1",
+  "scenarios": [
+    {
+      "name": "receive is permitted",
+      "action": "Receive",
+      "expected": "permit"
+    },
+    {
+      "name": "ordinary transmission is denied",
+      "action": "Transmit",
+      "expected": "deny"
+    },
+    {
+      "name": "emergency transmission remains denied",
+      "action": "Transmit",
+      "emergency": true,
+      "expected": "deny"
+    },
+    {
+      "name": "activation fails without hardware receive-only enforcement",
+      "missing_capability": "enforcement.hardware-receive-only",
+      "expected": "activation-deny"
+    }
+  ]
+}

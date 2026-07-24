@@ -1,0 +1,5 @@
+namespace GhostNet {
+  entity Operator;
+  entity Resource;
+  action Transmit appliesTo { principal: Operator, resource: Resource, context: {} };
+}

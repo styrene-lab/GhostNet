@@ -1,0 +1,6 @@
+{
+  "schema": "ghostnet-om-profile-vector-v1",
+  "profile_path": "profiles/ghost-rx-only/profile.json",
+  "canonical_sha256": "sha256:f343779691fbbe7e8a3d7e7f17384a0a621f1ecbc0b9096877625b53e02b3eb5",
+  "canonical_length": 1460
+}

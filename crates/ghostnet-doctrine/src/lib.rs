@@ -86,25 +86,36 @@ mod tests {
         );
     }
 
-    #[test]
-    fn canonicalizes_operating_modality_profile_vector() {
-        let profile: Value =
-            serde_json::from_str(include_str!("../../../profiles/nyc-ems1-fire/profile.json"))
-                .expect("profile must be JSON");
-        let expected =
-            include_bytes!("../../../test-vectors/om-profile/nyc-ems1-fire-v1.canonical.json");
+    fn assert_profile_vector(profile: &str, expected: &[u8], metadata: &str) {
+        let profile: Value = serde_json::from_str(profile).expect("profile must be JSON");
         let canonical = canonicalize(&profile).expect("profile must canonicalize");
         assert_eq!(canonical, expected);
 
-        let metadata: Value = serde_json::from_str(include_str!(
-            "../../../test-vectors/om-profile/nyc-ems1-fire-v1.vector.json"
-        ))
-        .expect("vector metadata must be JSON");
+        let metadata: Value = serde_json::from_str(metadata).expect("vector metadata must be JSON");
         assert_eq!(
             format!("sha256:{:x}", Sha256::digest(&canonical)),
             metadata["canonical_sha256"]
         );
         assert_eq!(canonical.len() as u64, metadata["canonical_length"]);
+    }
+
+    #[test]
+    fn canonicalizes_operating_modality_profile_vectors() {
+        assert_profile_vector(
+            include_str!("../../../profiles/nyc-ems1-fire/profile.json"),
+            include_bytes!("../../../test-vectors/om-profile/nyc-ems1-fire-v1.canonical.json"),
+            include_str!("../../../test-vectors/om-profile/nyc-ems1-fire-v1.vector.json"),
+        );
+        assert_profile_vector(
+            include_str!("../../../profiles/open-starter/profile.json"),
+            include_bytes!("../../../test-vectors/om-profile/open-starter-v1.canonical.json"),
+            include_str!("../../../test-vectors/om-profile/open-starter-v1.vector.json"),
+        );
+        assert_profile_vector(
+            include_str!("../../../profiles/ghost-rx-only/profile.json"),
+            include_bytes!("../../../test-vectors/om-profile/ghost-rx-only-v1.canonical.json"),
+            include_str!("../../../test-vectors/om-profile/ghost-rx-only-v1.vector.json"),
+        );
     }
 
     #[test]

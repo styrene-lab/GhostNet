@@ -15,6 +15,12 @@ The Operating Modality profile schema is a GhostNet-owned contribution contract.
 
 Resource hashes cover the exact file bytes at the declared relative path. Bundle signing and trust envelopes are supplied by the generic Styrene OM substrate rather than duplicated here.
 
+The initial profile set demonstrates three intentionally distinct operating points:
+
+- `GHOSTNET_OPEN_STARTER` adds no OM-specific transmission restriction and exposes only a simple participant workflow. “Open” does not bypass Styrene identity, RBAC, disclosure, destination, or exact-byte safety checks.
+- `NYC_EMS1_FIRE` is the higher-stakes operational example with confirmation-sensitive restricted transmission.
+- `GHOSTNET_GHOST_RX_ONLY` has no transmit permit and requires `enforcement.hardware-receive-only` at activation. A software-only deny is not represented as physical RF silence.
+
 The signed-envelope schema carries a canonical body as an object. Its `body_hash` covers only the canonical body bytes. Signature input is:
 
 ```text
